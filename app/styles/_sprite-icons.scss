@@ -1,0 +1,13 @@
+@import "compass";
+
+
+//$iconSpritePath: "/app/images/aliyun-icons-sprite.png" !default;
+$icons-sprite-base-class:".icons";
+$icons-spacing:5px;
+@import "icons/*/*.png";
+@include all-icons-sprites(true);
+
+.icons{
+    @include inline-block;
+    background-image: url(http://img03.taobaocdn.com/tps/i3/T1l8ttFatcXXarSykb-128-3957.png);
+}

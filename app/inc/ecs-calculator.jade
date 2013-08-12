@@ -1,0 +1,56 @@
+.preloader#vm_cal_preloader("style="height:173px;")
+#vm_cal_panel.vm_cal_panel("style="display:none")
+  .form
+    .row
+      .caption.pt15 推荐配置：
+      .row-content
+        .inner
+          #vmsets_container
+    .hr
+    .row
+      .caption CPU：
+      .row-content
+        .inner
+          #cpu_container
+    .row
+      .caption 内存：
+      .row-content
+        .inner
+          #memory_container
+    .row
+      .caption 系统盘：
+      .row-content
+        .inner
+          | 免费赠送（linux送20GB，Windows送40GB）
+    .row
+      .caption 数据盘：
+      .row-content
+        .inner
+          #storage_container.slider
+    .row
+      .caption 带宽：
+      .row-content
+        .inner
+          #bandwidth_container.slider
+    #row_custom_os.row(style='display: none;')
+      .caption 自定义镜像：
+      .row-content
+        .inner
+          #custom_os_container.combo
+    #row_os.row
+      .caption 操作系统：
+      .row-content
+        .inner
+          #os_container.combo
+    .hr
+    .row
+      .caption 计算结果：
+      .row-content
+        #vm_cal_result.inner.total
+          span
+            span#vm_cal_result_month.price 0
+            | 元/月
+          span.ml20
+            span#vm_cal_result_year.price 0
+            | 元/年
+          a#btn_goto_buy_vm(href='#', target='_blank',style="margin-left:25px;",onclick="AYSW.product.buyCurrentVM(this);") 购买这个配置

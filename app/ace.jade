@@ -1,0 +1,181 @@
+extends layout
+block vars
+  productName = "product-ace screen1200"
+block titleName
+  title 云引擎 - 阿里云-打造数据第一平台
+block css
+block header
+  include inc/header-index
+  style
+    .product-ace .features{
+      background-image:url(http://img03.taobaocdn.com/tps/i3/T1wut0FiXeXXcmVW3k-315-872.png) !important;
+    }
+block container
+  .product-overview.fix-clear
+    .overview-container
+      h1
+        i.icons.icons-ace-48
+        | 云引擎ACE
+      p.introduce ACE（Aliyun Cloud Engine）是一款弹性、分布式的应用托管环境，支持Java、php多种语言环境。帮助开发者快速开发和部署服务端应用程序，并且简化了系统维护工作。搭载了丰富的分布式扩展服务，为应用程序提供强大助力。
+    .buy-container
+      .buy-area
+        p 最划算、最稳定、最安全
+          p 经济型云服务器低至
+            span ￥89/月
+        a.btn.btn-large.btn-orange(role="button") 立即购买
+  .product-tab
+    .product-topnav
+      ul.nav.nav-tabs#product_tab
+        li.active(role="tab")
+          a(href="#detail") 产品详情
+        li(role="tab")
+          a(href="#template") 应用场景及案例
+        li(role="tab")
+          a(href="#resources") 金牌服务体系
+        li(role="tab")
+          a(href="#help") 产品帮助
+  .tab-content.page-buy
+    .tab-panel.first
+      .anchor
+        a(id="detail",name="detail") &nbsp
+      h2 产品详情
+      h3 
+        span 如何使用
+      ul.info-list.dot
+        li 注册阿里云帐号
+        li 进入ACE产品详情页，申请激活码
+        li 申请审核通过后，您的注册邮箱会收到一封通知邮件，内容包含了激活码和激活地址
+        li 访问产品激活地址，输入激活码，成功激活产品并进入ACE控制台
+        li 通过控制台进行创建应用、上传代码、部署应用等管理操作
+        li 也可以在控制台中查询应用的性能数据（流量、内存等）、运行日志等
+        li 还可以在控制台开通ACE扩展服务，供应用程序调用
+      h3 
+        span 产品优势
+      ul.info-list.features
+        li.features-item
+          h4 
+            span.icon-good 
+            | 稳定
+          ul.features-info
+            li 服务可用性达到99.x%
+            li 服务可靠性达到99.xxx%
+            li 支持集群模式，个别应用实例故障不影响整体对外服务
+            li 健康检查机制，宕机自动重启；设备故障，应用实例自动漂移
+        li.features-item
+          h4 
+            span.icon-good 
+            | 弹性
+          ul.features-info
+            li 根据负载情况自动伸缩应用使用的资源
+            li 采用热伸缩方式，服务不中断
+        li.features-item
+          h4 
+            span.icon-good 
+            | 安全
+          ul.features-info
+            li 多用户隔离、防DDoS系统
+        li.features-item
+          h4 
+            span.icon-good 
+            | 高效
+          ul.features-info
+            li 路由优化，对动、静资源访问分离处理
+            li 对静态资源访问进行了加速处理
+        li.features-item.last-feature
+          h4 
+            span.icon-good 
+            | 丰富的扩展服务
+          ul.features-info.last-feature
+            li 分布式Session服务、开放缓存服务、共享型MySQL服务、
+            li 邮件服务、页面抓取服务、还在不断丰富中…
+      h3 
+        span 产品功能 
+      ul.info-list.dot
+        li Java和php应用的创建、代码上传、部署，应用的重启，停止、启动、删除
+        li 应用运行过程中，ACE通过判断负载情况自动伸缩它所使用的资源，伸缩过程不影响应用对外服务，也无需用户干预
+        li 应用的版本管理，可以在历史版本之间切换部署
+        li 支持通过svn管理代码（仅php应用）
+        li 提供应用的性能分析数据，包括JVM的各项参数、网络流量等
+        li 提供运行日志的查询和下载
+        li 提供离线开发和测试工具：ACE依赖SDK、本地模拟运行容器（仅Java应用）
+        li 提供扩展功能：共享型MySQL数据库、分布式Session服务、开放缓存服务、邮件服务、页面抓取服务
+    .tab-panel
+      .anchor
+        a(id="template",name="template") &nbsp
+      h2 应用场景及案例
+      ul.info-list.dot
+        li 快速开发基于Java/php语言的各类传统web应用。如博客、门户、论坛、商城等
+        li 互联网类应用。该类应用一般具有架构易于水平扩展，开发周期短，商业需求变化较迅速，业务成长快等特点，ACE的易于快速开发和自动弹性伸缩的特性，适合服务于它们
+        li 各种基于web的SaaS应用，以及配合SaaS应用使用的各种服务插件、辅助应用等
+    .tab-panel
+      .anchor
+        a(id="help",name="help") &nbsp
+      h2 产品帮助
+      .help
+        dl.dot
+          dt 操作指南
+          dd
+            a(href="") 远程连接for linux
+          dd
+            a(href="") Linux FTP服务配置
+          dd
+            a(href="") 远程连接for Windows
+          dd
+            a(href="") Windows FTP服务配置
+        dl.dot
+          dt 资料中心
+          dd
+            a(href="") 云服务器用户管理指南
+          dd
+            a(href="") 云服务器技术白皮书
+        dl.dot.more
+          dt.more.fix-clear 
+            span 常见问题
+            a(href="") 更多...
+          dd
+            a(href="") ip类相关问题
+          dd
+            a(href="") 机房相关问题
+          dd
+            a(href="") 配置升级相关问题
+          dd
+            a(href="") 操作系统相关问题 
+block footer
+  script
+        (function(){
+              
+              Alipw.importClass('Alipw.SlideView');
+
+              AYSW.product.slideCustomerViews =[];
+              AYSW.product.slideCustomerViews.push([
+                          '<ul class="customer-item">',
+                                  '<li class="li-title">囧记单词</li>',
+                                  '<li class="li-content-1">移动APP开发者解决方案</li>',
+                                  '<li class="li-content-2"><span>急需解决：</span>用户增长速度快，流量急需扩容，服务成本过高</li>',
+                                  '<li class="li-content-2"><span>购买服务：</span>云服务器V型+<a href="#">关系型数据库</a></li>',
+                                  '<li class="li-logo"> <img width="90" height="90" src="http://img02.taobaocdn.com/tps/i2/T10Nx4XrBXXXbCFbsb-100-100.jpg"></li>',
+                                  '<li class="li-info poptip-container">',
+                                    '<div class="poptip-arrow"><em>◆</em><span>◆</span></div>',
+                                    '<h4>客户使用心得：</h4>',
+                                    '<p>从2012年开始就想把服务器跟第三方更加专业的合作伙伴进行合作。综合对比下来觉得阿里云的云服务在目前的云主机里是做得比较好的，所以很原意和你们进行合作，速度和稳定性方面都很好。</p>',
+                                  '</li>',
+                            '</ul>'
+                            ].join(''));
+              AYSW.product.slideCustomerViews.push([
+                          '<ul class="customer-item">',
+                                  '<li class="li-title">囧记单词</li>',
+                                  '<li class="li-content-1">移动APP开发者解决方案</li>',
+                                  '<li class="li-content-2"><span>急需解决：</span>用户增长速度快，流量急需扩容，服务成本过高</li>',
+                                  '<li class="li-content-2"><span>购买服务：</span>云服务器V型+<a href="#">关系型数据库</a></li>',
+                                  '<li class="li-logo"> <img width="90" height="90" src="http://img02.taobaocdn.com/tps/i2/T10Nx4XrBXXXbCFbsb-100-100.jpg"></li>',
+                                  '<li class="li-info poptip-container">',
+                                    '<div class="poptip-arrow"><em>◆</em><span>◆</span></div>',
+                                    '<h4>客户使用心得：</h4>',
+                                    '<p>从2012年开始就想把服务器跟第三方更加专业的合作伙伴进行合作。综合对比下来觉得阿里云的云服务在目前的云主机里是做得比较好的，所以很原意和你们进行合作，速度和稳定性方面都很好。</p>',
+                                  '</li>',
+                            '</ul>'
+                            ].join(''));
+          })();
+
+
+  

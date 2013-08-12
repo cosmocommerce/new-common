@@ -1,0 +1,165 @@
+// 
+ // @TODO: Add docs to mixin-name!
+ //
+ @mixin min-screen($width) {
+    .layout-inner{
+        width:$width !important;
+        margin:0 auto;
+    }
+    .aly-wrap{
+        width:$width !important;
+    }
+    .aly-main{
+        width:$width !important;
+        right:$width - 236px !important;
+        
+    }
+    .aly-container{
+        left:$width !important;
+        width:$width - 236px - 18px !important; 
+    }
+    // 底部
+    .aysw-footer .aysw-inner{
+      width:$width !important;
+    }
+}
+@mixin layout1200{
+  //购买登录区块固定定位
+  .product-overview{
+    background: none;
+      position:relative;
+      .buy-container{
+          position:absolute;
+          width:185px;
+          right:-204px;
+          top:0;
+          .buy-area{
+              position:fixed;
+              -webkit-transform: translateZ(0);
+              top:121px;
+              width:185px;
+              text-align: center;
+              line-height: 20px;
+          }
+      }
+  }
+
+  //首页的大banner
+  .banner-area .user-info-area{
+      width:1200px;
+  }
+  .banner-area .slider .slider-item a {
+      width:1200px;
+  }
+  .banner-area .slider-items-index .slider-index-wrap{
+      width:1200px;
+  }
+  // 首页主体部分响应式 
+  .aly-wrap .page-home .c-layout700-left{
+      width:1200px - 236px - 18px;
+  }
+  .aly-wrap .page-home .section .layout510-left{
+      width:700px;
+  }
+  .aly-wrap .page-home .section .layout510 .desc{ 
+      float:right; width:600px;
+  }
+  .aly-wrap .page-home .section .desc{ float:right; width: 778px;}
+  .aly-topbar .inner{margin:0 auto;width:1200px !important;}
+  .aysw-footer-goldmetal {
+    width: 590px !important;
+  }
+  .aly-wrap .page-home .section .layout300-left{
+    float: left;
+    width: 430px !important;
+  }
+  .aly-wrap .page-home .section .layout300-right{
+    float: right;
+    width: 430px !important;
+  }
+  .aly-wrap .page-home .section .layout300 .desc{
+    float: right;
+    width: 320px !important;
+  }
+  .sub-logo{
+    display: block !important;
+  }
+}
+
+@mixin layout997{
+  .product-overview{
+    background: url(http://oss.aliyuncs.com/aliyun_portal_storage/1370342092_76_673.png) repeat-y 545px top;
+    .overview-container{
+        float:left;
+        width:528px;
+    }
+    .buy-container{
+        //padding-top:62px;
+        float:right;
+        width:185px;
+        top:0;
+        .buy-area{
+            width:185px;
+            text-align: center;
+            line-height: 20px;
+        }
+    }
+  } 
+  //首页的大banner
+  .banner-area .user-info-area{
+      width:997px;
+  }
+  .banner-area .slider .slider-item a{
+      width:997px;
+  }
+  .banner-area .slider-items-index .slider-index-wrap{
+      width:997px;
+  }
+  // 首页主体部分响应式 
+  .c-layout700-left{
+      width:997px - 236px - 18px;
+  }
+  .aly-wrap .page-home .section .layout510-left{
+      width:550px;
+  }
+  .aly-wrap .page-home .section .layout510 .desc{ 
+      float:right; width:460px;
+  }
+  .aly-wrap .page-home .section .desc{ float:right; width: 580px;} 
+  .aly-topbar .inner{margin:0 auto;width:997px !important}
+  .aysw-footer-goldmetal {
+    width: 387px !important;
+  }
+  .aly-wrap .page-home .section .layout300 .desc{
+    float: right;
+    width: 182px !important;
+  }
+  .sub-logo{
+    display: none !important;
+  }
+}
+
+
+
+.screen997{
+    @include min-screen(997px);
+    @include layout997;
+    
+}
+.screen1200{
+    @include min-screen(1200px);
+    @include layout1200;
+}
+@media screen and (max-width: 1280px) {
+    @include min-screen(997px);
+    @include layout997;
+}
+
+
+@media screen and (min-width: 1280px) {
+    @include min-screen(1200px);
+    @include layout1200;
+}
+    
+   
+    

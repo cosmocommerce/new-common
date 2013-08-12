@@ -1,0 +1,74 @@
+header
+  .header-wrap
+    .header-inner
+      a(href="http://www.aliyun.com") 
+        h1.logo 阿里云官方网站
+          span.sub-title 打造数据分享第一平台
+        a(href="http://dev.aliyun.com",class="sub-logo sub-logo-dev",title="阿里云服务中心") 开发者社区
+      nav
+        ul.nav-child
+          li
+            a(href="http://www.aliyun.com/product/") 首页
+          li.main-menu
+            a(href="http://www.aliyun.com",aria-haspopup="J_sub_menu5") 技术文档 
+            div#J_sub_menu5.sub-menu
+              b
+              dl
+                dt
+                dd
+                  a(href="http://dev.aliyun.com/thread.php?fid=2",target="_blank") 弹性计算 ECS
+                  i
+                  a(href="http://dev.aliyun.com/thread.php?fid=15",target="_blank") 负载均衡服务SLB
+                  i
+                  a(href="http://dev.aliyun.com/thread.php?fid=14",target="_blank") 云监控
+                  br
+                  a(href="http://dev.aliyun.com/thread.php?fid=3",target="_blank") 开放式存储服务 OSS
+                  i
+                  a(href="http://dev.aliyun.com/thread.php?fid=4",target="_blank") 关系型数据库 RDS
+                  br
+                  a(href="http://dev.aliyun.com/thread.php?fid=5",target="_blank") 开放结构化数据服务 OTS
+                  i
+                  a(href="http://dev.aliyun.com/thread.php?fid=6",target="_blank") 云盾
+          li
+            a(href="http://dev.aliyun.com/index.php?m=area&alias=tool",aria-haspopup="J_sub_menu3",target="_blank") 下载中心
+          li
+            a(href="http://dasai.aliyun.com/2013/",target="_blank") 开发者大赛
+          li
+            a(href="http://awdc.aliyun.com/",target="_blank") 开发者大会
+        i.big
+        form.search-form(action="")
+          input.search-input(type="text",placeholder="问题关键字,例如:密码")
+          input.search-button(type="submit",value="搜索") 
+<!--[if IE 6]>
+script
+  $(function() {
+    $('.main-menu').hover(function() {
+      $(this).find('.sub-menu').show();
+    },function() {
+      $(this).find('.sub-menu').hide();
+    })
+  });
+<![endif]-->
+<!--[if lte IE 8]>
+script
+  (function(){
+      var updscreen=function(){
+
+        if($(window).width()>=1280){
+          if(/screen/ig.test($("body").attr("class"))){
+            $("body").get(0).className=$("body").attr("class").replace(/screen[0-9]{3,4}/ig,"screen1200");
+          }else{
+            $("body").addClass("screen1200");
+          }  
+        }else{
+          if(/screen/ig.test($("body").attr("class"))){
+            $("body").get(0).className=$("body").attr("class").replace(/screen[0-9]{3,4}/ig,"screen997");
+          }else{
+            $("body").addClass("screen997");
+          }
+        }
+      }
+      updscreen();
+      $(window).resize(updscreen);
+  })();
+<![endif]-->

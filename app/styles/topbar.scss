@@ -1,0 +1,131 @@
+﻿@import "compass";
+@import "mixin";
+@import "responsive";
+//顶部通栏
+.topbar-wrap{
+  height: 26px;
+}
+.topbar{
+    font:12px "\5B8B\4F53";
+    background-color:#e1e1e1;
+    height: 26px;
+    line-height: 26px;
+    position:fixed;
+    top:0;
+    z-index: 7;
+    width:100%;
+    left:0;
+    a{
+        color:#666666;
+        &:hover{
+            color:#ff6600;
+        }
+    }
+    .inner{
+        
+        margin:0 auto;
+        width:997px;
+        @extend .layout-inner;
+        height: 100px;
+    }
+    .inner-left{
+        float:left;
+        a{
+            padding-right:15px;
+        }
+        a.login-uname{
+            color:#ff6600;
+        }
+        a.has-message{
+            position:relative;
+            background-color:#ff6600;
+            color:#fff;
+            padding:3px 4px;
+            b{
+                border:5px solid #ff6600;
+                border-color:#e1e1e1 #ff6600 #e1e1e1 #e1e1e1;
+                position:absolute;
+                left:-10px;
+                top:5px;
+                width:0;
+                height:0
+            }
+        }
+    }
+    .inner-right{
+        float:right;
+    }
+    i{
+        @include i(12px);
+    }
+    // 网站导航
+    .site_menu {
+        @include inline-block;
+        position: relative;
+        z-index:2;
+        a.menu-hd{
+            width: 58px;
+            position: relative;
+            display: inline-block;
+            b{
+                position: absolute;
+                right: 0px;
+                top: 9px;
+                width: 0;
+                height: 0;
+                border-width: 4px 4px;
+                border-style: solid;
+                border-color: #666 #f5f5f5 #f5f5f5;
+                font-size: 0;
+                line-height: 0;
+                -moz-transition: -moz-transform .2s ease-in;
+                -o-transition: -o-transform .2s ease-in;
+                transition: transform .2s ease-in;
+                border-color: #666 #e1e1e1 #e1e1e1 #e1e1e1;
+                
+            }
+        }
+        &:hover b{
+            @include rotate(180deg);
+            -moz-transform-origin: 50% 30%;
+            -webkit-transform-origin: 50% 30%;
+            -o-transform-origin: 50% 30%;
+            transform-origin: 50% 30%;
+            filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+        }
+        .menu-bd{
+            background-color:#ffffff;
+            border:1px solid #999999;
+            //border-top:2px solid #ff6600;
+            color:#000;
+            display: none;
+            position: absolute;
+            top:20px;
+            left:-22px;
+            width: 68px;
+            //font-size: 12px;
+            @include rem('font-size',12px);
+            padding:10px 16px;
+            b{
+                position: absolute;
+                border-width: 6px;
+                border-style: solid;
+                width:0;
+                height:0;
+                border-color: #f5f5f5 #f5f5f5 #ff6600;
+                left:47px;
+                top:-14px;
+            }
+            li{
+                height: 25px;
+                line-height: 25px;
+            }
+        }
+        &:hover,&:focus{
+            &:hover .menu-bd,&:focus .menu-bd {
+                display: block;
+            }
+        }      
+    }
+    
+}

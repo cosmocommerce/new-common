@@ -1,0 +1,39 @@
+!!! 5
+html(class='no-js', lang='zh-cn')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    block titleName
+    link(rel="stylesheet",href="styles/common.css")
+    link(rel="stylesheet",href="http://static-img3.cdn.aliyuncs.com/??css/common/alipw_skin.css")
+    link(rel="stylesheet",href="iconfont/style.css")
+    block css
+
+    //if lt IE 9
+      script(src="http://static-img3.cdn.aliyuncs.com/js/common/html5.js")
+      
+        
+    script(src="http://static.aliyun.com/js/lib/alipw/classes/alipw-all.js")
+    script(src="http://static-img3.cdn.aliyuncs.com/??js/account/Account.class.js,js/www-summerwind/common.js,js/common/CommonUtils.class.js?v=1367065989")
+    script(src="http://static-img3.cdn.aliyuncs.com/??js/common/alipw_config.js")
+    script(src="scripts/product.js")
+
+    //if lt IE 8
+      script(src="iconfont/lte-ie7.js")
+
+    block script
+    productName = ""
+    block vars
+  body(class="product #{productName}")
+    include inc/topbar
+    block header
+    .aly-wrap
+      .aly-main(role="main")
+        include inc/left-sidebar
+        article.aly-container
+          .aly-content
+            block container
+
+    include inc/footer.html
+    block footer
+

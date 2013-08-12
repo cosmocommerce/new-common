@@ -1,0 +1,367 @@
+@charset "utf-8";
+@import "compass";
+@import "mixin";
+
+// 覆盖首页原来的样式
+
+.page-home .section .layout510-left{ float:left;}
+.mt20{
+    margin-top: 20px;
+}
+.mt25{
+    margin-top: 25px;
+}
+.mt15{
+    margin-top: 15px;
+}
+.mt10{
+    margin-top: 10px;
+}
+.ml20{
+    margin-left:20px;
+}
+.c-layout700-right{
+    width:236px;
+}
+#help_list a{
+  _background-image:url(http://img01.taobaocdn.com/tps/i1/T1Z50bFf4XXXbJl9Iy-220-429.png) !important;
+}
+// 首页顶端对齐
+.page-home .section .layout510 .thumb span {
+  margin-top: 3px;
+}
+.page-home .section h2{
+  padding-top: 1px;
+}
+
+.banner-area{
+    height:280px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    z-index:1;
+    .user-info{
+        position: absolute;
+        z-index: 5;
+        width:100%;
+    }
+    .user-info-area{
+        position:relative;
+        margin:0 auto;
+        .login-area{
+            display:none;
+            position:absolute;
+            width:236px;
+            height:236px;
+            top:22px;
+            right:0;
+            z-index:5;
+            background-color: rgba(255,255,255,0.8);
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#99ffffff', endColorstr='#99ffffff'); /* IE */
+            .login-btns{
+                margin:10px;
+                @include clearfix;
+                .btn{
+                    width:75px;
+                }
+            }
+            .login-mail{
+                margin:5px 10px;
+                text-align: center;
+                .btn{
+                    @include background-image(linear-gradient(#fff6dc, #f7e7bc));
+                    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff6dc',endColorstr='#f7e7bc'); 
+                    width:175px;
+                    color:#ff6600;
+                    span{
+                        vertical-align:middle;
+                    }
+                    &:hover{
+                        background-color:#fdf3d5;
+                        background-image:none;
+                    }
+                }
+            }
+            .help-tab{
+                margin:10px;
+                margin-top:0;
+                .help-tab-nav{
+                    display: table;
+                    width:100%;
+                    *zoom:1;
+                    border-bottom:1px solid #c9c9c9;
+                    li{
+                        float:left;
+                        height:24px;
+                        line-height:24px;
+                        color:#000;
+                        margin-bottom: -1px;
+                        text-align: center;
+                        background-color: #fff;
+                        width:105px;
+                        a{
+                            line-height: 22px;
+                            height:22px;
+                            border:1px solid #c9c9c9;
+                            float:left;
+                            width:103px;
+                            cursor:pointer;
+                            color:#666;
+                            &:hover{
+                                text-decoration: none;
+                            }
+                        }
+                        &.right{
+                          float:right;
+                        }
+                        a:hover{
+                            background-color:#efefef;
+                            color:#000;
+                        }
+                        &.active {
+                            a{
+                                border-top:solid #ff9900 2px;
+                                background-color:#fff;
+                                border-bottom: none;
+                                color:#000;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+                .help-tab-body{
+                    background-color:#fff;
+                    border: 1px solid #c9c9c9;
+                    border-top: none;
+                    padding:0 10px;
+                    height:100px;
+                }
+            }
+            p{
+                span{
+                    @include inline-block;
+                    height:52px;
+                    line-height: 52px;
+                    text-align:center;
+                    width:50%;
+                }
+            }
+        }
+    }
+    .slider{
+        .slider-item{
+            position:absolute;
+            width:100%;
+            height:100%;
+            display:none;
+            &.active{
+                z-index:3;
+            }
+            a{
+                display: block;
+                position:relative;
+                height:100%;
+                margin:0 auto;
+                background:no-repeat center center;
+                b{
+                    position:absolute;
+                    left:0;
+                    @include opacity(0);
+                    top:-50px;
+                    display: block;
+                    height:280px;
+                    width:100%;
+                    img{
+                      height:280px;
+                    }
+                }
+            }
+        }
+    }
+    .slider-items-index{
+        position: absolute;
+        z-index: 4;
+        width: 100%;
+        bottom:0;
+        .slider-index-wrap{
+            height:100%;
+            position:relative;
+            margin:0 auto;
+        }
+        .slider-index{
+            position:absolute;
+            bottom:10px;
+            left:0;
+            z-index: 5;
+            .slider-index-item{
+                width:22px;
+                height:22px;
+                font-size: 11px;
+                line-height:22px;
+                @include inline-block;
+                @include border-radius(11px);
+                -webkit-user-select:none;
+                -moz-user-select:none;
+                background-color:#ecf2f7;
+                text-align: center;
+                cursor:pointer;
+                margin:0 5px;
+                &.active{
+                    background-color:#fe940d;
+                    color:#fff;
+                }
+                &:hover{
+                  @include opacity(0.6)
+                }
+            }
+        }
+    }
+}
+//金牌服务
+.ecs-gold-service{
+    overflow: hidden;
+    dl{
+        float:left;
+        width:235px;
+        padding-right: 53px;
+        padding-left:64px;
+        margin-top:40px;
+        dt{
+            @include rem('font-size',16px);
+            color:#333;
+        }
+        dd{
+            @include rem('font-size',13px);
+            color:#999;
+        }
+    }
+}
+
+
+
+#help_list {
+    ul{
+        padding:10px 0;
+        @include clearfix;
+        li{
+            width:96px;
+            padding:10px 0;
+            text-align: center;
+            float:left;
+        }
+    }
+    a{
+        display: inline-block;
+        padding-left: 25px;
+        padding-right: 10px;
+        color: #333!important;
+        background-image: url(http://static-img4.cdn.aliyuncs.com/images/account/sprite_login_new.gif?v=20130423);
+        background-repeat: no-repeat;
+        height: 20px;
+        &.lesson {
+            background-position: -5px -209px;
+        }
+        &.task {
+            background-position: -5px -289px;
+        }
+        &.act {
+            background-position: -5px -250px;
+        }
+        &.direction {
+            background-position: -5px -329px;
+        }
+    }
+}
+#help_jpfw{
+    span{
+        display: block;
+        float: left;
+        height: 55px;
+        width: 59px;
+        background: url(http://static-img4.cdn.aliyuncs.com/images/account/sprite_login_new.gif?v=20130423) right -130px no-repeat;
+        margin: 20px 8px;
+    }
+    li{
+        height: 25px;
+        line-height: 25px;
+        border-bottom: 1px dashed #e7e7e7;
+        &.a,&.b,&.c{
+            background: url(http://static-img4.cdn.aliyuncs.com/images/account/goldservice-icon.png?v=20130423) 0 5px no-repeat;
+            text-indent: 22px;
+            a{
+              font-size: 12px;
+            }
+        }
+        &.b{
+            background-position: 0 -24px;
+        }
+        &.c{
+            background-position: 0 -51px;
+        }
+    }
+    ul{
+        margin: 0;
+        float: left;
+        width: 115px;
+        margin-top: 10px;
+    }
+}
+
+#login_user_info{
+    .welcome{
+        height: 30px;
+        line-height: 30px;
+        padding:10px 15px;
+        border-bottom:1px solid #929394;
+        .username{
+            color: #F60!important;
+        }
+    }
+    ul.userinfo{
+        padding: 10px 15px 0 15px;
+        border-bottom:1px solid #bfc3c6;
+        li{
+            padding: 7px 0;
+            //border-bottom: 1px dotted #E4E4E4;
+            .messge-count{
+                color:#f60;
+            }
+            i{
+                @include i(12px);
+                margin:0 8px !important;
+                background-color:#929495;
+            }
+        }
+    }
+    .links-row{
+        padding:0 15px;
+        span{
+            display: inline-block;
+                height: 18px;
+                vertical-align: middle;
+                padding-left: 25px;
+                color: #333333;
+                margin-top: 6px;
+                background-image: url(http://static-img4.cdn.aliyuncs.com/images/account/sprite_login.gif);
+                text-decoration: none;
+                cursor: pointer;
+        }
+        .price,.magazine{
+            @include inline-block;
+            width:50%;
+            margin-top: 5px;
+        }
+        .price{
+            span{
+                background-position: -7px -166px;
+            }
+        }
+
+        .magazine{
+            span{
+                background-position: -5px -130px;
+            }
+        }
+    }
+}
+

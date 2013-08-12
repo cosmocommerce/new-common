@@ -1,0 +1,232 @@
+extends layout
+block vars
+  productName = "product-ocs"
+block titleName
+  title 阿里云-开放缓存服务OCS
+block css
+block header
+  include inc/header-index
+  style
+    .product-ocs .features{
+      background-image:url(http://img03.taobaocdn.com/tps/i3/T1yztLFhdiXXXgv8Mo-317-582.png) !important;
+    }
+block container
+  .product-overview.fix-clear
+    .overview-container
+      h1
+        i.icons.icons-ocs-48
+        | 开放缓存服务 OCS
+      p.introduce OCS( Open Cache Service）为在线缓存服务，实现热点数据的快速响应及数据的持久化保存；OCS支持Key-Value的数据结构，兼容memcached协议的客户端都可与服务端通信。
+        br
+        | OCS 支持即开即用的方式快速部署；对于动态Web、APP应用，可通过缓存服务减轻对数据库的压力，从而提高网站整体的响应速度。
+    .buy-container.loading
+      .buy-area
+        p 最划算、最稳定、最安全
+        p 经济型云服务器低至
+          span.font-orange ￥69/月
+        a.btn.btn-large.btn-black.buy-widget-btn(role="button",href="http://console.aliyun.com/ecs/index.html") 进入管理控制台  
+        a.btn.btn-large.btn-orange.buy-widget-btn(role="button",href="buy.aliyun.com") 立即购买
+        p(style="margin-top:8px;") 
+          a(href="#") 申请免费数据迁移和环境配置
+  .product-tab
+    .product-topnav
+      ul.nav.nav-tabs#product_tab
+        li.active(role="tab")
+          a(href="#detail") 产品详情
+        li(role="tab")
+          a(href="#case") 应用场景及案例
+        li(role="tab")
+          a(href="#jpfw") 金牌服务体系
+        li(role="tab")
+          a(href="#help") 产品帮助
+  .tab-content.page-buy
+    .tab-panel.first
+      .anchor
+        a(id="detail",name="detail") &nbsp
+      h2.h2-1 产品详情
+      h3 
+        span 如何使用
+      ul.info-list.dot
+        li 获取激活码，在审核通过后，可用激活码免费开通一个512M的实例（有效期致2013年12月31日）
+        li 登录OCS控制台，获取OCS客户端和访问信息，并可对实例进行配置管理
+        li 将OCS客户端植入应用程序，应用程序通过客户端对OCS进行生产操作
+      h3 
+        span 产品优势
+      ul.info-list.features
+        li.features-item
+          h4 
+            span.icon-good 
+            | 快速
+          ul.features-info
+            li SSD+内存配置，响应速度远远高于磁盘性能
+            li 分布式集群，突破单机服务和网络能力
+            li 提供内网访问，降低网络开销
+        li.features-item
+          h4 
+            span.icon-good 
+            | 可靠
+          ul.features-info
+            li 分布式生产集群及负载均衡设计，硬件损坏10秒内快速恢复
+            li 数据高可靠，通过SSD实现数据持久化保存
+            li 安全可靠， 内网访问,支持访问权限控制
+        li.features-item
+          h4 
+            span.icon-good 
+            | 便捷
+          ul.features-info
+            li 快速开通，只需申请实例即可使用
+            li 弹性升级，修改规格不影响服务
+      h3 
+        span 产品功能 
+      ul.info-list.dot
+        li Web应用可以通过OCS实现热点数据的高速缓存，例如完成数据库写操作时同步写入OCS，而在读取时先从OCS中读取，从而大幅提高访问速度
+        li OCS主要支持存储、读取、删除及其他类操作，以下OCS主要元操作，不同第三方客户端封装后会有增减或修改，请参考相应的客户端说明
+        li 存储类命令：用来对Key进行赋值例， 例如Add、Replace、Set
+        li 读取类命令：用来获取Key的Value，例如Get
+        li 删除类命令：用来删除数据项的关键字，  例如Delete
+        li 其他类命令等：
+    .tab-panel
+      .anchor
+        a(id="case",name="case") &nbsp
+      h2 应用场景及案例
+      ul.info-list.dot
+        li 适合于动态Web网站的热点数据缓存
+        li 对数据访问速度要求较高
+        li 数据更新频率低、读取频率高
+        li 数据可以key/value的形式存储
+        li 单个数据较小，建议在KB级别
+      .customer-panel
+        .panel-container.panel-container-loading(id="customer_slideview")
+         
+        .more-customer
+          h4 更多客户
+          .more-customer-wrap
+            a(href="#")
+              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57") 
+            a(href="#")
+              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
+            a(href="#")
+              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
+            a(href="#")
+              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
+            a(href="#")
+              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
+        .panel-left
+          a(id="customer_slideview_prevbtn",href="#") 
+        .panel-right
+          a(id="customer_slideview_nextbtn",href="#") 
+
+    .tab-panel
+      .anchor
+        a(id="jpfw",name="jpfw") &nbsp
+      h2 金牌服务体系
+      .ecs-gold-service.fix-clear
+        dl.icons.icons-pei
+          dt 故障100倍赔偿
+          dd 由于阿里云原因导致您服务器故障无法使用，按照故障时间进行100倍赔偿！
+        dl.icons.icons-tui
+          dt 5天无理由退款
+          dd 阿里云郑重承诺，在购买云服务器起5天内可无理由申请退款，让您买得放心！
+        dl.icons.icons-shuju
+          dt 免费数据迁移
+          dd 免费为您提供相同操作系统数据迁移，让您迁站无忧，省钱更省心！
+        dl.icons.icons-h-24
+          dt 7*24小时售后技术支持
+          dd 为确保您的服务正常运行，阿里云为您提供专业7*24小时售后技术支持服务！
+        dl.icons.icons-bei
+          dt 免费快速备案
+          dd 免费为您提供备案服务，包括首次备案、新增接入、新增网站！
+        dl.icons.icons-ruanjian
+          dt 免费软件安装
+          dd 阿里云免费提供windows和linux基础软件的安装服务，让您省心、放心！
+        dl.icons.icons-shiyong
+          dt 5天免费试用
+          dd 云服务器提供5天免费试用，先试用后购机，让您买个安心！
+
+
+    .tab-panel
+      .anchor
+        a(id="help",name="help") &nbsp
+      h2.h2-1 产品帮助
+      .help
+        dl.dot
+          dt 操作指南
+          dd
+            a(href="") 远程连接for linux远程连接for linux远程连接for linux远程连接for linux远程连接for linux
+          dd
+            a(href="") Linux FTP服务配置
+          dd
+            a(href="") 远程连接for Windows
+          dd
+            a(href="") Windows FTP服务配置
+        dl.dot
+          dt 资料中心
+          dd
+            a(href="") 云服务器用户管理指南
+          dd
+            a(href="") 云服务器技术白皮书
+        dl.dot.more
+          dt.more.fix-clear 
+            span 常见问题
+            a(href="") 更多...
+          dd
+            a(href="") ip类相关问题
+          dd
+            a(href="") 机房相关问题
+          dd
+            a(href="") 配置升级相关问题
+          dd
+            a(href="") 操作系统相关问题 
+  script
+    (function(){          
+          Alipw.importClass('Alipw.SlideView');
+          AYSW.product.slideCustomerViews =[];
+          AYSW.product.slideCustomerViews.push([
+                      '<ul class="customer-item">',
+                              '<li class="li-title">囧记单词</li>',
+                              '<li class="li-content-1">移动APP开发者解决方案</li>',
+                              '<li class="li-content-2"><span>急需解决：</span>用户增长速度快，流量急需扩容，服务成本过高</li>',
+                              '<li class="li-content-2"><span>购买服务：</span>云服务器V型+<a href="#">关系型数据库</a></li>',
+                              '<li class="li-logo"> <img width="90" height="90" src="http://img02.taobaocdn.com/tps/i2/T10Nx4XrBXXXbCFbsb-100-100.jpg"></li>',
+                              '<li class="li-info poptip-container">',
+                                '<div class="poptip-arrow"><em>◆</em><span>◆</span></div>',
+                                '<h4>客户使用心得：</h4>',
+                                '<p>从2012年开始就想把服务器跟第三方更加专业的合作伙伴进行合作。综合对比下来觉得阿里云的云服务在目前的云主机里是做得比较好的，所以很原意和你们进行合作，速度和稳定性方面都很好。</p>',
+                              '</li>',
+                        '</ul>'
+                        ].join(''));
+          AYSW.product.slideCustomerViews.push([
+                      '<ul class="customer-item">',
+                              '<li class="li-title">囧记单词</li>',
+                              '<li class="li-content-1">移动APP开发者解决方案</li>',
+                              '<li class="li-content-2"><span>急需解决：</span>用户增长速度快，流量急需扩容，服务成本过高</li>',
+                              '<li class="li-content-2"><span>购买服务：</span>云服务器V型+<a href="#">关系型数据库</a></li>',
+                              '<li class="li-logo"> <img width="90" height="90" src="http://img02.taobaocdn.com/tps/i2/T10Nx4XrBXXXbCFbsb-100-100.jpg"></li>',
+                              '<li class="li-info poptip-container">',
+                                '<div class="poptip-arrow"><em>◆</em><span>◆</span></div>',
+                                '<h4>客户使用心得：</h4>',
+                                '<p>从2012年开始就想把服务器跟第三方更加专业的合作伙伴进行合作。综合对比下来觉得阿里云的云服务在目前的云主机里是做得比较好的，所以很原意和你们进行合作，速度和稳定性方面都很好。</p>',
+                              '</li>',
+                        '</ul>'
+                        ].join(''));
+            //登录区块
+            var loginBoxHtml = [
+                  '<p>最划算、最稳定、最安全</p>',
+                  '<p>经济型云服务器低至<span class="font-orange">￥89/月</span></p><a role="button" href="buy.aliyun.com" class="btn btn-large btn-orange buy-widget-btn">立即购买</a>'].join("");
+            
+            if (!AYSW.product.getCookie()['login_aliyunid']){
+                //已登录
+                var ecsHTML= [
+                  '<p>最划算、最稳定、最安全</p>',
+                  '<p>经济型云服务器低至<span class="font-orange">￥89/月</span></p><a role="button" href="http://console.aliyun.com/ecs/index.html" class="btn btn-large btn-black buy-widget-btn">进入管理控制台  </a><a role="button" href="buy.aliyun.com" class="btn btn-large btn-orange buy-widget-btn">立即购买</a>',
+                  '<p style="margin-top:8px;"> <a href="#">申请免费数据迁移和环境配置</a></p>'].join("");
+                $(".buy-container .buy-area").html(ecsHTML);
+              }else{
+                //未登录
+                 $(".buy-container .buy-area").html(loginBoxHtml);
+              }
+            //显示
+            AYSW.product.viewBuyArea();
+            
+      })();
+  script(src="http://w.cnzz.com/c.php?id=30062873")

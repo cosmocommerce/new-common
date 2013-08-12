@@ -1,0 +1,56 @@
+header
+  .header-wrap
+    .header-inner
+      a(href="http://www.aliyun.com") 
+        h1.logo 阿里云官方网站
+          span.sub-title 打造数据分享第一平台
+        a(href="http://help.aliyun.com",class="sub-logo sub-logo-help",title="阿里云服务中心") 帮助中心
+      nav
+        ul.nav-child
+          li
+            a(href="http://help.aliyun.com/") 服务中心首页
+          li
+            a(href="http://help.aliyun.com/guide") 新手指南
+          li
+            a(href="http://help.aliyun.com/manual",aria-haspopup="J_sub_menu3") 产品使用帮助
+          li
+            a(href="http://www.aliyun.com/act/webbaindex.html") 备案专区
+          li
+            a(href="http://www.aliyun.com/act/contactservice.html") 联系客服
+        i.big
+        form.search-form(action="")
+          input.search-input(type="text",placeholder="问题关键字,例如:密码",id="help_search",onfocus="AYSW.help.searchInputFocusHandler(event,this)",onblur="AYSW.help.searchInputBlurHandler(event,this)")
+          input.search-button(type="submit",value="搜索",onclick="AYSW.help.searchKeyword();return false;") 
+<!--[if IE 6]>
+script
+  $(function() {
+    $('.main-menu').hover(function() {
+      $(this).find('.sub-menu').show();
+    },function() {
+      $(this).find('.sub-menu').hide();
+    })
+  });
+<![endif]-->
+<!--[if lte IE 8]>
+script
+  (function(){
+      var updscreen=function(){
+
+        if($(window).width()>=1280){
+          if(/screen/ig.test($("body").attr("class"))){
+            $("body").get(0).className=$("body").attr("class").replace(/screen[0-9]{3,4}/ig,"screen1200");
+          }else{
+            $("body").addClass("screen1200");
+          }  
+        }else{
+          if(/screen/ig.test($("body").attr("class"))){
+            $("body").get(0).className=$("body").attr("class").replace(/screen[0-9]{3,4}/ig,"screen997");
+          }else{
+            $("body").addClass("screen997");
+          }
+        }
+      }
+      updscreen();
+      $(window).resize(updscreen);
+  })();
+<![endif]-->

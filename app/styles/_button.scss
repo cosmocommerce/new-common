@@ -1,0 +1,143 @@
+﻿/*.btn{
+    border:none;
+    height: 35px;
+    line-height: 35px;
+    @include inline-block;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    margin-right: 5px;
+    padding:0 20px;
+    text-align: center;
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+}
+*/
+//按钮样式
+//统一默认，不依赖reset
+.btn *{margin:0; padding:0}
+.btn{
+    @include inline-block;
+    text-align:center; 
+    text-decoration:none; 
+    vertical-align:middle; 
+    cursor:pointer; 
+    font-family:Microsoft YaHei,verdana,Hiragino Sans GB;
+    @include border-radius(4px);
+    *overflow:visible;
+    outline:none;
+}
+.btn:hover{ text-decoration:none !important;}
+.btn:active{position:relative;top:1px;}
+.btn::-moz-focus-inner,
+.btn::-moz-focus-inner {
+    border: 0;
+}
+//按钮尺寸
+.btn-large{
+    padding:0 20px;
+    font-size:14px; 
+    height: 36px;
+    line-height: 36px;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+}
+.btn-small{
+    line-height:30px; 
+    height:30px;
+    padding:0 15px;
+    font-size:12px;
+    //font-weight:bold; 
+}
+.btn-mini{
+    line-height:26px; 
+    height:26px; 
+    padding:0 10px;
+    font-size:12px;
+}
+
+//橘色按钮
+.btn-orange{
+    color:#fff;
+    background-color: #f60;
+    @include background-image(linear-gradient(bottom, #ee7b00, #ff8a00));
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee7b00',endColorstr='#ff8a00'); 
+    @include text-shadow(0px -1px 0px #b25f00);
+    border:0 solid;
+}
+.btn-orange:hover{
+    background-color:#ffa800;
+    background-image:none;
+    @include text-shadow(0px -1px 0px #a26b00);
+}
+.btn-orange:active{
+    background-color:#d4961f;
+    background-image:none;
+    @include text-shadow(0px -1px 0px #a26b00);
+}
+
+
+//正常按钮
+/*
+.btn-gray{
+    color:#333; 
+    border:1px solid #bcbcbc; 
+    background-color:#e9e9e9; 
+    background:-webkit-gradient(linear,left top,left bottom,from( #f9f9f9),to(#e9e9e9)); 
+    background:-moz-linear-gradient(top,#f9f9f9,#e9e9e9); 
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9',endColorstr='#e9e9e9'); 
+    background:-o-linear-gradient(top,#f9f9f9,#e9e9e9); 
+    background:linear-gradient(top,#f9f9f9,#e9e9e9); 
+}
+.btn-gray:hover{border:1px solid #eaeaea; background-color:#e9e9e9; background:-webkit-gradient(linear,left top,left bottom,from( #f3f3f3),to( #fbfbfb)); background:-moz-linear-gradient(top,#f3f3f3,#fbfbfb); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f3f3f3',endColorstr='#fbfbfb'); background:-o-linear-gradient(top,#f3f3f3,#fbfbfb); background:linear-gradient(top,#f3f3f3,#fbfbfb); }
+.btn-gray:active{border:1px solid #bcbcbc; background-color:#e5e5e5;  box-shadow:0 2px 3 0 rgba(204,204,204,.3) inset;}
+*/
+
+//红色按钮
+.btn-red{color:#fff; border:1px solid #991100; background-color:#cc1100; background:-webkit-gradient(linear,left top,left bottom,from(#dd1100),to(#cc1100)); background:-moz-linear-gradient(top,#dd1100,#cc1100); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dd1100',endColorstr='#cc1100'); background:-o-linear-gradient(top,#dd1100,#cc1100); background:linear-gradient(top,#dd1100,#cc1100); }
+.btn-red:hover{border:1px solid #991100; background-color:#ee2200; background:-webkit-gradient(linear,left top,left bottom,from( #ee2200),to( #ff2200)); background:-moz-linear-gradient(top,#ee2200,#ff2200); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee2200',endColorstr='#ff2200'); background:-o-linear-gradient(top,#ee2200,#ff2200); background:linear-gradient(top,#ee2200,#ff2200); }
+.btn-red:active{border:1px solid #991100; background-color:#e5e5e5;  box-shadow:0 2px 3 0 rgba(227,136,0,.3) inset;}
+
+
+//不可用的按钮
+.btn-disable{color:#ccc; border:1px solid #ccc; background-color:#e9e9e9; background:-webkit-gradient(linear,left top,left bottom,from( #e9e9e9),to(#f9f9f9)); background:-moz-linear-gradient(top,#e9e9e9,#f9f9f9); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9',endColorstr='#f9f9f9'); background:-o-linear-gradient(top,#e9e9e9,#f9f9f9); background:linear-gradient(top,#e9e9e9,#f9f9f9); cursor:default;}
+.btn-disable:active{position:relative;top:0px; outline:none;}
+
+
+.btn-black{
+    @include border-radius(4px);
+    background-color: #000;
+    @include background-image(linear-gradient(bottom, #242424, #4e4e4e));
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#242424',endColorstr='#4e4e4e'); 
+    color: #ccc;
+    @include text-shadow(0 -1px rgba(0,0,0,.75));
+}
+.btn-black:hover{
+    background-color: #666666;
+    background-image:none;
+}
+.btn-black:active{
+    background-color:#141414;
+    background-image:none;
+}
+.btn-gray{
+    color:#333; 
+    background-color: #333;
+    //filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebebeb',endColorstr='#eeeeee');
+    //background-color: #333;
+    @include background-image(linear-gradient(bottom, #d8d8d8, #e5e5e5));
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#DBDBDB',endColorstr='#E5E5E5'); 
+}
+.btn-gray:hover{
+    background-color: #efefef;
+    background-image:none;
+}
+.btn-gray:active{
+    background-color: #e4e4e4;
+    background-image:none;
+}
+.btn-buy{
+    //@extend .btn-orange;
+    //width:140px;
+}

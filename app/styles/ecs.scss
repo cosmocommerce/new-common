@@ -1,0 +1,28 @@
+﻿@charset "utf-8";
+@import "compass";
+@import "mixin";
+@import "ecs-calculator";//ecs价格计算器
+
+//因背景图不同，这里需要重写背景URL
+.features{
+    background-image: url(http://img03.taobaocdn.com/tps/i3/T1hUORXx8fXXcOmuw2-339-731.png) !important;
+}
+//金牌服务
+.ecs-gold-service{
+    overflow: hidden;
+    dl{
+        float:left;
+        width:235px;
+        padding-right: 53px;
+        padding-left:64px;
+        margin-top:40px;
+        dt{
+            @include rem('font-size',16px);
+            color:#333;
+        }
+        dd{
+            @include rem('font-size',12px);
+            color:#999;
+        }
+    }
+}

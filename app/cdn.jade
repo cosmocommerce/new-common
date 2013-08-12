@@ -1,0 +1,272 @@
+extends layout
+block vars
+  productName = "product-cdn"
+block titleName
+  title ECS - 阿里云-打造数据第一平台
+block css
+block header
+  include inc/header-index
+block container
+  .product-overview.fix-clear
+    .overview-container
+      h1
+        i.icons.icons-cdn-48
+        | 云服务器 CDN
+      p.introduce 云服务器（Elastic Compute Service, ECS）是一种处理能力可弹性伸缩的计算服务，其管理方式比物理服务器更简单高效。云服务器帮助您快速构建更稳定、安全的应用，降低开发运维的难度和整体IT成本，使您能够更专注于核心业务创新。
+    .buy-container.loading
+      .buy-area
+        p 最划算、最稳定、最安全
+        p 经济型云服务器低至
+          span.font-orange ￥89/月
+        a.btn.btn-large.btn-black.buy-widget-btn(role="button",href="http://console.aliyun.com/ecs/index.html") 进入管理控制台  
+        a.btn.btn-large.btn-orange.buy-widget-btn(role="button",href="buy.aliyun.com") 立即购买
+        p(style="margin-top:8px;") 
+          a(href="#") 申请免费数据迁移和环境配置
+  .product-tab
+    .product-topnav
+      ul.nav.nav-tabs#product_tab
+        li.active(role="tab")
+          a(href="#detail") 产品详情
+        li(role="tab")
+          a(href="#case") 应用场景及案例
+        li(role="tab")
+          a(href="#price") 价格总览
+        li(role="tab")
+          a(href="#jpfw") 金牌服务体系
+        li(role="tab")
+          a(href="#help") 产品帮助
+  .tab-content.page-buy
+    .tab-panel
+      .anchor
+        a(id="detail",name="detail") &nbsp
+      h2.h2-1 产品详情
+      p
+        a.btn.btn-large.btn-black.J_btn_video(href="http://cloud.video.taobao.com//video/play/sid/10446443/uid/653771672/v/2006/f/video.swf")
+          span.icon-play
+          |  了解ECS
+        a.btn.btn-large.btn-black.J_btn_video(href="http://cloud.video.taobao.com//play/u/653771672/p/2/e/1/t/1/10478914.swf")
+          span.icon-play
+          |  对比传统服务器
+        a.btn.btn-large.btn-gray(href="http://www.aliyun.com/promotion/bijia",target="_blank")
+          span.icon-counter
+          |  选型推荐
+      h3 
+        span 如何使用
+      ul.info-list.dot
+        li 注册阿里云账号并在线购买云服务器实例
+        li 登录阿里云管理控制台进行云服务器实例的基本管理，如修改密码、重启、更换操作系统等，您还可以通过API的方式来管理云服务器
+        li 远程登录到云服务器后运行程序或脚本，Linux系统可以使用SSH，Windows系统可以使用远程桌面登录，登录后的管理方式和物理服务器没有差别
+        li 安装Apache/Nginx, MySQL等应用软件
+        li 通过管理控制台查看云服务器的基本运行性能指标（CPU利用率、网络带宽、磁盘读写速率等），强烈建议您通过云监控部署更多的性能监控指标
+      h3 
+        span 产品优势
+      ul.info-list.features
+        li.features-item
+          h4 
+            span.icon-good 
+            | 稳定
+          ul.features-info
+            li 服务可用性99.9%，数据可靠性99.999%
+            li 自动宕机迁移
+            li 数据备份和回滚
+            li 系统性能报警
+        li.features-item
+          h4 
+            span.icon-good 
+            | 安全
+          ul.features-info
+            li 安全组规则保护
+            li 防DDoS系统
+            li 多用户隔离
+            li 防密码破解
+        li.features-item
+          h4 
+            span.icon-good 
+            | 多线BGP网络
+          ul.features-info
+            li 多线接入
+            li 基于BGP的最优路由算法
+        li.features-item
+          h4 
+            span.icon-good 
+            | 弹性
+          ul.features-info.last-feature
+            li 10分钟内可启动或释放100台云服务器
+            li 在线不停机升级带宽
+            li 5分钟内停机升级CPU和内存
+      h3 
+        span 产品功能 
+        a.idc-link(href="http://help.aliyun.com/manual?helpId=673") 
+          i
+          与IDC托管物理机比较
+      ul.info-list.dot
+        li 对云服务器的操作系统（Linux和Windows）拥有完全控制权及基本云管理操作，如启动、停止、重启、重置、修改密码以及更换操作系统等。
+        li 对云服务器的磁盘数据生成快照；用快照恢复磁盘数据
+        li 针对已经安装了应用软件包的云服务器生成自定义镜像，并采用镜像来启动其他云服务器。
+        li 通过安全组功能对一台或多台云服务器设定访问权限
+    .tab-panel
+      .anchor
+        a(id="case",name="case") &nbsp
+      h2 应用场景及案例
+      ul.info-list.dot
+        li 在云服务器上安装各种应用软件，譬如Apache/Nginx、企业ERP/CRM管理软件、游戏软件、教育软件等
+        li 负载均衡服务SLB和多个云服务器连接成应用服务集群, 后端数据库采用高性能的关系型数据库服务RDS，此结构下应用系统的服务能力可以水平扩展
+        li 云服务器与开放存储服务OSS, 开放结构化数据服务OTS结合使用以提供更大的存储和访问能力
+      .customer-panel
+        .panel-container.panel-container-loading(id="customer_slideview")
+         
+        .more-customer
+          h4 更多客户
+          .more-customer-wrap
+            a(href="#")
+              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57") 
+            a(href="#")
+              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
+            a(href="#")
+              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
+            a(href="#")
+              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
+            a(href="#")
+              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
+        .panel-left
+          a(id="customer_slideview_prevbtn",href="#") 
+        .panel-right
+          a(id="customer_slideview_nextbtn",href="#") 
+
+    .tab-panel
+      .anchor
+        a(id="price",name="price") &nbsp
+      h2 价格总览
+      include inc/ecs-calculator
+    .tab-panel
+      .anchor
+        a(id="jpfw",name="jpfw") &nbsp
+      h2 金牌服务体系
+      .ecs-gold-service.fix-clear
+        dl.icons.icons-pei
+          dt 故障100倍赔偿
+          dd 由于阿里云原因导致您服务器故障无法使用，按照故障时间进行100倍赔偿！
+        dl.icons.icons-tui
+          dt 5天无理由退款
+          dd 阿里云郑重承诺，在购买云服务器起5天内可无理由申请退款，让您买得放心！
+        dl.icons.icons-shuju
+          dt 免费数据迁移
+          dd 免费为您提供相同操作系统数据迁移，让您迁站无忧，省钱更省心！
+        dl.icons.icons-h-24
+          dt 7*24小时售后技术支持
+          dd 为确保您的服务正常运行，阿里云为您提供专业7*24小时售后技术支持服务！
+        dl.icons.icons-bei
+          dt 免费快速备案
+          dd 免费为您提供备案服务，包括首次备案、新增接入、新增网站！
+        dl.icons.icons-ruanjian
+          dt 免费软件安装
+          dd 阿里云免费提供windows和linux基础软件的安装服务，让您省心、放心！
+        dl.icons.icons-shiyong
+          dt 5天免费试用
+          dd 云服务器提供5天免费试用，先试用后购机，让您买个安心！
+
+
+    .tab-panel
+      .anchor
+        a(id="help",name="help") &nbsp
+      h2.h2-1 产品帮助
+      .help
+        dl.dot
+          dt 操作指南
+          dd
+            a(href="") 远程连接for linux
+          dd
+            a(href="") Linux FTP服务配置
+          dd
+            a(href="") 远程连接for Windows
+          dd
+            a(href="") Windows FTP服务配置
+        dl.dot
+          dt 资料中心
+          dd
+            a(href="") 云服务器用户管理指南
+          dd
+            a(href="") 云服务器技术白皮书
+        dl.dot.more
+          dt.more.fix-clear 
+            span 常见问题
+            a(href="") 更多...
+          dd
+            a(href="") ip类相关问题
+          dd
+            a(href="") 机房相关问题
+          dd
+            a(href="") 配置升级相关问题
+          dd
+            a(href="") 操作系统相关问题 
+  script
+    (function(){          
+          Alipw.importClass('Alipw.SlideView');
+          AYSW.product.slideCustomerViews =[];
+          AYSW.product.slideCustomerViews.push([
+                      '<ul class="customer-item">',
+                              '<li class="li-title">囧记单词</li>',
+                              '<li class="li-content-1">移动APP开发者解决方案</li>',
+                              '<li class="li-content-2"><span>急需解决：</span>用户增长速度快，流量急需扩容，服务成本过高</li>',
+                              '<li class="li-content-2"><span>购买服务：</span>云服务器V型+<a href="#">关系型数据库</a></li>',
+                              '<li class="li-logo"> <img width="90" height="90" src="http://img02.taobaocdn.com/tps/i2/T10Nx4XrBXXXbCFbsb-100-100.jpg"></li>',
+                              '<li class="li-info poptip-container">',
+                                '<div class="poptip-arrow"><em>◆</em><span>◆</span></div>',
+                                '<h4>客户使用心得：</h4>',
+                                '<p>从2012年开始就想把服务器跟第三方更加专业的合作伙伴进行合作。综合对比下来觉得阿里云的云服务在目前的云主机里是做得比较好的，所以很原意和你们进行合作，速度和稳定性方面都很好。</p>',
+                              '</li>',
+                        '</ul>'
+                        ].join(''));
+          AYSW.product.slideCustomerViews.push([
+                      '<ul class="customer-item">',
+                              '<li class="li-title">囧记单词</li>',
+                              '<li class="li-content-1">移动APP开发者解决方案</li>',
+                              '<li class="li-content-2"><span>急需解决：</span>用户增长速度快，流量急需扩容，服务成本过高</li>',
+                              '<li class="li-content-2"><span>购买服务：</span>云服务器V型+<a href="#">关系型数据库</a></li>',
+                              '<li class="li-logo"> <img width="90" height="90" src="http://img02.taobaocdn.com/tps/i2/T10Nx4XrBXXXbCFbsb-100-100.jpg"></li>',
+                              '<li class="li-info poptip-container">',
+                                '<div class="poptip-arrow"><em>◆</em><span>◆</span></div>',
+                                '<h4>客户使用心得：</h4>',
+                                '<p>从2012年开始就想把服务器跟第三方更加专业的合作伙伴进行合作。综合对比下来觉得阿里云的云服务在目前的云主机里是做得比较好的，所以很原意和你们进行合作，速度和稳定性方面都很好。</p>',
+                              '</li>',
+                        '</ul>'
+                        ].join(''));
+            //登录区块
+            
+            
+            $.getJSON('/promotion/newproductajax',{type:'cdn'},function(result) {
+              if(!result) {
+                return;
+              }
+              var buyArea = $(".buy-container .buy-area");
+              if(result && result.code === -2) {
+                // 未登录
+                var loginBoxHtml = [
+                  '<p><a role="button" href="http://i.aliyun.test/inviteapply?agent_id=PjFAwl3VLvs%3D" class="btn btn-large btn-orange buy-widget-btn">获取邀请码</a></p>',
+                  '<p><a href="">登录</a>/<a href="">注册</a></p>'
+                  ].join("");
+                buyArea.html(loginBoxHtml);
+                return;
+              }
+
+              if(result.code === 200) {
+                var invitationCode = result.data.invitationCode;
+                if(invitationCode == 'false') {
+                  buyArea.html('<p>需要邀请码才能开通CDN服务</p><p><a href="http://i.aliyun.test/inviteapply?agent_id=PjFAwl3VLvs%3D" class="btn btn-large btn-orange buy-widget-btn">获取邀请码</a></p>');
+                  return;
+                }
+                if(result.count === 0) {
+                  buyArea.html('<p>您已拥有邀请码</p><p><a href="" class="btn btn-large btn-orange buy-widget-btn">开通CDN</a></p>');
+                }else {
+                  buyArea.html('<a role="button" target="_blank" href="http://console.aliyun.com/cdn/index.htm" class="btn btn-large btn-black buy-widget-btn" data-ga="">进入管理控制台</a>');
+                }
+              }
+            });
+            //显示
+            AYSW.product.viewBuyArea();
+            
+      })();
+  script(src="http://buy.aliyun.com?app=vm_js")
+  script(src="http://static.aliyun.com/js/www-summerwind/buy_modules.js?v=1367065989")
+  script(src="http://static.aliyun.com/js/www-summerwind/product_vmcalculator.js?v=1367065989")
+  script(src="http://w.cnzz.com/c.php?id=30062873")

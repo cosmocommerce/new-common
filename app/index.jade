@@ -1,0 +1,254 @@
+!!! 5
+html(lang='zh-cn')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1')
+    title 首页 - 阿里云
+
+    script(src="http://static-img3.cdn.aliyuncs.com/js/lib/alipw/classes/alipw-base.js?v=1368612239")
+    
+    link(rel="stylesheet",href="http://static-img2.cdn.aliyuncs.com/??css/www-summerwind/shared.css,css/www-summerwind/style.css?v=1368612239")
+    
+    link(rel="stylesheet",href="styles/common.css")
+    link(rel="stylesheet",href="iconfont/style.css")
+    link(rel="stylesheet",href="styles/index.css")
+
+    //if lt IE 9
+      script(src="http://static-img3.cdn.aliyuncs.com/js/common/html5.js")
+      script(src="scripts/respond.js")
+
+    script(src="http://static-img3.cdn.aliyuncs.com/js/www-summerwind/common.js")
+
+    //if lt IE 8
+      script(src="iconfont/lte-ie7.js")
+    style
+      #feedback{display:block;position:fixed;_position:absolute;right:0;top:112px;width:25px;height:37px;text-indent:-2000px;z-index:330;background:url(http://img04.taobaocdn.com/tps/i4/T1MSlbFb4cXXc3cmDa-92-115.png) no-repeat 0 0}#feedback:hover{background-position:0 -42px}#feedback i{height:21px;width:0;position:absolute;top:7px;right:25px;-webkit-transition:width 300ms ease;-moz-transition:width 300ms ease;-ms-transition:width 300ms ease;-o-transition:width 300ms ease;transition:width 300ms ease;background:url(http://img04.taobaocdn.com/tps/i4/T1MSlbFb4cXXc3cmDa-92-115.png) no-repeat 0 -91px}#feedback:hover i{width:96px;height:26px;right:21px}.c-sectitle-2 span,.c-sectitle-1{padding-left:0;}.slider-index:first-child{margin-left:0 !important;}
+  body.index
+    a#feedback.icon-pen(href="")
+      | 给新版提意见
+      i
+    include inc/topbar
+    include inc/header-index
+    .banner-area
+      .user-info
+        .user-info-area
+          .login-area#login_area
+            .login-btns
+              a.btn.btn-small.btn-orange(href="https://account.aliyun.com/register/register.htm?oauth_callback=http%3A%2F%2Fwww.aliyun.com%2F",style="float:left;") 免费注册
+              a.btn.btn-small.btn-orange(href="https://account.aliyun.com/login/login.htm?oauth_callback=http%3A%2F%2Fwww.aliyun.com%2F",style="float:right;") 登录
+            .help-tab#help_tab
+              ul.help-tab-nav
+                li.active(data-src="help_list")
+                  a 新手专区
+                li.right(data-src="help_jpfw")
+                  a 金牌服务
+              .help-tab-body
+                #help_list
+                  ul
+                    li(style="border-bottom: 1px dotted #E7E7E7;") 
+                      a.lesson(href="http://bbs.aliyun.com/read.php?tid=135619",target="_blank") 新手教程
+                    li(style="border-bottom: 1px dotted #E7E7E7;") 
+                      a.task(href="http://bbs.aliyun.com/read.php?tid=128287",target="_blank") 新手礼包
+                    li 
+                      a.act(href="http://www.aliyun.com/act/buyvmpromotion.html",target="_blank") 热点活动
+                    li 
+                      a.direction(href="http://help.aliyun.com/guide?lastSortId=428",target="_blank") 新手指南
+                #help_jpfw(style="display:none;")
+                  a(href='http://promotion.aliyun.com/act/jpfw.html', target='_blank')
+                    span
+                  ul
+                    li.a
+                      a(href='http://promotion.aliyun.com/act/jpfw.html?czclac=65a1d80a0bc368dc8873ba3a6d5f5e23#4',target="_blank") 免费快速备案
+                    li.b
+                      a(href='http://promotion.aliyun.com/act/jpfw.html?czclac=b974fe41cc2653560b10fdd898c111b6#6',target="_blank") 免费数据迁移
+                    li.c
+                      a(href='http://promotion.aliyun.com/act/jpfw.html?czclac=3cd5adf7d4e07bde5905da0f3045efb1#2',target="_blank") 故障100倍赔偿
+            .login-mail 
+              a.btn.btn-large.btn-gray(href="http://mail.aliyun.com",target="_blank")
+                span.icon-mail 
+                |  登录阿里云邮箱
+          .login-area#login_user_info
+            .welcome
+              | 欢迎您，
+              span.username
+            ul.userinfo
+              li 
+                a(href="http://i.aliyun.com/pm",target="_blank") 消息中心 
+                a(href="http://i.aliyun.com/pm",target="_blank")
+                  span.messge-count
+              li 
+                a(href="http://console.aliyun.com/",target="_blank") 进入管理控制台
+              li 去 
+                a(href="http://i.aliyun.com/",target="_blank") 用户中心 
+                | 看看
+              li 
+                a(href="http://i.aliyun.com/faq",target="_blank") 售后支持
+                i
+                a(href="http://bbs.aliyun.com/thread.php?fid=157",target="_blank") 意见反馈
+                i
+                a(href="http://my.aliyun.com",target="_blank") 手机云空间
+            .links-row
+              a.price(href='http://help.aliyun.com/manual', target='_blank')
+                span 价格总览
+              a.magazine(href='http://lingyun.aliyun.com?spm=5176.383338.10a3c000.d37.qN2UKK', target='_blank')
+                span 凌云杂志
+      #slider.slider
+        <div style="background:#1a0e30 url(http://img01.taobaocdn.com/tps/i1/T1A2J3FftfXXcr67oX-1200-280.jpg) no-repeat center center;z-index:3;" class="slider-item active"><a title="昆塔盒子总动员"  target="_blank" style=""  data-ga="AD.Banner.1000101"  href="http://promotion.aliyun.com/kunta"></a></div> 
+        <div style="background:#fecf31 url(http://img01.taobaocdn.com/tps/i1/T13zBSFbtfXXcr67oX-1200-280.jpg) no-repeat center center;" class="slider-item"><a title="推荐有礼，赚取集分宝"  target="_blank" style=""  data-ga="AD.Banner.1000102"  href="http://promotion.aliyun.com/act/recommend-buy"></a></div> 
+
+        <div style="background:#fcfbe7 url(http://img01.taobaocdn.com/tps/i1/T1I98VFjFXXXcr67oX-1200-280.jpg) no-repeat center center;" class="slider-item"><a title="续费有惊喜"  target="_blank" style=""  data-ga="AD.Banner.1000103"  href="http://www.aliyun.com/act/old-customer-favourable/index.html"></a></div> 
+
+        <div style="background:#3b9bed url(http://img02.taobaocdn.com/tps/i2/T1vi06FdXeXXcr67oX-1200-280.jpg) no-repeat center center;" class="slider-item"><a title="金牌服务"  target="_blank" style=""  data-ga="AD.Banner.1000104"  href="http://promotion.aliyun.com/act/newjpfw.html"></a></div> 
+
+      .slider-items-index#slider_index
+        .slider-index-wrap
+          .slider-index
+    script(type='text/javascript')
+      (function(){
+        /*
+        *解决ie6下不支持背景缓存
+        */
+        if (!+'\v1' && !('maxHeight' in document.body.style)) {
+            try{
+                document.execCommand("BackgroundImageCache", false, true);
+            }catch(e){}
+        }
+        // 首页右侧登录区域tab切换
+        $('#help_tab .help-tab-nav li').click(function(e) {
+          e.preventDefault();
+          $(this).addClass('active').siblings().removeClass('active');
+          var id = $(this).data('src');
+          $('#'+id).show().siblings().hide();
+        });
+        var suffix = function(){
+            if(window.location.host.indexOf('aliyun.') == -1) { 
+              return '.com'; 
+            }
+            var output =  window.location.host.replace(/^.*\.aliyun/i,'');
+            if(!output) { 
+              output = '.com';
+            }
+            return output;
+        }();
+        var loginProtocol = 'https://';
+        var currentURL = encodeURIComponent(window.location.href);
+        var user_url = 'http://www.aliyun' + suffix + '/user?m=ajaxcomm&ac=getuserstatus&reurl=' + currentURL;
+        
+        jQuery.getScript(user_url,function() {
+            if(window.__ay_login_info && window.__ay_login_info.data) {
+              var data = window.__ay_login_info.data;
+              if(data.uname) {
+                var userInfoPanel = $('#login_user_info').fadeIn();
+                userInfoPanel.find('.username').text(data.uname)
+                userInfoPanel.find('.messge-count').text('(' + data.pnum + ')');
+              } else {
+                $('#login_area').fadeIn();
+              }
+            }
+        });
+        //首页banner焦点广告切换功能
+        var slider = $('#slider');
+        var sliderIndex = $('#slider_index');
+        var slideParent = slider.parent();
+        var sliderItem = slider.find('.slider-item');
+        var slideIndex = sliderIndex.find('.slider-index');
+        var i = 0, len = sliderItem.length;
+        var indexHtml = [];
+        for( ;i < len;i++ ) {
+          indexHtml.push('<span class="slider-index-item'+ (i == 0 ?' active' : '') +'">'+ (i+1) + '</span>');
+        }
+        slideIndex.append(indexHtml.join(''));
+        var indexItem = slideIndex.find('.slider-index-item');
+        function showSlider(sliderOne) {
+          var activeItem = sliderItem.filter('.active');
+          var next;
+          if(sliderOne) {
+            next = sliderOne
+          }else {
+            next = (activeItem.length && activeItem.next('.slider-item').length > 0) ? activeItem.next() : sliderItem.eq(0);
+          }
+          next.css('z-index',2);
+          // 取得索引，让下面的索引数字亮起来
+          var index = sliderItem.index(next);
+          indexItem.eq(index).addClass('active').siblings().removeClass('active');
+          
+          // 判断当前焦点图是否有广告文字要飞走的,有的话开始飞
+          var activeAdimg = activeItem.find('b');
+          if( activeAdimg.length ) {
+            activeAdimg.animate({
+              top:-50,
+              opacity:0
+            },300);
+          }
+          
+          // 要显示的子广告图飞进来
+          var adimg = next.find('b');
+          if( adimg.length ) {
+            var img = adimg.find('img');
+            var src = img.attr('data-src');
+            if(src) {
+              img.attr("src", src).removeAttr("data-src");
+            }
+            adimg.animate({
+              top:0,
+              opacity:1
+            },400);
+          }
+          activeItem.fadeOut(300,function() {
+            activeItem.css('z-index',1).show().removeClass('active');
+            next.css('z-index',3).addClass('active');
+          });
+        }
+        
+        // 默认显示第一个
+        //showSlider(sliderItem.eq(0));
+        // 第一个显示之后把其它的都显示，要不然会有闪动感觉
+        sliderItem.show();
+        //定时器
+        var interval;
+        function start() {
+          interval = setInterval(function() {
+            showSlider();
+          },5000);
+        }
+        
+        start();
+        
+        //点击bannner数字导航切换到相应广告
+        var hoverTimer;
+        indexItem.hover(function(e) {
+          if( $(this).hasClass('active') ) {
+            return;
+          }
+          e.preventDefault();
+          var index = indexItem.index( $(this) );
+          hoverTimer = setTimeout(function() {
+            clearInterval(interval);
+            clearTimeout(hoverTimer);
+            showSlider(sliderItem.eq(index));
+            //点击之后先清除定时器，显示完后再开启定时器，要不然占快会乱掉
+            start();
+          },300);
+        },function() {
+          clearTimeout(hoverTimer);
+        });
+        //鼠标指上去暂停轮播
+        slider.hover(function() {
+          clearInterval(interval);
+        },function(){
+          start();
+        });
+
+        $(function(){
+          AYSW.renderImageLazyLoad();
+        });
+      })();
+
+    .aly-wrap(style="padding-top:0;")
+      include inc/index-body.html
+    include inc/footer.html
+    script
+      $.get('/product',function(data){
+        console.log(data);
+        })

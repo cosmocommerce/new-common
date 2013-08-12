@@ -1,0 +1,304 @@
+extends layout
+block vars
+  productName = "product-rds"
+block titleName
+  title 阿里云-关系型数据库RDS
+block css
+  link(rel="stylesheet",href="styles/oss.css")
+  link(rel="stylesheet",href="http://static-img2.cdn.aliyuncs.test/??css/www-summerwind/needbuy.css,aliyun/aliyun.com_developer.css?v={v}")
+block header
+  include inc/header-index
+block container
+  .product-overview.fix-clear
+    .overview-container
+      h1
+        i.icons.icons-rds-48
+        | 关系型数据库 RDS
+      p.introduce RDS(Relational Database Service)是一种处理能力可弹性伸缩的在线数据库服务。RDS采用即开即用的方式, 兼容MySQL、SQL Server两种关系型数据库，并提供数据库在线扩容、备份回滚、性能监测及分析功能。
+        br
+        为用户提供更稳定可靠和更高性能的数据库系统，用户无需安装任何软件，大幅简化了数据库的管理运维工作。
+    .buy-container
+      .buy-area
+        p 最划算、最稳定、最安全
+          p 经济型云服务器低至
+            span ￥89/月
+        a.btn.btn-large.btn-orange(role="button") 立即购买   
+  .product-tab
+    .product-topnav
+      ul.nav.nav-tabs#product_tab
+        li.active(role="tab")
+          a(href="#detail") 产品详情
+        li(role="tab")
+          a(href="#case") 应用场景及案例
+        li(role="tab")
+          a(href="#price") 价格总览
+        li(role="tab")
+          a(href="#jpfw") 金牌服务体系
+        li(role="tab")
+          a(href="#help") 产品帮助
+  .tab-content
+    .tab-panel.first
+      .anchor
+        a(id="detail",name="detail") &nbsp
+      h2.h2-1 产品详情
+      p
+        a(href="http://cloud.video.taobao.com//video/play/sid/10468066/uid/653771672/v/2006/f/video.swf").btn.btn-large.btn-black.J_btn_video
+          span.icon-play 
+          了解RDS
+        a(href="http://cloud.video.taobao.com/video/play/sid/10290398/uid/dGlhbnRpYW5kb25nc2hhbg%3D%3D/v/2001/f/video.swf ").btn.btn-large.btn-black.J_btn_video 
+          span.icon-play 
+          入门指南
+        a(href="http://cloud.video.taobao.com/video/play/sid/10287333/uid/dGlhbnRpYW5kb25nc2hhbg%3D%3D/v/2001/f/video.swf").btn.btn-large.btn-black.J_btn_video 
+          span.icon-play 
+          控制台指南
+        a(href="rds-recommend.html").btn.btn-large.btn-gray 
+          span.icon-counter 
+          选型推荐
+      h3 
+        span 如何使用
+      ul.info-list.dot
+        li 注册阿里云账号，选择RDS实例类型进行购买，可以通过实例核算器帮您推荐一个合适的RDS实例
+        li 登录阿里云管理控制台进行RDS实例管理，如数据库创建删除、帐号管理、安全授权、备份策略和回滚以及查看实例信息等
+        li 通过程序或客户端（如MySQL-Front或SQL Server Management Studio）连接RDS实例执行SQL语句
+        li 注：如原有数据库需要迁移到RDS：请参考阿里云提供的迁移帮助
+        
+      h3 
+        span 产品优势
+        a.database-link(href="#") 
+          i
+          与自建数据库比较
+
+      ul.info-list.features
+        li.features-item 
+          h4 
+            span.icon-good
+            稳定
+          ul.features-info
+            li 99.95%的服务可用性
+            li RDS采用主从热备的架构，主机故障时后备机秒
+            li 级完成无缝切换
+        li.features-item 
+          h4 
+            span.icon-good
+            可靠
+          ul.features-info
+            li 99.9999%的数据可靠性
+            li 自动多重备份数据库，可回滚到任意备份点
+            li 采用高可靠的磁盘阵列
+        li.features-item  
+          h4 
+            span.icon-good
+            弹性
+          ul.features-info.last-feature
+            li 在线无缝升级，数据库访问不间断
+            li 内存和磁盘可灵活扩容
+            li 磁盘（随机读写）IOPS可达12000
+      h3 
+        span 产品功能
+        a.vertion-link(href="#") 
+          i
+          版本更新
+      table.table-1.rds-description
+        thead
+          tr
+            th(width="33%") 功能
+            th(width="33%") RDS兼容（Mysql）
+            th(width="34%") RDS兼容（SQLserver）
+        tbody
+          tr
+            td 版本号
+            td 5.1
+            td 2008企业版&nbsp sp2
+          tr
+            td 每实例可创建的数据库
+            td 最多200
+            td最多20
+          tr
+            td 每数据库可创建的账号
+            td 最多50
+            td 最多10
+          tr
+            td 支持内外网模式
+            td(colspan="2") 支持二选一，每日可选5次
+          tr
+            td 安全设置
+            td(colspan="2") 支持IP授权访问
+          tr
+            td 备份恢复
+            td(colspan="2") 定时自动备份（每日1次，最长保存7日）、临时备份备、份文件下载、备份恢复到实例、备份创建临时实例
+          tr
+            td 日志管理
+            td(colspan="2") 错误日志、控制台操作日志
+          tr
+            td 性能监控
+            td(colspan="2") 
+              span.icon-yes2
+          tr
+            td 实例任一时间备份
+            td(colspan="2") 0.02
+          tr
+            td 报警管理
+            td(colspan="2") 可添加报警人及定义报警阈值
+          tr
+            td 数据库性能优化顾问
+            td(colspan="2") 慢SQL查询、大表检查、主键检查等
+          tr
+            td 数据导入
+            td 工具支持
+            td 服务支持
+          tr
+            td 在线迁移、在线升级
+            td
+              span.icon-yes2
+            td 
+              span.icon-yes2
+          tr
+            td PhpMyAdmin管理
+            td 
+              span.icon-yes2
+            td 
+              span.icon-wrong
+          tr
+            td 兼容性
+            td 兼容MySQL
+            td 兼容SQL Server
+    .tab-panel
+      .anchor
+        a(id="case",name="case") &nbsp
+      h2 应用场景及案例
+      ul.info-list.dot
+        li 网站后台关系型数据库， 譬如会员数据库、产品数据库、交易数据库等
+        li 企业ERP或CRM系统后台关系型数据库，譬如供应链信息数据库、库存数据库、财务数据库、数据分析结果数据库等
+        li 政府和银行后台关系型数据库，譬如医疗卫生数据库、专利信息数据库、证券交易信息数据库
+        li 其他一切可以使用关系型数据库的场景
+      .customer-panel
+        .panel-container.panel-container-loading(id="customer_slideview")
+         
+        .more-customer
+          h4 更多客户
+          .more-customer-wrap
+            a(href="#")
+              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57") 
+            a(href="#")
+              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
+            a(href="#")
+              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
+            a(href="#")
+              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
+            a(href="#")
+              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
+        .panel-left
+          a(id="customer_slideview_prevbtn",href="#") 
+        .panel-right
+          a(id="customer_slideview_nextbtn",href="#") 
+    .tab-panel
+      .anchor
+        a(id="price",name="price") &nbsp
+      h2 价格总览
+        span.rds-price-title RDS实例按服务使用期限预付费，RDS实例的价格请见下表
+          i
+          a(href="#") 小云推荐
+      include inc/rds-tab-table.html
+    .tab-panel
+      .anchor
+        a(id="jpfw",name="jpfw") &nbsp
+      h2 金牌服务体系
+      .ecs-gold-service.fix-clear
+        dl.icons.icons-pei
+          dt 故障100倍赔偿
+          dd 由于阿里云原因导致您服务器故障无法使用，按照故障时间进行100倍赔偿！
+        dl.icons.icons-tui
+          dt 5天无理由退款
+          dd 阿里云郑重承诺，在购买云服务器起5天内可无理由申请退款，让您买得放心！
+        dl.icons.icons-shuju
+          dt 免费数据迁移
+          dd 免费为您提供相同操作系统数据迁移，让您迁站无忧，省钱更省心！    
+    .tab-panel
+      .anchor
+        a(id="help",name="help") &nbsp
+      h2.h2-1 产品帮助
+      .help
+        dl.dot
+          dt 操作指南
+          dd
+            a(href="") 远程连接for linux
+          dd
+            a(href="") Linux FTP服务配置
+          dd
+            a(href="") 远程连接for Windows
+          dd
+            a(href="") Windows FTP服务配置
+        dl.dot
+          dt 资料中心
+          dd
+            a(href="") 云服务器用户管理指南
+          dd
+            a(href="") 云服务器技术白皮书
+        dl.dot.more
+          dt.more.fix-clear 
+            span 常见问题
+            a(href="") 更多...
+          dd
+            a(href="") ip类相关问题
+          dd
+            a(href="") 机房相关问题
+          dd
+            a(href="") 配置升级相关问题
+          dd
+            a(href="") 操作系统相关问题 
+  script
+    (function(){          
+          Alipw.importClass('Alipw.SlideView');
+          AYSW.product.slideCustomerViews =[];
+          AYSW.product.slideCustomerViews.push([
+                      '<ul class="customer-item">',
+                              '<li class="li-title">囧记单词</li>',
+                              '<li class="li-content-1">移动APP开发者解决方案</li>',
+                              '<li class="li-content-2"><span>急需解决：</span>用户增长速度快，流量急需扩容，服务成本过高</li>',
+                              '<li class="li-content-2"><span>购买服务：</span>云服务器V型+<a href="#">关系型数据库</a></li>',
+                              '<li class="li-logo"> <img width="90" height="90" src="http://img02.taobaocdn.com/tps/i2/T10Nx4XrBXXXbCFbsb-100-100.jpg"></li>',
+                              '<li class="li-info poptip-container">',
+                                '<div class="poptip-arrow"><em>◆</em><span>◆</span></div>',
+                                '<h4>客户使用心得：</h4>',
+                                '<p>从2012年开始就想把服务器跟第三方更加专业的合作伙伴进行合作。综合对比下来觉得阿里云的云服务在目前的云主机里是做得比较好的，所以很原意和你们进行合作，速度和稳定性方面都很好。</p>',
+                              '</li>',
+                        '</ul>'
+                        ].join(''));
+          AYSW.product.slideCustomerViews.push([
+                      '<ul class="customer-item">',
+                              '<li class="li-title">囧记单词</li>',
+                              '<li class="li-content-1">移动APP开发者解决方案</li>',
+                              '<li class="li-content-2"><span>急需解决：</span>用户增长速度快，流量急需扩容，服务成本过高</li>',
+                              '<li class="li-content-2"><span>购买服务：</span>云服务器V型+<a href="#">关系型数据库</a></li>',
+                              '<li class="li-logo"> <img width="90" height="90" src="http://img02.taobaocdn.com/tps/i2/T10Nx4XrBXXXbCFbsb-100-100.jpg"></li>',
+                              '<li class="li-info poptip-container">',
+                                '<div class="poptip-arrow"><em>◆</em><span>◆</span></div>',
+                                '<h4>客户使用心得：</h4>',
+                                '<p>从2012年开始就想把服务器跟第三方更加专业的合作伙伴进行合作。综合对比下来觉得阿里云的云服务在目前的云主机里是做得比较好的，所以很原意和你们进行合作，速度和稳定性方面都很好。</p>',
+                              '</li>',
+                        '</ul>'
+                        ].join(''));
+            //登录区块
+            var loginBoxHtml = [
+                  '<p>最小规格低至<span class="font-orange">￥600</span>/年</p>',
+                  '<p>流量按需付费，内网流量免费</p>',
+                  '<a role="button" href="http://buy.aliyun.com/?app=rds" class="btn btn-large btn-orange buy-widget-btn">立即购买</a>'].join("");
+            if (AYSW.product.getCookie()['login_aliyunid']){
+                //已登录
+                var rdsHtml= [
+                  '<p>最小规格低至<span class="font-orange">￥600</span>/年</p>',
+                  '<p>流量按需付费，内网流量免费</p>',
+                  '<a role="button" href="http://console.aliyun.com/rds/index.html" class="btn btn-large btn-black buy-widget-btn">进入管理控制台</a>',
+                  '<a role="button" href="http://buy.aliyun.com/?app=rds" class="btn btn-large btn-orange buy-widget-btn">立即购买</a>'].join("");
+               $(".buy-container .buy-area").html(rdsHtml);    
+
+              }else{
+                //未登录
+                 $(".buy-container .buy-area").html(loginBoxHtml);
+              }
+            //显示
+            AYSW.product.viewBuyArea();
+            
+      })();
+
+

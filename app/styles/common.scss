@@ -1,0 +1,666 @@
+@charset "utf-8";
+@import "compass";
+@import "mixin";
+@import "reset";
+@import "media-queries";
+
+@import "sprite-icons";
+//@import "icon-fonts";
+@import "alipw_skin";
+@import "button";
+//@import "topbar"; //顶部通栏
+@import "header"; // 头部
+@import "left-sidebar";
+
+@import "responsive";
+@import "footer";
+
+body{
+    background-color:#FFFFFF;
+    color:#666;
+}
+a{
+    color:#0066cc;
+}
+a:focus, a:focus img, input:focus{
+  outline: 1;
+}
+.product .page-buy{
+  margin-bottom: 15px;
+}
+//页面头部以下的主体
+.aly-wrap{
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+}
+.aly-main{
+    position:relative;
+    top:0;
+    background-color:#F3F3F3;
+
+}
+
+.aly-container{
+    position:relative;
+    padding:30px 0 30px 18px;
+    .aly-content{
+        width: 743px;
+    }
+    h1{
+        font-size:24px;
+        color:#000;
+        font-weight:bold;
+        .icons{
+            margin-right: 10px;
+        }
+    }
+    .introduce{
+        margin-top: 15px;
+    }
+    //详情页导航
+    .nav-tabs{
+        //display: table;
+        width:743px;
+        //*zoom:1;
+        @include inline-block;
+        margin-top:20px;
+        border-bottom:1px solid #c9c9c9;
+
+        li{
+            float:left;
+            height:35px;
+            line-height:35px;
+            color:#000;
+            margin-right:5px;
+            margin-bottom: -1px;
+            text-align: center;
+            a{
+                line-height: 33px;
+                height:33px;
+                border:1px solid #c9c9c9;
+                padding:0 20px;
+                float:left;
+                border-bottom: none;
+                cursor:pointer;
+                color:#666;
+                font-size: 14px;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+            a:hover{
+                background-color:#efefef;
+                color:#000;
+            }
+            &.active {
+                a{
+                    border-top:solid #ff9900 2px;
+                    background-color:#fff;
+                    border-bottom: none;
+                    color:#000;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    //TAB外框样式
+    .product-tab{
+        height:56px;
+    }
+    //tab切换部分
+    .tab-content{
+        //tab子面板
+        .tab-panel{
+            padding:0 15px 15px;
+            position:relative;
+            border:1px solid #f3f3f3;
+            @include box-shadow(#eeeeee 0px 3px 6px);
+            border-top:none;
+            margin-top:24px;
+            *zoom:1;
+            .anchor{
+                position:absolute;
+                top:-77px;
+                //因为ie6的顶部导航不支持fixed定位，所以
+                *top:0;
+            }
+            &.first{
+              margin-top:20px;
+            }
+            h1{
+                font-family: "Microsoft Yahei";
+                //font-size:23px;
+                @include rem('font-size',23px);
+                color:#333;
+            }
+            h2{
+                height: 40px;
+                line-height: 40px;
+                background-color: #f6f6f6;
+                @include rem('font-size',20px);
+                //margin-top:40px;
+                margin-left:-16px;
+                margin-right:-16px;
+                padding-left:10px;
+                border-left:5px solid #ff9800;
+                color:#000;
+            }
+            .h2-1{
+               //margin-top:20px;               
+            }
+            h3{
+                margin-top:10px;
+                line-height: 26px;
+                font-size:16px;
+                // @include rem('font-size',14px);
+                border-bottom: 1px solid #efefef;
+                span{
+                    @include inline-block;
+                    margin-bottom: -1px;
+                    //padding: 4px 5px 5px 5px;
+                    border-bottom: 2px solid #4D4D4D;
+                    color:#333;
+                }
+                a{
+                  font-size: 12px;
+                }
+            }
+            h4{
+                padding-top:15px;
+                span{
+                    color:#AAAAAA;
+                }
+            }
+            p{
+                margin-top: 17px;
+                .btn{
+                    margin-right:5px;
+                    span{
+                      position:relative;
+                      top:1px;
+                    }
+                }
+            }
+        }
+    }
+    .info-list{
+        margin-top:10px;
+        list-style:none outside none;
+        margin-left:11px;
+        li{
+            line-height: 24px;
+            //background-image: inline-image("image.gif", gif);
+        }
+    }
+    //前面带红点的列表
+    .dot li{
+        //list-style-position: inside;
+        list-style-image: inline-image("../images/icons/common/dot-orange.png");
+        *list-style-image: image-url("http://img02.taobaocdn.com/tps/i2/T1E_9TXtXcXXcCFuHr-3-7.png"); /* IE7 */
+    }
+    .dot dd{
+        background:inline-image("../images/icons/common/dot-orange.png") no-repeat left 12px;
+        //text-indent: 1em;
+        *background-image: image-url("http://img02.taobaocdn.com/tps/i2/T1E_9TXtXcXXcCFuHr-3-7.png"); /* IE7 */
+    }
+    .features{
+        width:640px;
+        //height:690px;
+        background:url(http://oss.aliyuncs.com/aliyun_portal_storage/1370322242_64_259.png) no-repeat right 0;
+        .features-item{
+            height:195px;
+            .features-info{
+                padding-left:30px;
+            }
+        }
+        h4{
+            //font-size:24px;
+            @include rem('font-size',24px);
+            margin-bottom:15px;
+        }
+    }
+    .help{
+        overflow: hidden;
+        margin-top:20px;
+        //margin-right:20px;
+        dl{
+            float:left;
+            width:28%;
+            margin-right: 3%;
+            dt{
+                border-bottom:1px solid #e7e7e7;
+                @include rem('font-size',14px);
+                //font-weight: bold;
+                margin-bottom: 5px;
+                line-height:30px;
+                &.more{
+                    span{
+                        float:left;
+                    }
+                    a{
+                        float:right;
+                        font-weight: normal;
+                        
+                    }
+                }
+            }
+            dd{
+                //height:28px;
+                line-height: 28px;
+                padding-left:13px;
+            }
+        }
+        dl.more{
+            width: 38%;
+            *width: 35%;
+            margin-right:0;
+        }
+    }
+}
+//
+.product-ecs .aly-container .features .features-item .last-feature{
+    height: 85px;
+}
+.product-oss .aly-container .features .features-item .last-feature{
+    height: 102px;
+}
+.product-rds .aly-container .features .features-item .last-feature{
+    height: 102px;
+}
+//提示框样式
+.poptip-container{
+    border:1px solid #DCDCDC;  
+    border-radius: 5px;              
+    position: relative;
+    padding:10px 15px; 
+    background-color: #FAFAFA;
+    color: #9A9A9A;
+    zoom:1;
+    line-height: 20px;
+    .poptip-arrow{
+        position: absolute;
+        left:45px;
+        top:-11px;
+        font-size: 24px;
+        line-height: 24px;
+        font-family:SimSun,Hiragino Sans GB;
+        em {
+            top: -1px;
+            top:0px\9;
+            position: absolute;
+            color:#DCDCDC; 
+
+        }
+        span{            
+            top: 0px;
+            top:1px\9;
+            position: absolute;
+            color:#FAFAFA;
+        }       
+    }
+
+}
+//清除浮动
+.fix-clear:after{
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.fix-clear{
+    zoom:1;
+}
+//表格样式
+.detail-second-title{
+    padding-top:15px;
+    font-weight:bold;
+}
+//表格样式
+.table-1 {
+    border-collapse:collapse;
+    width:100%;
+    line-height:14px;
+    font-size:12px;
+    th{
+        font-size:12px;
+        font-weight:bold;
+        color:#676767;     
+    }
+    th, td {
+        border: 1px solid #F2F2F2;
+        text-align:center;
+    }
+    thead tr {
+        height:30px;
+        //background:-moz-linear-gradient(top, #F7F7F7, #F3F3F3);
+        //box-shadow:0px 1px 1px #C4C4C4;
+        background-color:#F2F2F2;
+    }
+    tbody td{
+        padding:10px;
+    }
+    tbody tr:hover {
+        background-color:#EEEEEE;
+    }
+    .bg-gray {
+        background:#FAFAFA
+    }
+    .bg-blue {
+        background:#F9FAFE
+    }
+    .font-12bold {
+        font-size:12px;
+        font-weight:bold;
+        color:#676767;
+    }
+    .font-red {
+        color:#EA0000;
+    }
+    .icon-wrong{
+        color:red;
+    }
+    .icon-yes2{
+        color:#A5E23C;
+    }
+    .text-align-left{
+        text-align:left;
+    }
+}
+
+//客户案例样式
+.customer-panel{
+    position:relative;
+    zoom:1;
+    padding-top:15px;
+    .panel-container{
+        padding:10px 50px;
+        position:relative;
+        height:225px;
+        overflow:hidden;
+        
+        .customer-item{
+            position: relative;
+            zoom:1;
+            font:12px/120% tahoma,arial,"Hiragino Sans GB","Microsoft Yahei",宋体;
+            .li-title{
+                padding:0 0 3px 130px;
+                font-size: 16px;
+                font-weight: bold;
+                color:#000;
+            }
+            .li-content-1{
+                padding-left: 130px;
+                line-height: 23px;
+                color:#FF6D06;
+            }
+            .li-content-2{
+                padding-left: 130px;
+                line-height: 23px;
+
+            }
+            .li-content-2{
+                color:#000;
+            }
+            .li-content-2 span{
+                color:#666;
+            }
+            .li-logo{
+                position: absolute;
+                top:0;
+                left: 0;
+            }
+            .li-info{
+                margin-top:10px;
+                h4{
+                    color: #000;
+                    padding-top:0;
+                }
+                p{margin-top:0;}
+            }
+
+        }
+       
+
+    }
+    .more-customer{
+        position: relative;
+        height: 115px;
+        padding-left: 50px;
+        h4{
+            font-weight: bold;
+            padding:12px 0  8px 0;
+        }
+        img{
+            border: 1px solid #EEEEEE;
+            border-radius: 5px 5px 5px 5px;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+            margin-right: 8px;
+        }
+        .more-customer-wrap{
+            position: absolute;
+            top: 36px;
+            //width: 690px;
+
+        }
+    }
+    .panel-left a,.panel-right a{
+        background:url(http://static-img2.cdn.aliyuncs.com/images/www-summerwind/arrow.gif) no-repeat 0 0;
+            display:block;
+            width:31px;
+            height: 45px;
+    }
+    .panel-left{
+          position:absolute;
+          top:38px;
+          left: 0;
+          a:hover{
+             background-position: 0 -80px;
+          }
+
+    }
+    .panel-right{
+        position:absolute;
+        top: 38px;
+        right: 0;
+        a{
+            background-position: 0 -160px;
+        }
+        a:hover{
+            background-position: 0 -240px;
+        }
+    }
+
+}
+// profuct topbar tab
+@keyframes noop {
+  0%   { margin-bottom: 0; }
+  100% { margin-bottom: 1em; }
+}
+.product-topnav{
+    background-color: #fff;
+    border-top:1px solid #fff;
+    width:750px;
+    margin-left: -5px;
+    padding-left: 5px;
+    -webkit-transform: translateZ(0);
+}
+
+// ---------------------详情页---------------------------------
+@import "ecs-calculator";//ecs价格计算器
+//因背景图不同，这里需要重写背景URL
+.product-ecs .features{
+    background-image: url(http://oss.aliyuncs.com/aliyun_portal_storage/1370322242_64_259.png) !important;
+}
+.product-oss .features{
+    background-image: url(http://oss.aliyuncs.com/aliyun_portal_storage/1370322272_23_140.png) !important;
+}
+.product-rds .features{
+    background-image: url(http://oss.aliyuncs.com/aliyun_portal_storage/1370322296_55_102.png) !important;
+}
+.product-cdn .features{
+    background-image: url(http://img01.taobaocdn.com/tps/i1/T1VulAFkdXXXbC6WAR-442-525.png) !important;
+}
+//产品优势下手型图标右边距
+.tab-content .tab-panel h4 .icon-good{
+  margin-right:1px;
+}
+//金牌服务
+.ecs-gold-service{
+    //@include clearfix();
+    dl{
+        width:235px;
+        margin:20px 0;
+        padding-right: 53px;
+        padding-left:64px;
+        //margin-top:40px;
+        height: 50px !important;
+        dt{
+            @include rem('font-size',16px);
+            color:#333;
+        }
+        dd{
+            color:#999;
+        }
+    }
+}
+//右上角购买区按钮
+.buy-container{
+    min-height:90px;
+    _height: 90px; 
+    .buy-area {
+        background-color:#fff;
+        .font-orange{
+            color:#f60 !important;
+        }
+        .font-green{
+            color:#339900 !important
+        }
+        .buy-widget-btn{
+            width:183px;
+            padding:0;
+            text-align: center;
+            margin-top:5px;
+        } 
+        p{
+            font-size:12px;
+        }  
+    }    
+}
+
+//ECS产品详情里的小图标样式
+.aly-container .tab-content .tab-panel h3 .idc-link{
+    margin-left: 20px;
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+    font-size:12px;
+    i{
+        margin-right: 3px;
+        display:inline-block;
+        *display:inline;
+        *zoom:1;
+          background:url(http://oss.aliyuncs.com/aliyun_portal_storage/1369633926_3_664.png) no-repeat 0 -734px;  
+          width:19px;
+          height: 18px;
+          vertical-align: middle;
+    }
+}
+
+//加载动画样式
+.loading{
+    background: url(http://static.aliyun.com/images/account/loading_32.gif) no-repeat center center;
+    *{
+        visibility: hidden;
+    }
+}
+// ---------------------slb odps详情页------------------------------------
+.tab-content .tab-panel .detail-info{
+    @include clearfix();
+    padding-bottom: 20px!important;
+    margin-top: 20px!important;
+    img{
+        width: 60px;
+        height: 60px;
+        float: left;
+        //padding: 0 10px;
+    }
+    h4{
+        margin-left: 70px;
+        float: none;
+
+        @include rem('font-size',16px);
+        padding-top:5px;
+    }
+    p{
+        margin-left: 70px;
+        float: none;
+        margin-top: 0 !important;
+        line-height: 180%;
+    }
+}
+
+// -----------------------ots详情页----------------------------------------
+.product-item{
+    padding-top:10px;
+}
+.product-item a{ 
+    @include inline-block;
+    padding:2px 0px; 
+    //margin:0 10px;
+    width:32%;
+}
+
+// -----------------------云监控详情页----------------------------------------
+.detail-table-container{
+    padding-top:15px;
+}
+.jiankong-font-orange{
+    color:#FF6600 !important;
+}
+.site-jiankong-container{
+    padding-top:15px;
+}
+.service-jiankong-container{
+    padding-top:15px;
+}
+
+// -----------------------云盾控详情页----------------------------------------
+.yundun-font-red{
+    color:#FF0000 !important;
+}
+.yundun-font-green{
+    color:#339900 !important
+}
+
+// -----------------------云引擎ACE详情页----------------------------------------
+.c-module-3{ clear:both; overflow:hidden; *zoom:1;padding-top:15px;}
+.c-module-3 img{ width:130px; height:90px; float:left; padding:0 10px;}
+.c-module-3 h2{ margin-left:160px; float:none; font-size:16px;}
+.c-module-3 p{ margin-left:160px; float:none; margin-top:10px; line-height:180%;}
+.c-module-3 .c-module-3-info{ margin-left:160px; padding-top:10px; overflow:hidden; *zoom:1;}
+.c-module-3 .c-module-3-info div{float:right;padding:20px 0 0;}
+.c-module-3 .c-module-3-info p{ margin:0; float:left;}
+.c-module-3 .c-module-3-info p span{ color:#333; margin-right:10px;}
+.c-module-3 .c-module-3-info label{ vertical-align:middle;}
+.c-module-3 .c-module-3-info .c-button-1{ float:right; margin-top:5px;}
+.c-stars-0,.c-stars-1,.c-stars-2,.c-stars-3,.c-stars-4,.c-stars-5{ background:url(http://oss.aliyuncs.com/aliyun_portal_storage/1369206100_3_193.png) 0 0 no-repeat; display:inline-block; *display:inline; *zoom:1; width:91px; height:14px; vertical-align:middle;}
+.c-stars-0{ background-position:0 -103px;}
+.c-stars-1{ background-position:0 -83px;}
+.c-stars-2{ background-position:0 -63px;}
+.c-stars-3{ background-position:0 -43px;}
+.c-stars-4{ background-position:0 -23px;}
+.c-stars-5{ background-position:0 -3px;}
+
+//重置右侧浮出层边框
+.aysw-quicksupport-mini .aysw-quicksupport-body{
+  border-right:0 solid;
+}
+//重置footer上边距
+.product .aysw-footer{
+  margin-top:0 !important;
+}
+//重置footer右边两列的宽度，因为内容调整过，宽度要修改
+.aysw-footer-goldmetal-beian{width:170px;}
+.aysw-footer-goldmetal-others{float: right;width: 108px;}

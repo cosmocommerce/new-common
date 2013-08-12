@@ -1,0 +1,146 @@
+<p>目前，云监控对外提供两类监控：站点可用性监控、服务器监控、，每个分类下均有多种可供用户配置的监控类型，详情如下：</p>
+<h4 class="detail-second-title">站点可用性监控(8种)</h4>
+<div class="site-jiankong-container">
+  <table class="table-1">
+     <thead>
+    <tr>
+      <th width="20%">监控类型</th>
+      <th class="text-align-left">内容</th>
+    </tr>
+     </thead>
+     <tbody>
+    <tr>
+      <td>网站监控</td>
+      <td class="text-align-left">监控Web站点中任何指定的URL，获得可用性监控以及响应时间。</td>
+    </tr>
+    <tr  class="bg-blue">
+      <td>Ping监控</td>
+      <td class="text-align-left">对指定的服务器进行ICMP Ping检测，获得可用性监控以及响应时间、丢包率等。</td>
+    </tr>
+    <tr>
+      <td>TCP端口监控</td>
+      <td class="text-align-left">监控服务器TCP端口的可用性和响应时间。</td>
+    </tr>
+    <tr  class="bg-blue">
+      <td>UDP监控</td>
+      <td class="text-align-left">监控服务器UDP端口的可用性和响应时间。</td>
+    </tr>
+    <tr>
+      <td>DNS监控</td>
+      <td class="text-align-left">监控DNS服务器的可用性和响应时间，并获得各种DNS记录列表，支持DNS轮询(RR)。</td>
+    </tr>
+    <tr class="bg-blue">
+      <td>POP3监控</td>
+      <td class="text-align-left">监控POP3服务器的可用性和响应时间。</td>
+    </tr>
+    <tr>
+      <td>SMTP监控</td>
+      <td class="text-align-left">监控SMTP服务器的可用性和响应时间。</td>
+    </tr>
+    <tr class="bg-blue">
+      <td>FTP监控</td>
+      <td class="text-align-left">监控FTP服务器的可用性和响应时间。</td>
+    </tr>
+  </tbody>
+  </table>
+</div>
+<h4 class="detail-second-title">相关说明</h4>
+<p class="jiankong-font-orange"> 
+  1、这些监控类型不需要用户编写代码或者安装Agent<br />
+  2、对每一类监控类型事件先定义好一个标准监控项供初级用户使用。这些监控项允许所有用户看到 </p>
+<h4 class="detail-second-title">服务器监控（14种）</h4>
+<div class="service-jiankong-container">
+  <table class="table-1">
+     <thead>
+    <tr>
+      <th width="20%">监控类型</th>
+      <th colspan="2">内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CPU利用率监控</td>
+      <td class="text-align-left">对指定的服务器进行CPU利用率监控。</td>
+      <td class="text-align-left" width="15%">Windows, Linux</td>
+    </tr>
+    <tr class="bg-blue">
+      <td>内存利用率监控</td>
+      <td class="text-align-left">对指定的服务器进行内存利用率监控。</td>
+      <td class="text-align-left">Windows, Linux</td>
+    </tr>
+    <tr>
+      <td>磁盘利用率监控</td>
+      <td class="text-align-left">对指定的服务器进行磁盘空间利用率监控。。</td>
+      <td class="text-align-left">Windows, Linux</td>
+    </tr>
+    <tr class="bg-blue">
+      <td>网络流量监控</td>
+      <td class="text-align-left">对指定的服务器进行网络流量监控，当网络流量超过多少Kb/s即报警。</td>
+      <td class="text-align-left">Windows, Linux</td>
+    </tr>
+    <tr>
+      <td>进程状态监控</td>
+      <td class="text-align-left">监控某个进程是否存在。</td>
+      <td class="text-align-left">Windows, Linux</td>
+    </tr>
+    <tr class="bg-blue">
+      <td>进程数量监控</td>
+      <td class="text-align-left">监控服务器上有多少个进程数。</td>
+      <td class="text-align-left">Windows, Linux</td>
+    </tr>
+    <tr>
+      <td>进程CPU资源监控</td>
+      <td class="text-align-left">监控某个进程的CPU利用率。</td>
+      <td class="text-align-left">Windows, Linux</td>
+    </tr>
+    <tr class="bg-blue">
+      <td>进程内存资源监控</td>
+      <td class="text-align-left">监控某个进程的内存利用率。</td>
+      <td class="text-align-left">Windows, Linux</td>
+    </tr>
+    <tr>
+      <td>TCP连接数监控</td>
+      <td class="text-align-left">监控本机总的TCP连接数是否异常。</td>
+      <td class="text-align-left">Windows, Linux</td>
+    </tr>
+    <tr class="bg-blue">
+      <td>SWAP利用率监控</td>
+      <td class="text-align-left">对指定的服务器进行SWAP利用率监控。</td>
+      <td class="text-align-left">Linux</td>
+    </tr>
+    <tr>
+      <td>CPU负载(load)监控</td>
+      <td class="text-align-left">对指定的服务器进行CPU负载(load)监控。</td>
+      <td class="text-align-left">Linux</td>
+    </tr>
+    <tr class="bg-blue">
+      <td>Filesystem可用性监控</td>
+      <td class="text-align-left">监控文件系统是否处于可用状态。</td>
+      <td class="text-align-left">Linux</td>
+    </tr>
+    <tr>
+      <td>服务监控</td>
+      <td class="text-align-left">监控某个服务是否处于Started状态。</td>
+      <td class="text-align-left">Windows</td>
+    </tr>
+    <tr class="bg-blue">
+      <td>日志监控 </td>
+      <td class="text-align-left">针对Linux系统，监控/usr/local/cms/log/sec.log日志文件中的异常。您可以将需要报警的信息按格式写入这个文件中。Sec.log文件中每一行内容都必须以”Critical-“或者”OK-“关键字开头，其中以”Critical-”关键字开头的信息会报警给相应的报警组。格式举例：Critical-xxxx、Ok-xxxxx。针对Windows系统该日志文件的路径是：Agent安装目录\log\。</td>
+      <td class="text-align-left">Windows, Linux</td>
+    </tr>
+    <tr>
+      <td>用户自定义监控</td>
+      <td class="text-align-left">用户自定义监控类型。</td>
+      <td class="text-align-left">Windows, Linux</td>
+    </tr>
+  </tbody>
+  </table>
+</div>
+<h4 class="detail-second-title">相关说明</h4>
+<p class="jiankong-font-orange">
+  1、服务器监控类型是对Windows、Linux服务器以及上面的应用进行监控，需要安装云监控Agent<br />
+  2、实现方式：安装云监控Agent，用户可以使用自带的标准插件，也可以根据输入输出规范编写自己的插件，由云监控Agent自行调度<br />
+  3、我们预定义好几种常用的服务器监控类型，对应插件随着Agent的安装自动安装<br />
+  4、允许用户自定义监控类型 </p>
+<h4 class="detail-second-title">服务监控</h4>
+<p>目前暂不支持，后续会针对阿里云推出的RDS、OSS、ACE、SLB等产品和服务提供监控服务。</p>

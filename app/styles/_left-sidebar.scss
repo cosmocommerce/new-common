@@ -1,0 +1,148 @@
+.left-sidebar{
+    .left-nav-container{
+      -webkit-transform: translateZ(0);
+    }
+    width:236px;
+    position:absolute; 
+    right:0; 
+    top:15px;
+    line-height:33px;
+    .product-menu-1{
+         width: 206px;
+         border-bottom: 1px dashed #E1E1E1;
+         padding-bottom: 3px;
+         margin-bottom: 10px;
+         position: relative;
+        dt{
+          font-size: 12px;
+        	line-height:22px;
+        	color:#999999;
+          font-weight:normal;
+            .point{
+                font-size: 8px;
+                margin: 0 2px;
+                font-style: normal;
+            }
+        }
+        dd{
+            position: relative;
+            height: 33px;
+        }
+        dd i{
+            margin-right: 5px;
+            font-style: normal;
+        }
+        dd a{
+            position: absolute;
+            display:block;
+            right:-30px;
+            width:250px;
+            top:0;
+            //font-size:14px;
+            @include rem('font-size',14px);
+            //链接颜色
+            color: #666;
+            zoom:1;
+
+        }
+        dd a:hover{
+            color: #000;
+            background-color: #eaeaea;
+            text-decoration: none;
+            cursor:pointer;
+        }
+        dd a .span-1{
+            display: block;
+            float: right;
+            width: 235px;
+
+        }
+    }
+    .product-menu-2{
+        width:235px;
+        dt{
+            line-height:22px;
+            color:#A9A9A9; 
+        }
+        dd{
+            width: 60px;
+            float: left;
+        }
+        a{
+            color: #666;
+        }
+        a:hover{
+            color: #000;
+            text-decoration: none;
+        }
+    }
+
+}
+.product-ecs .product-menu-1 dd .link-ecs{
+            color: #000;
+            background-color: #FFF;
+            i{
+              color: #007eff;  
+            }
+}
+.product-oss .product-menu-1 dd .link-oss{
+            color: #000;
+            background-color: #FFF;
+            i{
+               color: #ade675;    
+            }
+}
+.product-rds .product-menu-1 dd .link-rds{
+            color: #000;
+            background-color: #FFF;
+            i{
+               color: #20f8b8;    
+            }
+}
+.product-slb .product-menu-1 dd .link-slb{
+            color: #000;
+            background-color: #FFF;
+            i{
+              color: #f27741;  
+            }
+}
+.product-ots .product-menu-1 dd .link-ots{
+            color: #000;
+            background-color: #FFF;
+            i{
+               color: #15d4f0;    
+            }
+}
+
+.product-ace .product-menu-1 dd .link-ace{
+            color: #000;
+            background-color: #FFF;
+            i{
+               color: #C8341C;    
+            }
+}
+.product-odps .product-menu-1 dd .link-odps{
+            color: #000;
+            background-color: #FFF;
+            i{
+               color: #ffba00;    
+            }
+}
+.product-cdn .product-menu-1 dd .link-cdn{
+      color: #000;
+      background-color: #FFF;
+      i{
+         color: #bff3fe;    
+      }
+}
+.product-odps .product-menu-1 dd .link-odps:hover,
+.product-ace .product-menu-1 dd .link-ace:hover,
+.product-ots .product-menu-1 dd .link-ots:hover,
+.product-slb .product-menu-1 dd .link-slb:hover,
+.product-cdn .product-menu-1 dd .link-cdn:hover,
+.product-rds .product-menu-1 dd .link-rds:hover,
+.product-oss .product-menu-1 dd .link-oss:hover,
+.product-ecs .product-menu-1 dd .link-ecs:hover,{
+            background-color: #fff;
+
+}

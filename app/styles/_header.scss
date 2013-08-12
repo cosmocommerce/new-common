@@ -1,0 +1,304 @@
+// 导航条
+
+header{
+    height:64px;
+    background-color:#f3f3f3;
+    position: relative;
+    z-index: 3;
+    @include box-shadow(0 0 3px rgba(0, 0, 0, 0.2));
+    .header-wrap{
+      border-bottom: 1px solid #e4e4e4;
+      position:relative;
+      z-index: 301;
+      width:100%;
+    }
+    .logo{
+        background:url(http://img01.taobaocdn.com/tps/i1/T1mZeVXytaXXbqHRA.-134-40.png) left center no-repeat;
+        width:135px;
+        text-indent: -10000px;
+        height: 40px;
+        float: left;
+        margin-top:13px;
+    }
+    //导航条
+    .header-inner{
+        @extend .layout-inner;
+        width: 940px;
+    }
+    //主导航
+    nav {
+        float:right;// 
+        // @TODO: Add docs to mixin-name!
+        //
+        @mixin mixin-name($params) {
+          
+        }// 
+        // @TODO: Add docs to mixin-name!
+        //
+        @mixin mixin-name($params) {
+          
+        }
+        clear:right;
+        ul{
+            float:left;
+        }
+    }
+    nav li{
+        font:16px/18px "\5FAE\8F6F\96C5\9ED1", Helvetica, Arial, Verdana, "\5B8B\4F53"; 
+        float:left;
+        margin:23px 0 0px 35px;
+        padding-bottom:23px;
+        *margin-left:22px;
+        a {
+            color:#333333;
+            //导航鼠标指上去变橙色
+            &:hover {
+                color:#ff6600;
+                text-decoration:none;
+            }
+            &:active,&:focus{
+                text-decoration:none;
+            }
+        }
+        &.main-menu {
+            position:relative;
+            z-index:2;
+            &:hover,&:focus{
+                &:hover .sub-menu,&:focus .sub-menu {
+                    display: block;
+                }
+            }
+            // 装饰竖线
+            i{
+                @include i(12px);
+            }        
+        }
+        &.active > a{
+          color:#ff6600 !important;
+        }
+        &.header-nav-record{
+          margin-left:0 !important;
+        }
+    }
+    //右边关于备案专区和论坛的导航，字体略小
+    ul.nav-right{
+        li{
+            //font-size: 14px;
+            @include rem('font-size',14px);
+            margin-left:12px;
+            *margin-left:10px;
+        }
+    }
+    //隐藏的下拉二级导航
+    .sub-menu{
+        background-color:#ffffff;
+        border:1px solid #999999;
+        border-top:2px solid #ff6600;
+        display: none;
+        position: absolute;
+        top: 29px;
+        left: -146px;
+        width: 340px;
+        z-index: 1;
+        margin:0;
+        //font-size: 12px;
+        @include rem('font-size',12px);
+        padding:0 16px 0px 20px;
+        b{
+            position: absolute;
+            border-width: 6px;
+            border-style: solid;
+            border-color: #f5f5f5 #f5f5f5 #ff6600;
+            left: 178px;
+            top: -14px;
+            width: 0;
+            height: 0;
+            font-size: 0;
+            line-height: 0;
+        }
+        dl{
+            @include clearfix();
+            overflow: hidden;
+            padding: 12px 0;
+            border-bottom:1px dashed #e0e0e0;
+            &:last-child{
+              border-bottom: none;
+            }
+        }
+        dt{
+            width:72px;
+            color:#ccc;
+            float:left;
+            text-align: left;
+        }
+        dd{
+            float:left;
+            width:242px;
+            text-align: left;
+            a{
+                color:#000000;
+            }
+        }
+        p{
+            margin-top:15px;
+        }
+    }
+    // 产品服务左侧导航要宽一些
+    #J_sub_menu1{
+      dt{
+        width:110px;
+      }
+      dd{
+        width:230px;
+      }
+    }
+    #J_sub_menu3 b{
+      left:179px;
+    }
+    #J_sub_menu4,#J_sub_menu5{
+      width:298px;
+      left:-140px;
+      b{
+        left:158px;
+      }
+      dt{
+        display: none;
+      }
+      dd{
+        width:100%;
+      }
+    }
+    #J_sub_menu5 b{
+      left:156px;
+    }
+    // 二级页面的logo
+    .sub-logo{
+        display: block;
+        width: 140px;
+        //background: url(../images/logo-service.png) left center no-repeat;
+        margin-top: 22px;
+        //text-indent: -999em;
+        text-decoration: none;
+        overflow: hidden;
+        color:#999;
+        float: left;
+        text-align: left;
+        &:hover{
+          text-decoration: none;
+        }
+    }
+    // 服务中心和论坛头部二级logo
+    .sub-logo-help,.sub-logo-bbs,.sub-logo-dev{
+      background: url(http://img03.taobaocdn.com/tps/i3/T1UZi3XzVeXXcNTnfq-90-40.png) left center no-repeat;
+      text-indent: -999em;
+      height:40px;
+      margin-top:16px;
+    }
+    // 论坛头部二级logo
+    .sub-logo-bbs{
+      background-image: url(http://img02.taobaocdn.com/tps/i2/T1Bc9YXAlgXXcpKPji-54-40.png);
+    }
+    // 论坛头部二级logo
+    .sub-logo-dev{
+      background-image: url(http://img04.taobaocdn.com/tps/i4/T1ijOYXqtgXXcdXJ.7-115-40.png);
+    }
+    // 二级页面的导航
+    ul.nav-child{
+        li{
+            //font-size: 14px;
+            @include rem('font-size',14px);
+            margin-left:27px;
+        }
+    }
+    i.big{
+        @include i(28px);
+        margin:0 22px;
+        *margin:0 18px;
+        float:left;
+        margin-top:18px;
+    }
+    .search-form{
+        float:left;
+        margin-top:18px;
+            .search-input{
+                padding:2px;
+                height:23px;
+                width:147px;
+                //font-size: 14px;
+                @include rem('font-size',14px);
+                border:1px solid #cdcdcd;
+                vertical-align:middle;
+            }
+            .search-button{
+                @include border-radius(3px);
+                display: inline-block;
+                width:48px;
+                height:28px;
+                background-color:#fe980e;
+                color:#fff;
+                border:none;
+                text-shadow: 1px 0px 1px #333333;
+                background: -webkit-gradient(linear, 0 0, 0 100%, from(#ff8a00), to(#ee7b00));
+                background: -moz-linear-gradient(top, #ff8a00, #ee7b00);
+                -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#ff8a00, endColorStr=#ee7b00);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#ff8a00, endColorStr=#ee7b00);
+            }
+            /*.search-button:hover{
+                background: -webkit-gradient(linear, 0 0, 0 100%, from(#ee7b00), to(#ff8a00));
+                background: -moz-linear-gradient(top, #ee7b00, #ff8a00);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff8a00, endColorstr=#ee7b00);
+            }*/
+    }
+    
+}
+//控制导航的当前高亮显示
+.index header nav .header-nav-index a,
+.product header nav .header-nav-product a, 
+.solution header nav .header-nav-solution a,
+.market header nav .header-nav-market a,
+.solution header nav .header-nav-solution a,
+.developer header nav .header-nav-developer a,
+.record header nav .header-nav-record a,
+.customer header nav .header-nav-customer a,
+.partner header nav .header-nav-partner a,
+.bbs header nav .header-nav-bbs a{
+    color:#ff6600;
+}
+.product header nav .header-nav-product .sub-menu a, 
+.solution header nav .header-nav-solution .sub-menu a,
+.market header nav .header-nav-market .sub-menu a{
+  color:#000;
+}
+.product header nav .header-nav-product .sub-menu a:hover, 
+.solution header nav .header-nav-solution .sub-menu a:hover,
+.market header nav .header-nav-market .sub-menu a:hover{
+  color:#ff6600;
+}
+
+//凌云当前页面的高亮显示
+.lingyun-index .lingyun-header-nav-index a,
+.lingyun-about .lingyun-header-nav-about a,
+.lingyun-journal .lingyun-header-nav-journal a{
+  color:#ff6600;
+}
+//开发者
+.dev-index .dev-header-nav-index a,
+.dev-doc .dev-header-nav-doc a,
+.dev-download .dev-header-nav-download a{
+  color:#ff6600;
+}
+.dev-doc .dev-header-nav-doc .sub-menu a{
+  color:#000;
+}
+.dev-doc .dev-header-nav-doc .sub-menu a:hover{
+  color:#ff6600;
+}
+
+//帮助中心当前页面的高亮显示
+.help-index .help-nav-index a,
+.help-guide .help-nav-guide a,
+.help-contactservice .help-nav-contactservice a,
+.help-webbaindex .help-nav-webbaindex a,
+.help-manual .help-nav-manual a{
+  color:#ff6600;
+}

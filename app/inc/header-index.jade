@@ -1,0 +1,158 @@
+header
+  .header-wrap
+    .header-inner
+      a(href="http://www.aliyun.com") 
+        h1.logo 阿里云官方网站
+      a(href="http://www.aliyun.com",class="sub-logo index-logo",title="打造数据分享第一平台") 打造数据分享第一平台
+      nav
+        ul
+          li.header-nav-index
+            a(href="http://www.aliyun.com") 首页
+          li.main-menu.header-nav-product
+            a(href="http://www.aliyun.com/product/",aria-haspopup="J_sub_menu1") 产品 • 服务
+            div#J_sub_menu1.sub-menu
+              b
+              dl
+                dt 弹性计算
+                dd 
+                  a(href="http://www.aliyun.com/product/ecs/") 云服务器
+                  i
+                  a(href="http://www.aliyun.com/product/slb/") 负载均衡
+              dl
+                dt 数据存储 • 计算
+                dd
+                  a(href="http://www.aliyun.com/product/oss/") 开放存储服务
+                  i
+                  a(href="http://www.aliyun.com/product/rds/") 关系型数据库服务
+                  br
+                  a(href="http://www.aliyun.com/product/odps/") 开放数据处理服务
+                  i
+                  a(href="http://www.aliyun.com/product/ots/") 开放结构化数据服务
+              dl
+                dt 云引擎
+                dd 
+                  a(href="http://www.aliyun.com/product/ace/") 云引擎
+              dl
+                dt 其它服务
+                dd
+                  a(href="http://www.aliyun.com/product/jiankong/") 云监控
+                  i
+                  a(href="http://www.aliyun.com/product/yundun/") 云盾
+                  i
+                  a(href="http://css.aliyun.com/") 云搜索
+                  i
+                  a(href="http://ditu.aliyun.com/jsdoc/") 云地图
+                  br
+                  a(href="http://mail.aliyun.com/introduce/") 云邮箱
+                  i
+                  a(href="http://otp.aliyun.com/") 风云令
+          //- 注释掉，说是暂不上解决方案
+            li.main-menu.header-nav-solutions
+            a(href="http://www.aliyun.com",aria-haspopup="J_sub_menu2") 解决方案
+            div#J_sub_menu2.sub-menu
+              b
+              p
+                a(href="http://www.aliyun.com") 政企解决方案
+                i
+                a(href="http://www.aliyun.com") 游戏解决方案
+                i
+                a(href="http://www.aliyun.com") IDC行业解决方案
+              p
+                a(href="http://www.aliyun.com") 软件行业解决方案
+                i
+                a(href="http://www.aliyun.com") 消费电子解决方案
+                i
+                a(href="http://www.aliyun.com") 教育行业解决方案
+              p
+                a(href="http://www.aliyun.com") APP开发一站式解决方案       
+          li.main-menu.header-nav-market
+            a(href="http://market.aliyun.com/",aria-haspopup="J_sub_menu3") 云应用市场
+            div#J_sub_menu3.sub-menu
+              b
+              dl
+                dt 网站云
+                dd 
+                  a(href="http://market.aliyun.com/zoomla") 逐浪CMS建站
+              dl
+                dt 网店系统
+                dd
+                  a(href="http://market.aliyun.com/shopex") ShopEx
+                  i
+                  a(href="http://market.aliyun.com/hishop") Hishop   
+                  i
+                  a(href="http://market.aliyun.com/v5shop") V5Shop   
+                  i
+                  a(href="http://market.aliyun.com/shopnc") ShopNC
+              dl
+                dt ERP管理
+                dd 
+                  a(href="http://market.aliyun.com/bjhetang") 禾唐版ERP
+              dl
+                dt 办公软件
+                dd
+                  a(href="http://market.aliyun.com/qc24om") 24om在线办公软件
+              dl
+                dt 数据分析
+                dd 
+                  a(href="http://market.aliyun.com/markway") 马克威分析系统
+              dl
+                dt 渲染服务
+                dd 
+                  a(href="http://render.aliyun.com/") 渲染云
+          li.main-menu.header-nav-developer
+            a(href="http://dev.aliyun.com/",aria-haspopup="J_sub_menu4") 开发者
+            div#J_sub_menu4.sub-menu
+              b
+              dl
+                dt
+                dd
+                  a(href="http://dev.aliyun.com/thread.php?fid=2") 技术文档
+                  i
+                  a(href="http://dev.aliyun.com/index.php?m=area&alias=tool") 下载中心
+                  i
+                  a(href="http://dasai.aliyun.com/2013/") 开发者大赛
+                  i
+                  a(href="http://awdc.aliyun.com/") 开发者大会
+          li
+            a(href="http://www.aliyun.com/partner/index.html") 合作伙伴
+        i.big
+        ul.nav-right
+          li(style="margin-left:0;").header-nav-record
+            a(href="http://www.aliyun.com/act/webbaindex.html") 备案专区
+          li.header-nav-customer
+            a(href="http://www.aliyun.com/customer/") 客户案例
+          li.header-nav-bbs
+            a(href="http://bbs.aliyun.com/") 论坛
+<!--[if IE 6]>
+script
+  $(function() {
+    $('.main-menu').hover(function() {
+      $(this).find('.sub-menu').show();
+    },function() {
+      $(this).find('.sub-menu').hide();
+    })
+  });
+<![endif]-->
+<!--[if lte IE 8]>
+script
+  (function(){
+      var updscreen=function(){
+
+        if($(window).width()>=1280){
+          if(/screen/ig.test($("body").attr("class"))){
+            $("body").get(0).className=$("body").attr("class").replace(/screen[0-9]{3,4}/ig,"screen1200");
+          }else{
+            $("body").addClass("screen1200");
+          }  
+        }else{
+          if(/screen/ig.test($("body").attr("class"))){
+            $("body").get(0).className=$("body").attr("class").replace(/screen[0-9]{3,4}/ig,"screen997");
+          }else{
+            $("body").addClass("screen997");
+          }
+        }
+      }
+      updscreen();
+      $(window).resize(updscreen);
+  })();
+<![endif]-->
