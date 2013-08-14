@@ -8,7 +8,7 @@ block header
   include inc/header-index
   style
     .product-ace .features{
-      background-image:url(http://img03.taobaocdn.com/tps/i3/T1wut0FiXeXXcmVW3k-315-872.png) !important;
+      background-image:url(http://img03.taobaocdn.com/tps/i3/T1KOahFXdbXXbG1Yck-315-890.png) !important;
     }
 block container
   .product-overview.fix-clear
@@ -140,42 +140,79 @@ block container
             a(href="") 配置升级相关问题
           dd
             a(href="") 操作系统相关问题 
-block footer
+    .tab-panel
   script
-        (function(){
-              
-              Alipw.importClass('Alipw.SlideView');
+    (function(){
+          
+      Alipw.importClass('Alipw.SlideView');
 
-              AYSW.product.slideCustomerViews =[];
-              AYSW.product.slideCustomerViews.push([
-                          '<ul class="customer-item">',
-                                  '<li class="li-title">囧记单词</li>',
-                                  '<li class="li-content-1">移动APP开发者解决方案</li>',
-                                  '<li class="li-content-2"><span>急需解决：</span>用户增长速度快，流量急需扩容，服务成本过高</li>',
-                                  '<li class="li-content-2"><span>购买服务：</span>云服务器V型+<a href="#">关系型数据库</a></li>',
-                                  '<li class="li-logo"> <img width="90" height="90" src="http://img02.taobaocdn.com/tps/i2/T10Nx4XrBXXXbCFbsb-100-100.jpg"></li>',
-                                  '<li class="li-info poptip-container">',
-                                    '<div class="poptip-arrow"><em>◆</em><span>◆</span></div>',
-                                    '<h4>客户使用心得：</h4>',
-                                    '<p>从2012年开始就想把服务器跟第三方更加专业的合作伙伴进行合作。综合对比下来觉得阿里云的云服务在目前的云主机里是做得比较好的，所以很原意和你们进行合作，速度和稳定性方面都很好。</p>',
-                                  '</li>',
-                            '</ul>'
-                            ].join(''));
-              AYSW.product.slideCustomerViews.push([
-                          '<ul class="customer-item">',
-                                  '<li class="li-title">囧记单词</li>',
-                                  '<li class="li-content-1">移动APP开发者解决方案</li>',
-                                  '<li class="li-content-2"><span>急需解决：</span>用户增长速度快，流量急需扩容，服务成本过高</li>',
-                                  '<li class="li-content-2"><span>购买服务：</span>云服务器V型+<a href="#">关系型数据库</a></li>',
-                                  '<li class="li-logo"> <img width="90" height="90" src="http://img02.taobaocdn.com/tps/i2/T10Nx4XrBXXXbCFbsb-100-100.jpg"></li>',
-                                  '<li class="li-info poptip-container">',
-                                    '<div class="poptip-arrow"><em>◆</em><span>◆</span></div>',
-                                    '<h4>客户使用心得：</h4>',
-                                    '<p>从2012年开始就想把服务器跟第三方更加专业的合作伙伴进行合作。综合对比下来觉得阿里云的云服务在目前的云主机里是做得比较好的，所以很原意和你们进行合作，速度和稳定性方面都很好。</p>',
-                                  '</li>',
-                            '</ul>'
-                            ].join(''));
-          })();
+      AYSW.product.slideCustomerViews =[];
+      AYSW.product.slideCustomerViews.push([
+                  '<ul class="customer-item">',
+                          '<li class="li-title">囧记单词</li>',
+                          '<li class="li-content-1">移动APP开发者解决方案</li>',
+                          '<li class="li-content-2"><span>急需解决：</span>用户增长速度快，流量急需扩容，服务成本过高</li>',
+                          '<li class="li-content-2"><span>购买服务：</span>云服务器V型+<a href="#">关系型数据库</a></li>',
+                          '<li class="li-logo"> <img width="90" height="90" src="http://img02.taobaocdn.com/tps/i2/T10Nx4XrBXXXbCFbsb-100-100.jpg"></li>',
+                          '<li class="li-info poptip-container">',
+                            '<div class="poptip-arrow"><em>◆</em><span>◆</span></div>',
+                            '<h4>客户使用心得：</h4>',
+                            '<p>从2012年开始就想把服务器跟第三方更加专业的合作伙伴进行合作。综合对比下来觉得阿里云的云服务在目前的云主机里是做得比较好的，所以很原意和你们进行合作，速度和稳定性方面都很好。</p>',
+                          '</li>',
+                    '</ul>'
+                    ].join(''));
+      AYSW.product.slideCustomerViews.push([
+                  '<ul class="customer-item">',
+                          '<li class="li-title">囧记单词</li>',
+                          '<li class="li-content-1">移动APP开发者解决方案</li>',
+                          '<li class="li-content-2"><span>急需解决：</span>用户增长速度快，流量急需扩容，服务成本过高</li>',
+                          '<li class="li-content-2"><span>购买服务：</span>云服务器V型+<a href="#">关系型数据库</a></li>',
+                          '<li class="li-logo"> <img width="90" height="90" src="http://img02.taobaocdn.com/tps/i2/T10Nx4XrBXXXbCFbsb-100-100.jpg"></li>',
+                          '<li class="li-info poptip-container">',
+                            '<div class="poptip-arrow"><em>◆</em><span>◆</span></div>',
+                            '<h4>客户使用心得：</h4>',
+                            '<p>从2012年开始就想把服务器跟第三方更加专业的合作伙伴进行合作。综合对比下来觉得阿里云的云服务在目前的云主机里是做得比较好的，所以很原意和你们进行合作，速度和稳定性方面都很好。</p>',
+                          '</li>',
+                    '</ul>'
+                    ].join(''));
+      })();
 
+      jQuery.getJSON('/promotion/newproductajax',{type:'ace'},function(result) {
+          if(!result) {
+            return;
+          }
+          var buyArea = $(".buy-container .buy-area");
+          if(result && result.code === -2) {
+            // 未登录
+            var loginBoxHtml = [
+              '<p><a role="button" href="http://i.aliyun.test/inviteapply?agent_id=PjFAwl3VLvs%3D" class="btn btn-large btn-orange buy-widget-btn">获取邀请码</a></p>',
+              '<p><a href="">登录</a>/<a href="">注册</a></p>'
+              ].join("");
+            buyArea.html(loginBoxHtml);
+            return;
+          }
+
+          if(result.code === 200) {
+            var invitationCode = result.data.invitationCode;
+            if(!invitationCode) {
+              buyArea.html('<p>需要邀请码才能开通CDN服务</p><p><a href="http://i.aliyun.test/inviteapply?agent_id=PjFAwl3VLvs%3D" class="btn btn-large btn-orange buy-widget-btn">获取邀请码</a></p>');
+              return;
+            }
+            if(result.data.count === 0) {
+              var html = ['<p>您已拥有邀请码</p>'];
+              if(!result.data.ecsCount && !result.data.ossCount)  {
+                html.push('<p>需要<a href="/ecs">购买ECS</a>或<a href="/oss">购买OSS</a>才能开通CDN</p>');
+              }else {
+                html.push('<p><a href="http://console.aliyun.com/cdn/index.htm" class="btn btn-large btn-orange buy-widget-btn">开通CDN</a></p>');
+              }
+              buyArea.html( html.join('') );
+            }else {
+              var html = ['<p>欢迎使用云引擎(ACE),每个用户可创建3个ACE,您已创建'+ result.data.count +'</p>']
+              buyArea.html('<p><a role="button" target="_blank" href="http://console.aliyun.com/cdn/index.htm" class="btn btn-large btn-black buy-widget-btn" data-ga="">进入管理控制台</a></p>');
+            }
+          }
+        });
+        //显示
+        AYSW.product.viewBuyArea();
 
   

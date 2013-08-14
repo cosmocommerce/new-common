@@ -209,8 +209,8 @@ block container
                               '</li>',
                         '</ul>'
                         ].join(''));
-            //登录区块
-            $.getJSON('/promotion/newproductajax',{type:'ocs'},function(result) {
+
+            jQuery.getJSON('/promotion/newproductajax',{type:'ocs'},function(result) {
               if(!result) {
                 return;
               }
@@ -231,10 +231,16 @@ block container
                   buyArea.html('<p>需要邀请码才能开通OCS服务</p><p><a href="http://i.aliyun.test/inviteapply?agent_id=PjFAwl3VLvs%3D" class="btn btn-large btn-orange buy-widget-btn">获取邀请码</a></p>');
                   return;
                 }
-                if(result.count === 0) {
-                  buyArea.html('<p>您已拥有邀请码</p><p><a href="" class="btn btn-large btn-orange buy-widget-btn">开通CDN</a></p>');
+                if(result.data.count === 0) {
+                  var html = ['<p>您已拥有邀请码</p>'];
+                  if(!result.data.ecsCount)  {
+                    html.push('<p>需要<a href="/ecs">购买ECS</a>才能开通OCS</p>');
+                  }else {
+                    html.push('<p><a href="http://console.aliyun.com/ocs/index.htm" class="btn btn-large btn-orange buy-widget-btn">开通OCS</a></p>');
+                  }
+                  buyArea.html( html.join('') );
                 }else {
-                  buyArea.html('<a role="button" target="_blank" href="http://console.aliyun.com/cdn/index.htm" class="btn btn-large btn-black buy-widget-btn" data-ga="">进入管理控制台</a>');
+                  buyArea.html('<a role="button" target="_blank" href="http://console.aliyun.com/ocs/index.htm" class="btn btn-large btn-black buy-widget-btn" data-ga="">进入管理控制台</a>');
                 }
               }
             });
