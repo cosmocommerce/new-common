@@ -154,7 +154,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: 'app',
-                    src: ['**/*.{css,js,png,jpg,jpeg}'],
+                    src: ['**/*.{css,js,png,jpg,jpeg,html}'],
                     dest: '.tmp'
                 }]
             },

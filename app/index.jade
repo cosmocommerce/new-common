@@ -23,11 +23,13 @@ html(lang='zh-cn')
     //if lt IE 8
       script(src="iconfont/lte-ie7.js")
     style
-      #feedback{display:block;position:fixed;_position:absolute;right:0;top:112px;width:25px;height:37px;text-indent:-2000px;z-index:330;background:url(http://img04.taobaocdn.com/tps/i4/T1MSlbFb4cXXc3cmDa-92-115.png) no-repeat 0 0}#feedback:hover{background-position:0 -42px}#feedback i{height:21px;width:0;position:absolute;top:7px;right:25px;-webkit-transition:width 300ms ease;-moz-transition:width 300ms ease;-ms-transition:width 300ms ease;-o-transition:width 300ms ease;transition:width 300ms ease;background:url(http://img04.taobaocdn.com/tps/i4/T1MSlbFb4cXXc3cmDa-92-115.png) no-repeat 0 -91px}#feedback:hover i{width:96px;height:26px;right:21px}.c-sectitle-2 span,.c-sectitle-1{padding-left:0;}.slider-index:first-child{margin-left:0 !important;}
+      .c-sectitle-2 span,.c-sectitle-1{padding-left:0;}.slider-index:first-child{margin-left:0 !important;}
+      #mail-tip-box{
+
+      }
+      
   body.index
-    a#feedback.icon-pen(href="")
-      | 给新版提意见
-      i
+    include inc/notice
     include inc/topbar
     include inc/header-index
     .banner-area
@@ -248,5 +250,7 @@ html(lang='zh-cn')
     .aly-wrap(style="padding-top:0;")
       include inc/index-body.html
     include inc/footer.html
-    .mail-tip(style="position:absolute;top:-26px;z-index:5;")
-        img(src="http://img04.taobaocdn.com/tps/i4/T1H49aFetgXXXWpZrm-188-77.gif",alt="")
+    script
+      $.get('/product',function(data){
+        console.log(data);
+        })

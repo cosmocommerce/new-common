@@ -231,8 +231,8 @@ block container
                               '</li>',
                         '</ul>'
                         ].join(''));
-            //登录区块
             
+
             
             jQuery.getJSON('/promotion/newproductajax',{type:'cdn'},function(result) {
               if(!result) {
@@ -242,7 +242,7 @@ block container
               if(result && result.code === -2) {
                 // 未登录
                 var loginBoxHtml = [
-                  '<p><a role="button" href="http://i.aliyun.test/inviteapply?agent_id=PjFAwl3VLvs%3D" class="btn btn-large btn-orange buy-widget-btn">获取邀请码</a></p>',
+                  '<p><a role="button" href="http://i.aliyun.test/inviteapply?agent_id=77%3D" class="btn btn-large btn-orange buy-widget-btn">获取邀请码</a></p>',
                   '<p><a href="">登录</a>/<a href="">注册</a></p>'
                   ].join("");
                 buyArea.html(loginBoxHtml);
@@ -252,17 +252,11 @@ block container
               if(result.code === 200) {
                 var invitationCode = result.data.invitationCode;
                 if(!invitationCode) {
-                  buyArea.html('<p>需要邀请码才能开通CDN服务</p><p><a href="http://i.aliyun.test/inviteapply?agent_id=PjFAwl3VLvs%3D" class="btn btn-large btn-orange buy-widget-btn">获取邀请码</a></p>');
+                  buyArea.html('<p>需要邀请码才能开通CDN服务</p><p><a href="http://i.aliyun.test/inviteapply?agent_id=77" class="btn btn-large btn-orange buy-widget-btn">获取邀请码</a></p>');
                   return;
                 }
-                if(result.data.count === 0) {
-                  var html = ['<p>您已拥有邀请码</p>'];
-                  if(!result.data.ecsCount && !result.data.ossCount)  {
-                    html.push('<p>需要<a href="/ecs">购买ECS</a>或<a href="/oss">购买OSS</a>才能开通CDN</p>');
-                  }else {
-                    html.push('<p><a href="http://console.aliyun.com/cdn/index.htm" class="btn btn-large btn-orange buy-widget-btn">开通CDN</a></p>');
-                  }
-                  buyArea.html( html.join('') );
+                if(result.count === 0) {
+                  buyArea.html('<p>您已拥有邀请码</p><p><a href="http://i.aliyun.com/invite/active?agent_id=77" class="btn btn-large btn-orange buy-widget-btn">开通CDN</a></p>');
                 }else {
                   buyArea.html('<a role="button" target="_blank" href="http://console.aliyun.com/cdn/index.htm" class="btn btn-large btn-black buy-widget-btn" data-ga="">进入管理控制台</a>');
                 }
@@ -272,7 +266,4 @@ block container
             AYSW.product.viewBuyArea();
             
       })();
-  script(src="http://buy.aliyun.com?app=vm_js")
-  script(src="http://static.aliyun.com/js/www-summerwind/buy_modules.js?v=1367065989")
-  script(src="http://static.aliyun.com/js/www-summerwind/product_vmcalculator.js?v=1367065989")
   script(src="http://w.cnzz.com/c.php?id=30062873")

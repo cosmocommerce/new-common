@@ -8,7 +8,7 @@ block header
   include inc/header-index
   style
     .product-ace .features{
-      background-image:url(http://img03.taobaocdn.com/tps/i3/T1KOahFXdbXXbG1Yck-315-890.png) !important;
+      background-image:url(http://gtms03.alicdn.com/tps/i3/T1KOahFXdbXXbG1Yck-315-890.png) !important;
     }
 block container
   .product-overview.fix-clear
@@ -46,9 +46,9 @@ block container
         li 进入ACE产品详情页，申请激活码
         li 申请审核通过后，您的注册邮箱会收到一封通知邮件，内容包含了激活码和激活地址
         li 访问产品激活地址，输入激活码，成功激活产品并进入ACE控制台
-        li 通过控制台进行创建应用、上传代码、部署应用等管理操作
-        li 也可以在控制台中查询应用的性能数据（流量、内存等）、运行日志等
-        li 还可以在控制台开通ACE扩展服务，供应用程序调用
+        li 通过控制台填写应用配置参数提交创建应用
+        li 通过FTP上传应用代码
+        li 通过二级域名访问网站
       h3 
         span 产品优势
       ul.info-list.features
@@ -57,48 +57,51 @@ block container
             span.icon-good 
             | 稳定
           ul.features-info
-            li 服务可用性达到99.x%
-            li 服务可靠性达到99.xxx%
-            li 支持集群模式，个别应用实例故障不影响整体对外服务
-            li 健康检查机制，宕机自动重启；设备故障，应用实例自动漂移
+            li 多实例模式，个别应用实例故障不影响整体服务
         li.features-item
           h4 
             span.icon-good 
             | 弹性
           ul.features-info
-            li 根据负载情况自动伸缩应用使用的资源
-            li 采用热伸缩方式，服务不中断
+            li 自动弹性伸缩，无需人工干预运维，根据实际使用量计费
         li.features-item
           h4 
             span.icon-good 
             | 安全
           ul.features-info
-            li 多用户隔离、防DDoS系统
+            li 防DDoS系统
         li.features-item
           h4 
             span.icon-good 
             | 高效
           ul.features-info
-            li 路由优化，对动、静资源访问分离处理
-            li 对静态资源访问进行了加速处理
+            li 提供在线模板库，可以通过模板快速创建应用；开发人员
+              br
+              | 还可以将自己的应用做成模板，发布其应用给其他人使用，
+              br
+              | 大大提高了开发效率。
         li.features-item.last-feature
           h4 
             span.icon-good 
             | 丰富的扩展服务
           ul.features-info.last-feature
-            li 分布式Session服务、开放缓存服务、共享型MySQL服务、
-            li 邮件服务、页面抓取服务、还在不断丰富中…
+            li 提供了分布式session，分布式memcache，开放存储，
+              br
+              | 消息队列，计划任务等多种服务，让开发者可以更多的关注在业务
+              br
+              | 开发上，降低开发者的开发成本，其整体架构的高可靠性。
       h3 
         span 产品功能 
       ul.info-list.dot
-        li Java和php应用的创建、代码上传、部署，应用的重启，停止、启动、删除
-        li 应用运行过程中，ACE通过判断负载情况自动伸缩它所使用的资源，伸缩过程不影响应用对外服务，也无需用户干预
-        li 应用的版本管理，可以在历史版本之间切换部署
-        li 支持通过svn管理代码（仅php应用）
-        li 提供应用的性能分析数据，包括JVM的各项参数、网络流量等
-        li 提供运行日志的查询和下载
-        li 提供离线开发和测试工具：ACE依赖SDK、本地模拟运行容器（仅Java应用）
-        li 提供扩展功能：共享型MySQL数据库、分布式Session服务、开放缓存服务、邮件服务、页面抓取服务
+        li 支持NodeJS 环境和 PHP 环境两种语言环境
+        li 模板库，支持在线快速创建应用
+        li 应用管理和配置，支持应用的创建、启动、停止、更新、查看等操作
+        li 对消耗的资源有详细的统计记录
+        li 分布式session，开发者无需考虑跨多台机器的session处理
+        li 基于开放式存储服务，支持多台机器的同时访问
+        li 分布式缓存，有效解决memcache的多机共享，和实例重启引发的缓存清空
+        li 通过函数调用方式，支持定时和定期执行任务
+        li mysql数据库支持，双机热备，支持在线迁移和备份，单表可支持上亿记录
     .tab-panel
       .anchor
         a(id="template",name="template") &nbsp
@@ -140,79 +143,37 @@ block container
             a(href="") 配置升级相关问题
           dd
             a(href="") 操作系统相关问题 
-    .tab-panel
+block footer
   script
     (function(){
-          
-      Alipw.importClass('Alipw.SlideView');
-
-      AYSW.product.slideCustomerViews =[];
-      AYSW.product.slideCustomerViews.push([
-                  '<ul class="customer-item">',
-                          '<li class="li-title">囧记单词</li>',
-                          '<li class="li-content-1">移动APP开发者解决方案</li>',
-                          '<li class="li-content-2"><span>急需解决：</span>用户增长速度快，流量急需扩容，服务成本过高</li>',
-                          '<li class="li-content-2"><span>购买服务：</span>云服务器V型+<a href="#">关系型数据库</a></li>',
-                          '<li class="li-logo"> <img width="90" height="90" src="http://img02.taobaocdn.com/tps/i2/T10Nx4XrBXXXbCFbsb-100-100.jpg"></li>',
-                          '<li class="li-info poptip-container">',
-                            '<div class="poptip-arrow"><em>◆</em><span>◆</span></div>',
-                            '<h4>客户使用心得：</h4>',
-                            '<p>从2012年开始就想把服务器跟第三方更加专业的合作伙伴进行合作。综合对比下来觉得阿里云的云服务在目前的云主机里是做得比较好的，所以很原意和你们进行合作，速度和稳定性方面都很好。</p>',
-                          '</li>',
-                    '</ul>'
-                    ].join(''));
-      AYSW.product.slideCustomerViews.push([
-                  '<ul class="customer-item">',
-                          '<li class="li-title">囧记单词</li>',
-                          '<li class="li-content-1">移动APP开发者解决方案</li>',
-                          '<li class="li-content-2"><span>急需解决：</span>用户增长速度快，流量急需扩容，服务成本过高</li>',
-                          '<li class="li-content-2"><span>购买服务：</span>云服务器V型+<a href="#">关系型数据库</a></li>',
-                          '<li class="li-logo"> <img width="90" height="90" src="http://img02.taobaocdn.com/tps/i2/T10Nx4XrBXXXbCFbsb-100-100.jpg"></li>',
-                          '<li class="li-info poptip-container">',
-                            '<div class="poptip-arrow"><em>◆</em><span>◆</span></div>',
-                            '<h4>客户使用心得：</h4>',
-                            '<p>从2012年开始就想把服务器跟第三方更加专业的合作伙伴进行合作。综合对比下来觉得阿里云的云服务在目前的云主机里是做得比较好的，所以很原意和你们进行合作，速度和稳定性方面都很好。</p>',
-                          '</li>',
-                    '</ul>'
-                    ].join(''));
-      })();
-
       jQuery.getJSON('/promotion/newproductajax',{type:'ace'},function(result) {
-          if(!result) {
-            return;
-          }
-          var buyArea = $(".buy-container .buy-area");
-          if(result && result.code === -2) {
-            // 未登录
-            var loginBoxHtml = [
-              '<p><a role="button" href="http://i.aliyun.test/inviteapply?agent_id=PjFAwl3VLvs%3D" class="btn btn-large btn-orange buy-widget-btn">获取邀请码</a></p>',
-              '<p><a href="">登录</a>/<a href="">注册</a></p>'
-              ].join("");
-            buyArea.html(loginBoxHtml);
-            return;
-          }
-
-          if(result.code === 200) {
-            var invitationCode = result.data.invitationCode;
-            if(!invitationCode) {
-              buyArea.html('<p>需要邀请码才能开通CDN服务</p><p><a href="http://i.aliyun.test/inviteapply?agent_id=PjFAwl3VLvs%3D" class="btn btn-large btn-orange buy-widget-btn">获取邀请码</a></p>');
-              return;
-            }
-            if(result.data.count === 0) {
-              var html = ['<p>您已拥有邀请码</p>'];
-              if(!result.data.ecsCount && !result.data.ossCount)  {
-                html.push('<p>需要<a href="/ecs">购买ECS</a>或<a href="/oss">购买OSS</a>才能开通CDN</p>');
-              }else {
-                html.push('<p><a href="http://console.aliyun.com/cdn/index.htm" class="btn btn-large btn-orange buy-widget-btn">开通CDN</a></p>');
+              if(!result) {
+                return;
               }
-              buyArea.html( html.join('') );
-            }else {
-              var html = ['<p>欢迎使用云引擎(ACE),每个用户可创建3个ACE,您已创建'+ result.data.count +'</p>']
-              buyArea.html('<p><a role="button" target="_blank" href="http://console.aliyun.com/cdn/index.htm" class="btn btn-large btn-black buy-widget-btn" data-ga="">进入管理控制台</a></p>');
-            }
-          }
-        });
-        //显示
-        AYSW.product.viewBuyArea();
+              var buyArea = $(".buy-container .buy-area");
+              if(result && result.code === -2) {
+                // 未登录
+                var loginBoxHtml = [
+                  '<p>ACE内测中，暂时无法创建</p>'
+                  ].join("");
+                buyArea.html(loginBoxHtml);
+                return;
+              }
+
+              if(result.code === 200) {
+                var invitationCode = result.data.invitationCode;
+                if(!invitationCode) {
+                  buyArea.html('<p>ACE内测中，暂时无法创建</p>');
+                  return;
+                }
+                if(result.count > 0) {
+                  buyArea.html('<a role="button" target="_blank" href="http://console.aliyun.com/ace" class="btn btn-large btn-black buy-widget-btn" data-ga="">进入管理控制台</a>');
+                }
+              }
+            });
+            //显示
+            AYSW.product.viewBuyArea();
+    })();
+
 
   
