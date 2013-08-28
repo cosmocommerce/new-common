@@ -1,14 +1,13 @@
 @font-face {
     font-family: 'icomoon';
-    src:url('http://static-img2.cdn.aliyuncs.com/fonts/iconfont/icomoon.eot');
-    src:url('http://static-img2.cdn.aliyuncs.com/fonts/iconfont/icomoon.eot?#iefix') format('embedded-opentype'),
-        url('http://static-img2.cdn.aliyuncs.com/fonts/iconfont/icomoon.woff') format('woff'),
-        url('http://static-img2.cdn.aliyuncs.com/fonts/iconfont/icomoon.ttf') format('truetype'),
-        url('http://static-img2.cdn.aliyuncs.com/fonts/iconfont/icomoon.svg#ayun') format('svg');
+    src:url('http://static-img2.cdn.aliyuncs.test/fonts/iconfont/icomoon.eot?201308271834');
+    src:url('http://static-img2.cdn.aliyuncs.test/fonts/iconfont/icomoon.eot?201308271834#iefix') format('embedded-opentype'),
+        url('http://static-img2.cdn.aliyuncs.test/fonts/iconfont/icomoon.woff?201308271834') format('woff'),
+        url('http://static-img2.cdn.aliyuncs.test/fonts/iconfont/icomoon.ttf?201308271834') format('truetype'),
+        url('http://static-img2.cdn.aliyuncs.test/fonts/iconfont/icomoon.svg?201308271834#ayun') format('svg');
     font-weight: normal;
     font-style: normal;
 }
-
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
@@ -29,7 +28,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-oss, .icon-yunjiankong, .icon-yundun, .icon-yes3, .icon-yes2, .icon-wrong, .icon-video, .icon-upload, .icon-up2, .icon-up, .icon-unlock, .icon-tel, .icon-strap, .icon-stop, .icon-star2, .icon-star, .icon-slb, .icon-shopping-cart, .icon-set2, .icon-set, .icon-Search, .icon-sale, .icon-rubbish, .icon-right2, .icon-right, .icon-reload, .icon-reduce, .icon-rds, .icon-play, .icon-pic, .icon-phone, .icon-pen, .icon-ots, .icon-order, .icon-odps, .icon-ocs, .icon-no3, .icon-money, .icon-mail, .icon-lock, .icon-loading, .icon-link, .icon-lessen, .icon-left2, .icon-left, .icon-home, .icon-help, .icon-heart2, .icon-heart, .icon-good, .icon-giving, .icon-file, .icon-ecs, .icon-earth, .icon-download, .icon-down3, .icon-down2, .icon-down, .icon-dialog2, .icon-customers, .icon-customer, .icon-counter, .icon-cloud, .icon-clock, .icon-card, .icon-calendar, .icon-blow-up, .icon-bang2, .icon-bang, .icon-appendix, .icon-add, .icon-ace, .icon-info {
+.icon-oss, .icon-yunjiankong, .icon-yundun, .icon-yes3, .icon-yes2, .icon-wrong, .icon-video, .icon-upload, .icon-up2, .icon-up, .icon-unlock, .icon-tel, .icon-strap, .icon-stop, .icon-star2, .icon-star, .icon-slb, .icon-shopping-cart, .icon-set2, .icon-set, .icon-Search, .icon-sale, .icon-rubbish, .icon-right2, .icon-right, .icon-reload, .icon-reduce, .icon-rds, .icon-play, .icon-pic, .icon-phone, .icon-pen, .icon-ots, .icon-order, .icon-odps, .icon-ocs, .icon-no3, .icon-money, .icon-mail, .icon-lock, .icon-loading, .icon-link, .icon-lessen, .icon-left2, .icon-left, .icon-home, .icon-help, .icon-heart2, .icon-heart, .icon-good, .icon-giving, .icon-file, .icon-ecs, .icon-earth, .icon-download, .icon-down3, .icon-down2, .icon-down, .icon-dialog2, .icon-customers, .icon-customer, .icon-counter, .icon-cloud, .icon-clock, .icon-card, .icon-calendar, .icon-blow-up, .icon-bang2, .icon-bang, .icon-appendix, .icon-add, .icon-ace, .icon-info, .icon-cdn {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -257,4 +256,7 @@ you can use the generic selector below, but it's slower:
 }
 .icon-info:before {
   content: "\69";
+}
+.icon-cdn:before {
+  content: "\6a";
 }

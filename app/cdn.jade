@@ -234,7 +234,7 @@ block container
             
 
             
-            jQuery.getJSON('/promotion/newproductajax',{type:'cdn'},function(result) {
+            jQuery.getJSON('/promotion/newproductajax',{type:'cdn',timestamp:new Date().getTime()},function(result) {
               if(!result) {
                 return;
               }
@@ -242,24 +242,23 @@ block container
               if(result && result.code === -2) {
                 // 未登录
                 var loginBoxHtml = [
-                  '<p><a role="button" href="http://i.aliyun.test/inviteapply?agent_id=77%3D" class="btn btn-large btn-orange buy-widget-btn">获取邀请码</a></p>',
-                  '<p><a href="">登录</a>/<a href="">注册</a></p>'
+                  '<p><a role="button" href="http://i.aliyun.test/inviteapply?agent_id=77" class="btn btn-large btn-orange buy-widget-btn">获取邀请码</a></p>'
                   ].join("");
                 buyArea.html(loginBoxHtml);
                 return;
               }
-
               if(result.code === 200) {
+                if(result.data.count > 0) {
+                    buyArea.html('<a role="button" target="_blank" href="http://console.aliyun.com/cdn/index.htm" class="btn btn-large btn-black buy-widget-btn" data-ga="">进入管理控制台</a>');
+                    return;
+                }
                 var invitationCode = result.data.invitationCode;
                 if(!invitationCode) {
                   buyArea.html('<p>需要邀请码才能开通CDN服务</p><p><a href="http://i.aliyun.test/inviteapply?agent_id=77" class="btn btn-large btn-orange buy-widget-btn">获取邀请码</a></p>');
-                  return;
+                }else{
+                    buyArea.html('<p>您已拥有邀请码</p><p><a href="http://i.aliyun.com/invite/active?agent_id=77" class="btn btn-large btn-orange buy-widget-btn">开通CDN</a></p>');
                 }
-                if(result.count === 0) {
-                  buyArea.html('<p>您已拥有邀请码</p><p><a href="http://i.aliyun.com/invite/active?agent_id=77" class="btn btn-large btn-orange buy-widget-btn">开通CDN</a></p>');
-                }else {
-                  buyArea.html('<a role="button" target="_blank" href="http://console.aliyun.com/cdn/index.htm" class="btn btn-large btn-black buy-widget-btn" data-ga="">进入管理控制台</a>');
-                }
+                
               }
             });
             //显示

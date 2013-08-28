@@ -209,24 +209,46 @@ block container
                               '</li>',
                         '</ul>'
                         ].join(''));
-            //登录区块
-            var loginBoxHtml = [
-                  '<p>最划算、最稳定、最安全</p>',
-                  '<p>经济型云服务器低至<span class="font-orange">￥89/月</span></p><a role="button" href="buy.aliyun.com" class="btn btn-large btn-orange buy-widget-btn">立即购买</a>'].join("");
-            
-            if (!AYSW.product.getCookie()['login_aliyunid']){
-                //已登录
-                var ecsHTML= [
-                  '<p>最划算、最稳定、最安全</p>',
-                  '<p>经济型云服务器低至<span class="font-orange">￥89/月</span></p><a role="button" href="http://console.aliyun.com/ecs/index.html" class="btn btn-large btn-black buy-widget-btn">进入管理控制台  </a><a role="button" href="buy.aliyun.com" class="btn btn-large btn-orange buy-widget-btn">立即购买</a>',
-                  '<p style="margin-top:8px;"> <a href="#">申请免费数据迁移和环境配置</a></p>'].join("");
-                $(".buy-container .buy-area").html(ecsHTML);
-              }else{
-                //未登录
-                 $(".buy-container .buy-area").html(loginBoxHtml);
+
+            jQuery.getJSON('/promotion/newproductajax',{type:'ocs'},function(result) {
+              if(!result) {
+                return;
               }
+              var buyArea = $(".buy-container .buy-area");
+              if(result && result.code === -2) {
+                // 未登录
+                var loginBoxHtml = [
+                  '<p style="color:red">目前仅支持杭州的ECS和RDS用户申请邀请码</p><p><a role="button" href="http://i.aliyun.test/inviteapply?agent_id=76" class="btn btn-large btn-orange buy-widget-btn">获取邀请码</a></p>'
+                  ].join("");
+                buyArea.html(loginBoxHtml);
+                return;
+              }
+
+              if(result.code === 200) {
+                
+                if(result.data.count > 0) {
+                  buyArea.html('<a role="button" target="_blank" href="http://console.aliyun.test/ocs/index.htm" class="btn btn-large btn-black buy-widget-btn" data-ga="">进入管理控制台</a>');
+                  return;
+                }
+
+                var invitationCode = result.data.invitationCode;
+
+                if(!invitationCode) {
+                  buyArea.html('<p>需要邀请码才能开通OCS服务</p><p style="color:red">目前仅支持杭州的ECS和RDS用户申请邀请码</p><p><a href="http://i.aliyun.test/inviteapply?agent_id=76" class="btn btn-large btn-orange buy-widget-btn">获取邀请码</a></p>');
+                  return;
+                }else {
+                  var html = ['<p>您已拥有邀请码</p>'];
+                  if(!result.data.ecsCount)  {
+                    html.push('<p>需要<a href="/product/ecs"> 购买ECS </a>才能开通OCS</p>');
+                  }else {
+                    html.push('<p><a href="http://i.aliyun.test/invite/active?agent_id=76" class="btn btn-large btn-orange buy-widget-btn">开通OCS</a></p>');
+                  }
+                  buyArea.html( html.join('') );
+                }
+              }
+              
+            });
             //显示
             AYSW.product.viewBuyArea();
-            
       })();
   script(src="http://w.cnzz.com/c.php?id=30062873")

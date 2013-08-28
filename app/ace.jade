@@ -146,33 +146,36 @@ block container
 block footer
   script
     (function(){
-      jQuery.getJSON('/promotion/newproductajax',{type:'ace'},function(result) {
-              if(!result) {
-                return;
-              }
-              var buyArea = $(".buy-container .buy-area");
-              if(result && result.code === -2) {
-                // 未登录
-                var loginBoxHtml = [
-                  '<p>ACE内测中，暂时无法创建</p>'
-                  ].join("");
-                buyArea.html(loginBoxHtml);
-                return;
-              }
+      //登录区块
+        jQuery.getJSON('/promotion/newproductajax',{type:'ace'},function(result) {
+          if(!result) {
+            return;
+          }
+          var buyArea = $(".buy-container .buy-area");
+          if(result && result.code === -2) {
+            // 未登录
+            var loginBoxHtml = [
+              '<p>ACE即将开放公测，敬请期待</p>'
+              ].join("");
+            buyArea.html(loginBoxHtml);
+            return;
+          }
 
-              if(result.code === 200) {
-                var invitationCode = result.data.invitationCode;
-                if(!invitationCode) {
-                  buyArea.html('<p>ACE内测中，暂时无法创建</p>');
-                  return;
-                }
-                if(result.count > 0) {
-                  buyArea.html('<a role="button" target="_blank" href="http://console.aliyun.com/ace" class="btn btn-large btn-black buy-widget-btn" data-ga="">进入管理控制台</a>');
-                }
+          if(result.code === 200) {
+            if(result.data.count > 0) {
+              buyArea.html('<a role="button" target="_blank" href="http://console.aliyun.com/ace" class="btn btn-large btn-black buy-widget-btn" data-ga="">进入管理控制台</a>');
+            }else {
+              var invitationCode = result.data.invitationCode;
+              if(!invitationCode) {
+                buyArea.html('<p>ACE即将开放公测，敬请期待</p>');
+              }else{
+                buyArea.html('<p><a href="http://i.aliyun.com/invite/active?agent_id=78" class="btn btn-large btn-orange buy-widget-btn">开通ACE</a></p>');
               }
-            });
-            //显示
-            AYSW.product.viewBuyArea();
+            }
+          }
+        });
+        //显示
+        AYSW.product.viewBuyArea();
     })();
 
 
