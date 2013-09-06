@@ -210,7 +210,7 @@ block container
                         '</ul>'
                         ].join(''));
 
-            jQuery.getJSON('/promotion/newproductajax',{type:'ocs'},function(result) {
+            jQuery.getJSON('/promotion/newproductajax',{type:'ocs',timestamp:new Date().getTime()},function(result) {
               if(!result) {
                 return;
               }
@@ -218,7 +218,7 @@ block container
               if(result && result.code === -2) {
                 // 未登录
                 var loginBoxHtml = [
-                  '<p style="color:red">目前仅支持杭州的ECS和RDS用户申请邀请码</p><p><a role="button" href="http://i.aliyun.test/inviteapply?agent_id=76" class="btn btn-large btn-orange buy-widget-btn">获取邀请码</a></p>'
+                  '<p>需要获取邀请码开通OCS服务，目前仅支持杭州的ECS用户</p><p><a role="button" href="http://i.aliyun.test/inviteapply?agent_id=76" class="btn btn-large btn-orange buy-widget-btn">获取邀请码</a></p>'
                   ].join("");
                 buyArea.html(loginBoxHtml);
                 return;
@@ -227,14 +227,14 @@ block container
               if(result.code === 200) {
                 
                 if(result.data.count > 0) {
-                  buyArea.html('<a role="button" target="_blank" href="http://console.aliyun.test/ocs/index.htm" class="btn btn-large btn-black buy-widget-btn" data-ga="">进入管理控制台</a>');
+                  buyArea.html('<a role="button" target="_blank" href="http://ocs.aliyun.com" class="btn btn-large btn-black buy-widget-btn" data-ga="">进入管理控制台</a>');
                   return;
                 }
 
                 var invitationCode = result.data.invitationCode;
 
                 if(!invitationCode) {
-                  buyArea.html('<p>需要邀请码才能开通OCS服务</p><p style="color:red">目前仅支持杭州的ECS和RDS用户申请邀请码</p><p><a href="http://i.aliyun.test/inviteapply?agent_id=76" class="btn btn-large btn-orange buy-widget-btn">获取邀请码</a></p>');
+                  buyArea.html('<p>需要获取邀请码开通OCS服务，目前仅支持杭州的ECS用户</p><p><a href="http://i.aliyun.test/inviteapply?agent_id=76" class="btn btn-large btn-orange buy-widget-btn">获取邀请码</a></p>');
                   return;
                 }else {
                   var html = ['<p>您已拥有邀请码</p>'];

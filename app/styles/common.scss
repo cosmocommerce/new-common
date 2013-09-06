@@ -5,10 +5,7 @@
 @import "media-queries";
 
 @import "sprite-icons";
-//@import "icon-fonts";
-//@import "alipw_skin";
 @import "button";
-//@import "topbar"; //顶部通栏
 @import "header"; // 头部
 @import "left-sidebar";
 
@@ -661,6 +658,13 @@ a:focus, a:focus img, input:focus{
 .product .aysw-footer{
   margin-top:0 !important;
 }
-//重置footer右边两列的宽度，因为内容调整过，宽度要修改
-.aysw-footer-goldmetal-beian{width:170px;}
-.aysw-footer-goldmetal-others{float: right;width: 108px;}
+
+
+// 底部加上最小宽度，集团友情链接的地方也需要改，因为用户中心的是940宽，margin调小点
+.aysw-footer-copyright i {margin: 0 8px;}
+.aysw-footer{min-width:997px;}
+
+// 详情页客户案例的标题加一个行高，有时候文字会截断
+.customer-panel .panel-container .customer-item .li-title{
+  line-height: 18px;
+}

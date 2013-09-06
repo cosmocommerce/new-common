@@ -7,460 +7,194 @@
 <meta content="云服务器 云主机 弹性计算 云存储 开放存储 OSS ACE slb ots odps 数据库 mysql RDS SQLSERVER 开放数据处理服务 开放结构化数据服务 开发者 负载均衡 防攻击 防DDOS攻击 云监控 云浏览器 云地图 云邮箱 phpwind 阿里云 云产品 云计算 多线带宽 BGP 服务器环境配置 渲染云 云手机 云盾 应用托管 云引擎" name="keywords" />
 <meta content="弹性计算服务 存储与计算服务 云产品解决方案 享多线独享带宽" name="description" />
 <title>阿里云-关系型数据库RDS-选型推荐</title>
+<?php include('/home/admin/go/rgn/aliyun/www_index_head_new.php');?>
 <link rel="stylesheet" href="http://static-img3.cdn.aliyuncs.com/??css/new-common/ecs.css,css/new-common/oss.css?v={v}">
-<style>.wrap-1{width:100%}.wrap-1 .main-1{width:940px;margin:30px auto 0;padding-bottom:30px;_margin-top:30px}.box-1 .box-topbar{height:50px;border:1px solid #E0E0E0;border-bottom:0 solid;border-top-left-radius:5px;border-top-right-radius:5px;background:-moz-linear-gradient(top, #f8f8f8, #fff);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#F8F8F8FF',endColorstr='#FFFFFFFF')}.box-1 .box-body{border:1px solid #E0E0E0;border-top:0 solid;border-bottom-left-radius:5px;border-bottom-right-radius:5px;padding-bottom:30px}.content-header{padding-bottom:30px}.content-header .title-list-1{padding-left:35px;position:relative;zoom:1}.content-header .title-list-1 .li-1{position:absolute;left:0;top:0}.content-header .title-list-1 .li-2{font-size:18px;line-height:18px}.content-header .title-list-1 .li-3{line-height:14px;color:#A9A9A9}.font-16gray{color:#959595}.font-red{color:#EA0000}.form-1{padding:0 40px}.form-1 legend{display:block;width:100%;_width:auto;height:35px;line-height:35px;background:-moz-linear-gradient(top, #f8f8f8, #ececec);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#F8F8F8',endColorstr='#ECECEC');font-size:14px;color:#959595;margin-bottom:25px}.form-1 legend .span-1{float:left;padding:0 22px;font-weight:bold;background:-moz-linear-gradient(top, #d2d2d2, #e9e9e9);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#D2D2D2',endColorstr='#E9E9E9');border-right:2px solid #fff;zoom:1;height:35px}.form-1 legend .span-2{float:left;position:relative;padding-left:22px}.form-1 legend .span-2 ins{display:block;position:absolute;width:0;height:0;border-width:6px;border-style:solid;border-color:#E9E9E9 #fff #fff;top:35px;left:-44px}.form-1 .form-item{padding-left:230px;padding-bottom:20px}.form-1 .form-item .form-item-lable{float:left;text-align:right;width:210px;margin-left:-230px;font-size:14px}.form-1 .form-item .form-item-tip{margin-left:10px}.form-1 .form-item-buttton{border-top:1px dotted #CCC;padding-top:20px}.form-1 .form-item:after{clear:both;content:".";display:block;height:0;visibility:hidden}.title-box-1{height:35px;background-color:#FAFAFA;padding:0 20px;line-height:35px}.title-box-1 b{float:left;font-size:14px;font-weight:bold}.title-box-1 span{float:left;color:#959595}.title-box-1 a{float:right}.box-2{border:1px solid #E9E9E9;padding:20px;position:relative;zoom:1}.box-2 .ins-2{display:block;width:74px;height:74px;position:absolute;top:-1px;left:-1px;background:url(http://oss.aliyuncs.com/aliyun_portal_storage/1369638143_66_420.png) no-repeat 0 0}.box-2 .ins-1{display:block;width:74px;height:74px;position:absolute;top:-1px;left:-1px;background:url(http://oss.aliyuncs.com/aliyun_portal_storage/1369638143_66_420.png) no-repeat -112px 0}.box-2 .ul-list-1{padding:10px 0 0 45px;height:50px;border-right:1px solid #ccc;width:165px;float:left}.box-2 .ul-list-1 .li-1{font-size:16px;font-weight:bold}.box-2 .ul-list-1 .li-2{font-size:14px;color:#EA0000}.box-2 .ul-list-2{padding:5px 0 0 25px;height:55px;width:370px;float:left;border-right:1px solid #ccc}.box-2 .ul-list-2 li{float:left;width:180px;font-size:14px;line-height:25px}.box-2 .ul-list-2 li b{font-size:16px;font-weight:bold}.box-2 .buy-button-container{float:left;padding:10px 0 0 40px}.oss-text-list dl{padding-top:15px;line-height:25px}.oss-text-list dl dt{font-weight:bold}.program-2{margin-top:20px}.method-2{margin-top:20px}.input-1{height:15px;width:180px;border:1px solid #cfcfcf;border-radius:3px;padding:4px 5px;font:12px/15px Microsoft YaHei,Tahoma,Geneva,sans-serif,SimSun}
+<style>.wrap-1{width:100%}.wrap-1 .main-1{width:940px;margin:30px auto 0;padding-bottom:30px;_margin-top:30px}
+.box-1{
+    border: 1px solid #e0e0e0;
+    background: #fff url(../../images/www-summerwind/qingyibg.png) repeat-x;
+    padding: 25px 40px;
+}
+.box-1 .box-topbar{height:50px;border:1px solid #E0E0E0;border-bottom:0 solid;border-top-left-radius:5px;border-top-right-radius:5px;background:-moz-linear-gradient(top, #f8f8f8, #fff);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#F8F8F8FF',endColorstr='#FFFFFFFF')}.box-1 .box-body{border:1px solid #E0E0E0;border-top:0 solid;border-bottom-left-radius:5px;border-bottom-right-radius:5px;padding-bottom:30px}.content-header{padding-bottom:30px}.content-header .title-list-1{padding-left:35px;position:relative;zoom:1}.content-header .title-list-1 .li-1{position:absolute;left:0;top:0}.content-header .title-list-1 .li-2{font-size:18px;line-height:18px}.content-header .title-list-1 .li-3{line-height:14px;color:#A9A9A9}.font-16gray{color:#959595}.font-red{color:#EA0000}.form-1{padding:0 40px}.form-1 legend{display:block;width:100%;_width:auto;height:35px;line-height:35px;background:-moz-linear-gradient(top, #f8f8f8, #ececec);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#F8F8F8',endColorstr='#ECECEC');font-size:14px;color:#959595;margin-bottom:25px}.form-1 legend .span-1{float:left;padding:0 22px;font-weight:bold;background:-moz-linear-gradient(top, #d2d2d2, #e9e9e9);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#D2D2D2',endColorstr='#E9E9E9');border-right:2px solid #fff;zoom:1;height:35px}.form-1 legend .span-2{float:left;position:relative;padding-left:22px}.form-1 legend .span-2 ins{display:block;position:absolute;width:0;height:0;border-width:6px;border-style:solid;border-color:#E9E9E9 #fff #fff;top:35px;left:-44px}.form-1 .form-item{padding-left:230px;padding-bottom:20px}.form-1 .form-item .form-item-lable{float:left;text-align:right;width:210px;margin-left:-230px;font-size:14px}.form-1 .form-item .form-item-tip{margin-left:10px}.form-1 .form-item-buttton{border-top:1px dotted #CCC;padding-top:20px}.form-1 .form-item:after{clear:both;content:".";display:block;height:0;visibility:hidden}.title-box-1{height:35px;background-color:#FAFAFA;padding:0 20px;line-height:35px}.title-box-1 b{float:left;font-size:14px;font-weight:bold}.title-box-1 span{float:left;color:#959595}.title-box-1 a{float:right}.box-2{border:1px solid #E9E9E9;padding:20px;position:relative;zoom:1}.box-2 .ins-2{display:block;width:74px;height:74px;position:absolute;top:-1px;left:-1px;background:url(http://oss.aliyuncs.com/aliyun_portal_storage/1369638143_66_420.png) no-repeat 0 0}.box-2 .ins-1{display:block;width:74px;height:74px;position:absolute;top:-1px;left:-1px;background:url(http://oss.aliyuncs.com/aliyun_portal_storage/1369638143_66_420.png) no-repeat -112px 0}.box-2 .ul-list-1{padding:10px 0 0 45px;height:50px;border-right:1px solid #ccc;width:165px;float:left}.box-2 .ul-list-1 .li-1{font-size:16px;font-weight:bold}.box-2 .ul-list-1 .li-2{font-size:14px;color:#EA0000}.box-2 .ul-list-2{padding:5px 0 0 25px;height:55px;width:370px;float:left;border-right:1px solid #ccc}.box-2 .ul-list-2 li{float:left;width:180px;font-size:14px;line-height:25px}.box-2 .ul-list-2 li b{font-size:16px;font-weight:bold}.box-2 .buy-button-container{float:left;padding:10px 0 0 40px}.oss-text-list dl{padding-top:15px;line-height:25px}.oss-text-list dl dt{font-weight:bold}.program-2{margin-top:20px}.method-2{margin-top:20px}.input-1{height:15px;width:180px;border:1px solid #cfcfcf;border-radius:3px;padding:4px 5px;font:12px/15px Microsoft YaHei,Tahoma,Geneva,sans-serif,SimSun}
 </style>
 </head>
 <body class="product product-oss" data-spm="572093">
 <?php include('/home/admin/go//rgn/aliyun/header.php');?>
  <div class="wrap-1">
-      <div role="main" class="main-1">
-        <div class="content-header">
-          <ul class="title-list-1">
-            <li class="li-1"><img src="http://static-img2.cdn.aliyuncs.com/images/www-summerwind/icon_calculator.gif"></li>
-            <li class="li-2">RDS选型推荐</li>
-            <li class="li-3">什么套餐适合我呢，小云为你来推荐，可任选一种。</li>
-          </ul>
-        </div>
-        <div class="content-body">
-          <div class="method-1 box-1">
-            <div class="box-topbar"></div>
-            <div class="box-body">
-              <fieldset class="form-1">
-                <legend><span class="span-1">方法1</span><span class="span-2">根据业务评估数据库性能<ins></ins></span></legend>
-                <div class="form-item">
-                  <label class="form-item-lable font-16gray">请输入您的信息：</label><br>
+          <div role="main" class="main-1">
+            <div class="content-header">
+                <ul class="title-list-1">
+                  <li class="li-1"><img src="http://static-img2.cdn.aliyuncs.com/images/www-summerwind/icon_calculator.gif"></li>
+                  <li class="li-2">RDS选型推荐</li>
+                  <li class="li-3">什么套餐适合我呢，小云为你来推荐，可任选一种。</li>
+                </ul>
+            </div>
+            <div class="content-body">
+                <div class="method-1 box-1">
+                  <div class="box-topbar"></div>
+                  <div class="box-body">
+                      <fieldset class="form-1">
+                        <legend><span class="span-1">方法1</span><span class="span-2">根据业务评估数据库性能<ins></ins></span></legend>
+                        <div class="form-item">
+                            <label class="form-item-lable font-16gray">请输入您的信息：</label><br>
+                        </div>
+                        <div class="form-item">
+                            <label class="form-item-lable"> 业务类型：</label>
+                            <select id="site_type">
+                              <option value="0">电子商务网站</option>
+                              <option value="1">社区网站</option>
+                              <option value="2">SAAS化应用</option>
+                              <option value="3">企业官网</option>
+                              <option value="4">门户网站</option>
+                              <option value="5">其它</option>
+                            </select>
+                        </div>
+                        <div class="form-item">
+                            <label class="form-item-lable"> 数据库类型：</label>
+                            <select id="database_type">
+                              <option value="0">Mysql</option>
+                              <option value="1">Sql Server</option>
+                            </select>
+                        </div>
+                        <div class="form-item">
+                            <label class="form-item-lable"> 网站日PV：</label>
+                            <input id="site_pv" class="input-1"><span class="form-item-tip"><b class="font-red">万</b>，可写1-2500的任意值</span>
+                        </div>
+                        <div class="form-item form-item-buttton">
+                            <input type="button" value="开始测算" id="startCount_btn_1" class="btn btn-large btn-orange">
+                        </div>
+                        <div id="J_program_1"> </div>
+                      </fieldset>
+                  </div>
                 </div>
-                <div class="form-item">
-                  <label class="form-item-lable"> 业务类型：</label>
-                  <select id="site_type">
-                    <option value="business">电子商务网站</option>
-                    <option value="bbs">社区网站</option>
-                    <option value="saas">SAAS化应用</option>
-                    <option value="company">企业官网</option>
-                    <option value="portal">门户网站</option>
-                    <option value="other">其它</option>
-                  </select>
+                <div class="method-2 box-1">
+                  <div class="box-topbar"></div>
+                  <div class="box-body">
+                      <fieldset class="form-1">
+                        <legend><span class="span-1">方法2</span><span class="span-2">根据业务评估数据库性能<ins></ins></span></legend>
+                        <div class="form-item">
+                            <label class="form-item-lable font-16gray">请输入您的信息：</label><br>
+                        </div>
+                        <div class="form-item">
+                            <label class="form-item-lable"> 数据库类型：</label>
+                            <select id="method2_database_type">
+                              <option value="0">Mysql</option>
+                              <option value="1">Sql Server</option>
+                            </select>
+                        </div>
+                        <div class="form-item">
+                            <label class="form-item-lable"> QPS(每秒数据库SQL执行次数)：</label>
+                            <input id="method2_qps" class="input-1"><span class="form-item-tip"><b class="font-red">次</b>，可写1-10000的任意值</span>
+                        </div>
+                        <div class="form-item">
+                            <label class="form-item-lable"> 物理磁盘个数：</label>
+                            <input id="method2_disk" class="input-1">
+                        </div>
+                        <div class="form-item">
+                            <label class="form-item-lable"> 物理磁盘类型：</label>
+                            <select id="method2_disk_type">
+                              <option value="0">SATA</option>
+                              <option value="1">SAS</option>
+                              <option value="2">SSD</option>
+                            </select>
+                        </div>
+                        <div class="form-item form-item-buttton">
+                            <input type="button" value="开始测算" id="startCount_btn_2" class="btn btn-large btn-orange">
+                        </div>
+                        <div id="J_program_2"> </div>
+                      </fieldset>
+                  </div>
                 </div>
-                <div class="form-item">
-                  <label class="form-item-lable"> 数据库类型：</label>
-                  <select id="database_type">
-                    <option value="mysql">Mysql</option>
-                    <option value="sqlserver">Sql Server</option>
-                  </select>
-                </div>
-                <div class="form-item">
-                  <label class="form-item-lable"> 网站日PV：</label>
-                  <input id="site_pv" class="input-1"><span class="form-item-tip"><b class="font-red">万</b>，可写1-2500的任意值</span>
-                </div>
-                <div class="form-item form-item-buttton">
-                  <input type="button" value="开始测算" id="startCount_btn_1" class="btn btn-large btn-orange">
-                </div>
-                <div id="J_program_1"> </div>
-              </fieldset>
             </div>
           </div>
-          <div class="method-2 box-1">
-            <div class="box-topbar"></div>
-            <div class="box-body">
-              <fieldset class="form-1">
-                <legend><span class="span-1">方法2</span><span class="span-2">根据业务评估数据库性能<ins></ins></span></legend>
-                <div class="form-item">
-                  <label class="form-item-lable font-16gray">请输入您的信息：</label><br>
-                </div>
-                <div class="form-item">
-                  <label class="form-item-lable"> 数据库类型：</label>
-                  <select id="method2_database_type">
-                    <option value="mysql">Mysql</option>
-                    <option value="sqlserver">Sql Server</option>
-                  </select>
-                </div>
-                <div class="form-item">
-                  <label class="form-item-lable"> QPS(每秒数据库SQL执行次数)：</label>
-                  <input id="method2_qps" class="input-1"><span class="form-item-tip"><b class="font-red">次</b>，可写1-10000的任意值</span>
-                </div>
-                <div class="form-item">
-                  <label class="form-item-lable"> 物理磁盘个数：</label>
-                  <input id="method2_disk" class="input-1">
-                </div>
-                <div class="form-item">
-                  <label class="form-item-lable"> 物理磁盘类型：</label>
-                  <select id="method2_disk_type">
-                    <option value="SATA">SATA</option>
-                    <option value="SAS">SAS</option>
-                    <option value="SSD">SSD</option>
-                  </select>
-                </div>
-                <div class="form-item form-item-buttton">
-                  <input type="button" value="开始测算" id="startCount_btn_2" class="btn btn-large btn-orange">
-                </div>
-                <div id="J_program_2"> </div>
-              </fieldset>
-            </div>
-            <script>
-              var myTypeList = [{
-                      "typeName": "新1型",
-                      "memory": {
-                          "mysql": 240,
-                          "sqlserver": 1000
-                      },
-                      "maxConnections": {
-                          "mysql": 60,
-                          "sqlserver": 100
-                      },
-                      "pv": {
-                          "mysql": {
-                              "business": [1, 6],
-                              "bbs": [1, 18],
-                              "saas": [1, 12],
-                              "company": [1, 25],
-                              "portal": [1, 25],
-                              "other": [1, 18]
-                          },
-                          "sqlserver": {
-                              "business": [1, 25],
-                              "bbs": [1, 72],
-                              "saas": [1, 50],
-                              "company": [1, 60],
-                              "portal": [1, 60],
-                              "other": [1, 72]
-                          }
-                      },
-                      "qps": {
-                          "mysql": [0,100],
-                          "sqlserver": [0,400]
-                      },
-                      "iops": {
-                          "mysql": [0,150],
-                          "sqlserver": [0,500]
-                      }
-              }, {
-                      "typeName": "新2型",
-                      "memory": {
-                          "mysql": 600,
-                          "sqlserver": 2000
-                      },
-                      "maxConnections": {
-                          "mysql": 150,
-                          "sqlserver": 200
-                      },
-                      "pv": {
-                          "mysql": {
-                              "business": [6, 15],
-                              "bbs": [18, 45],
-                              "saas": [12, 30],
-                              "company": [25, 60],
-                              "portal": [25, 60],
-                              "other": [18, 45]
-                          },
-                          "sqlserver": {
-                              "business": [25, 50],
-                              "bbs": [72, 120],
-                              "saas": [50, 100],
-                              "company": [60, 200],
-                              "portal": [60, 200],
-                              "other": [45, 120]
-                          }
-                      },
-                      "qps": {
-                          "mysql": [100,250],
-                          "sqlserver":[400,750]
-                      },
-                      "iops": {
-                          "mysql": [150,300],
-                          "sqlserver":[500,1000]
-                      }
-              }, {
-                      "typeName": "新3型",
-                      "memory": {
-                          "mysql": 1200,
-                          "sqlserver": 4000
-                      },
-                      "maxConnections": {
-                          "mysql": 300,
-                          "sqlserver": 400
-                      },
-                      "pv": {
-                          "mysql": {
-                              "business": [15, 30],
-                              "bbs": [45, 90],
-                              "saas": [30, 60],
-                              "company": [60, 120],
-                              "portal": [60, 120],
-                              "other": [45, 90]
-                          },
-                          "sqlserver": {
-                              "business": [50, 100],
-                              "bbs": [120, 270],
-                              "saas": [100, 200],
-                              "company": [200, 400],
-                              "portal": [200, 400],
-                              "other": [120, 270]
-                          }
-                      },
-                      "qps": {
-                          "mysql": [250,500],
-                          "sqlserver":[750,1500]
-                      },
-                      "iops": {
-                          "mysql": [300,600],
-                          "sqlserver":[1000,2000]
-                      }
-              }, {
-                      "typeName": "新4型",
-                      "memory": {
-                          "mysql": 2400,
-                          "sqlserver": 6000
-                      },
-                      "maxConnections": {
-                          "mysql": 600,
-                          "sqlserver": 600
-                      },
-                      "pv": {
-                          "mysql": {
-                              "business": [30, 60],
-                              "bbs": [90, 180],
-                              "saas": [60, 125],
-                              "company": [120, 250],
-                              "portal": [120, 250],
-                              "other": [90, 180]
-                          },
-                          "sqlserver": {
-                              "business": [100, 150],
-                              "bbs": [270, 450],
-                              "saas": [200, 300],
-                              "company": [400, 600],
-                              "portal": [400, 600],
-                              "other": [270, 450]
-                          }
-                      },
-                      "qps": {
-                          "mysql": [500,1000],
-                          "sqlserver": [1500,2500]
-                      },
-                      "iops": {
-                          "mysql": [600,1200],
-                          "sqlserver": [2000,3000]
-                      }
-              }, {
-                      "typeName": "新5型",
-                      "memory": {
-                          "mysql": 6000,
-                          "sqlserver": 8000
-                      },
-                      "maxConnections": {
-                          "mysql": 1500,
-                          "sqlserver": 800
-                      },
-                      "pv": {
-                          "mysql": {
-                              "business": [60, 150],
-                              "bbs": [180, 450],
-                              "saas": [125, 300],
-                              "company": [250, 600],
-                              "portal": [250, 600],
-                              "other": [180, 450]
-                          },
-                          "sqlserver": {
-                              "business": [150, 200],
-                              "bbs": [450, 540],
-                              "saas": [300, 400],
-                              "company": [600, 800],
-                              "portal": [600, 800],
-                              "other": [450, 540]
-                          }
-                      },
-                      "qps": {
-                          "mysql": [1000,2500],
-                          "sqlserver": [2500,3000]
-                      },
-                      "iops": {
-                          "mysql": [1200,3000],
-                          "sqlserver": [3000,4000]
-                      }
-              }, {
-                      "typeName": "新6型",
-                      "memory": {
-                          "mysql": 12000,
-                          "sqlserver": 12000
-                      },
-                      "maxConnections": {
-                          "mysql": 2000,
-                          "sqlserver": 1200
-                      },
-                      "pv": {
-                          "mysql": {
-                              "business": [150, 300],
-                              "bbs": [450, 900],
-                              "saas": [300, 600],
-                              "company": [600, 1200],
-                              "portal": [600, 1200],
-                              "other": [450, 900]
-                          },
-                          "sqlserver": {
-                              "business": [200, 300],
-                              "bbs": [540, 900],
-                              "saas": [400, 600],
-                              "company": [800, 1200],
-                              "portal": [800, 1200],
-                              "other": [540, 900]
-                          }
-                      },
-                      "qps": {
-                          "mysql": [2500,5000],
-                          "sqlserver": [3000,5000]
-                      },
-                      "iops": {
-                          "mysql": [3000,6000],
-                          "sqlserver": [4000,6000]
-                      }
-              }, {
-                      "typeName": "新7型",
-                      "memory": {
-                          "mysql": 24000,
-                          "sqlserver": 24000
-                      },
-                      "maxConnections": {
-                          "mysql": 2000,
-                          "sqlserver": 2000
-                      },
-                      "pv": {
-                          "mysql": {
-                              "business": [300, 650],
-                              "bbs": [900, 1800],
-                              "saas": [600, 1250],
-                              "company": [1200, 2500],
-                              "portal": [1200, 2500],
-                              "other": [900, 1800]
-                          },
-                          "sqlserver": {
-                              "business": [300, 650],
-                              "bbs": [900, 1800],
-                              "saas": [600, 1250],
-                              "company": [1200, 2500],
-                              "portal": [1200, 2500],
-                              "other": [900, 1800]
-                          }
-                      },
-                      "qps": {
-                          "mysql": [5000,10000],
-                          "sqlserver": [5000,10000]
-                      },
-                      "iops": {
-                          "mysql": [6000,12000],
-                          "sqlserver": [6000,12000]
-                      }
-              }
-              ];
-              var NewLine = '\n';
-              var sqlServerTypeList=[];
-              Alipw.importClass('Alipw.ComboBox');
-              Alipw.Config.set('Alipw.ComboBox',{
-                height:25,
-                cls:'aliyun-standard-combo',
-                overCls:'aliyun-standard-combo-over',
-                downCls:'aliyun-standard-combo-down',
-                expandedCls:'aliyun-standard-combo-expanded',
-                listCls:'aliyun-standard-combo-list',
-                listAboveCls:'aliyun-standard-combo-list-above',
-                listUnderneathCls:'aliyun-standard-combo-list-underneath'
-              });
-              Alipw.onReady(function(){
-                var combo = new Alipw.ComboBox({
-                        applyTo:"#site_type"
-                });
-                var combo = new Alipw.ComboBox({
-                        applyTo:"#database_type"
-                });
-                var combo = new Alipw.ComboBox({
-                        applyTo:"#method2_database_type"
-                });
-                var combo = new Alipw.ComboBox({
-                        applyTo:"#method2_disk_type"
-                });
-                var viewProgram=function(recommendType,databaseType,container){
-                    var programHTML = '';
-                    programHTML+='<h2 class="title-box-1"><b>推荐方案</b><span>（以下建议仅供参考） </span><a href="#">申请免费试用RDS</a></h2>';
-                    for(var n=0,nn=recommendType.length;n<nn;n++){
-                        programHTML+='<div class="box-2 fix-clear program-'+(n+1)+'"><ins class="ins-'+(n+1)+'"></ins>';
-                        programHTML+='  <ul class="ul-list-1">';
-                        programHTML+='    <li class="li-1">总计费用：</li>';
-                        programHTML+='    <li class="li-2">500元/月、5000元/月</li>';
-                        programHTML+='  </ul>';
-                        programHTML+='  <ul class="ul-list-2">';
-                        programHTML+='    <li> <b>数据库类型：</b>'+databaseType+'</li>';
-                        programHTML+='    <li> <b>内存：</b>'+recommendType[n].memory[databaseType]+'</li>';
-                        programHTML+='    <li> <b>最大并发连接：</b>'+recommendType[n].maxConnections[databaseType]+'</li>';
-                        programHTML+='    <li> <b>最大IOPS：</b>'+recommendType[n].iops[databaseType][1]+'</li>';
-                        programHTML+='  </ul>';
-                        programHTML+='  <div class="buy-button-container"><a class="btn btn-large btn-orange" href="#"> 立即购买</a></div>';
-                        programHTML+='</div>';
-                    }
-                    
-                    $(container).fadeOut(300,function(){
-                        $(container).html(programHTML).fadeIn();
-                    });
-                }
-                $("#startCount_btn_1").click(function(){
-                    var siteType=$("#site_type").val();
-                    var databaseType=$("#database_type").val();
-                    var pvNum=parseInt($("#site_pv").val());
-                    var recommendType=[];
-                    for(var i=0,ii=myTypeList.length;i<ii;i++){
-                    
-                      var pvRange=myTypeList[i].pv[databaseType][siteType];
-                      
-                      if(pvNum>pvRange[0]&&pvNum<=pvRange[1]){
-                          recommendType.push(myTypeList[i]);
-                          
-                          if(myTypeList[i+1]){
-                            recommendType.push(myTypeList[i+1]);
-                          }
-                      }
-                    }
-                    viewProgram(recommendType,databaseType,"#J_program_1");
-                })
-                $("#startCount_btn_2").click(function(){
-                    var databaseType=$("#method2_database_type").val();
-                    var qps=parseInt($("#method2_qps").val());
-                    var diskNum=parseInt($("#method2_disk").val());
-                    var disktype=$("#method2_disk_type").val()=="SATA"?80:$("#method2_disk_type").val()=="SAS"?150:500;
-                    var recommendType=-1;
-                    //计算IOPS
-                    if(jQuery.trim($("#method2_disk").val())!=""){
-                      var iops=Math.ceil(diskNum*disktype/1.3);
-                    }
-                    
-                    for(var i=0,ii=myTypeList.length;i<ii;i++){
-                    
-                      var qpsRange=myTypeList[i].qps[databaseType];
-                      var iopsRange=myTypeList[i].iops[databaseType];
-                      if(qps>qpsRange[0]&&qps<=qpsRange[1]){
-                          recommendType=i;
-                          
-                      }
-                      if(iops&&iops>iopsRange[0]&&iops<=iopsRange[1]){
-                          recommendType=i;
-                          
-                      }
-                    }
-                    recommendTypeList=[]
-                    if(recommendType>-1){
-                      recommendTypeList.push(myTypeList[recommendType]);
-                      
-                      if(myTypeList[recommendType+1]){
-                          recommendTypeList.push(myTypeList[recommendType+1]);
-                      }
-                    }
-                    viewProgram(recommendTypeList,databaseType,"#J_program_2");
-                })
-                
-                })        
-                
-            </script>
-          </div>
-        </div>
-      </div>
 
+<?php include('/home/admin/go/rgn/aliyun/footer.php');?>
+<script>
+(function() {
+    var viewProgram=function(resultData,container) {
+        var programHTML = '';
+        programHTML+='<h2 class="title-box-1"><b>推荐方案</b><span>（以下建议仅供参考） </span></h2>';
+        for(var i = 0,j = resultData.length; i < j; i++ ) {
+          console.log(resultData[i])
+              programHTML+='<div class="box-2 fix-clear program-'+ (i+1) +'"><ins class="ins-'+ (i+1) +'"></ins>';
+              programHTML+='    <ul class="ul-list-1">';
+              programHTML+='      <li class="li-1">总计费用：</li>';
+              programHTML+='      <li class="li-2">'+ resultData[i].rds_month_price +'元/月、'+ resultData[i].rds_year_price +'/年</li>';
+              programHTML+='    </ul>';
+              programHTML+='    <ul class="ul-list-2">';
+              programHTML+='      <li> <b>数据库类型：</b>'+ resultData[i].rds_dbtype +'</li>';
+              programHTML+='      <li> <b>内存：</b>'+ resultData[i].rds_ram +'</li>';
+              programHTML+='      <li> <b>最大并发连接：</b>'+ resultData[i].rds_max_connection +'</li>';
+              programHTML+='      <li> <b>最大IOPS：</b>'+ resultData[i].rds_iops +'</li>';
+              programHTML+='    </ul>';
+              programHTML+='    <div class="buy-button-container"><a class="btn btn-large btn-orange" href="http://www.aliyun.com/product/rds/">立即购买</a></div>';
+              programHTML+='</div>';
+        }
+        
+        $(container).fadeOut(300,function(){
+              $(container).html(programHTML).fadeIn();
+        });
+    }
+    var token;
+    jQuery.get('http://www.aliyun.test/promotion/rdsbijia/getToken',function(data) {
+        if(data.code === 200) {
+            token = data.data;
+        }
+    });
+
+    $('#startCount_btn_1').click(function(e) {
+        var btn = $(this);
+        btn.attr('disabled','disabled').val('测算中...').removeClass('btn-orange').addClass('btn-disable');
+        var webiteType = $('#site_type').val();
+        var pv = $('#site_pv').val();
+        var sqlType = $('#database_type').val();
+        jQuery.ajax({
+          url:'/promotion/rdsbijia',
+          dataType:'json',
+          data:{
+              type :'0',
+              website_type : webiteType,
+              sql_type : sqlType,
+              pv : pv,
+              sec_token : token
+          },
+          type:'POST',
+          success:function(result) {
+              if(result.code = 200) {
+                btn.removeAttr('disabled').val('开始测算').removeClass('btn-disable').addClass('btn-orange');
+                viewProgram(result.data,'#J_program_1');
+              }
+          }
+        });
+   });
+
+    $('#startCount_btn_2').click(function() {
+        var sqlType = $('#method2_database_type').val();
+        var qps = $('#method2_qps').val();
+        var hardDiskCount = $('#harddisk_count').val();
+        var hardDiskType = $('#method2_disk_type').val();
+        jQuery.ajax({
+          url:'/promotion/rdsbijia',
+          dataType:'json',
+          data:{
+              type :'1',
+              sql_type : sqlType,
+              qps : qps,
+              harddisk_count : hardDiskCount,
+              harddisk_type : hardDiskType,
+              sec_token : token
+          },
+          type:'POST',
+          success:function(data) {
+              if(result.code = 200) {
+                btn.removeAttr('disabled').val('开始测算').removeClass('btn-disable').addClass('btn-orange');
+                viewProgram(result.data,'#J_program_2');
+              }
+          }
+        });
+    });
+
+})();
+</script>
 </body>
 </html>
