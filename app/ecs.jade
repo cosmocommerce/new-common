@@ -232,21 +232,30 @@ block container
                         '</ul>'
                         ].join(''));
             //登录区块
-            var loginBoxHtml = [
-                  '<p>最划算、最稳定、最安全</p>',
-                  '<p>经济型云服务器低至<span class="font-orange">￥89/月</span></p><a role="button" href="buy.aliyun.com" class="btn btn-large btn-orange buy-widget-btn">立即购买</a>'].join("");
-            
-            if (!AYSW.product.getCookie()['login_aliyunid']){
-                //已登录
-                var ecsHTML= [
-                  '<p>最划算、最稳定、最安全</p>',
-                  '<p>经济型云服务器低至<span class="font-orange">￥89/月</span></p><a role="button" href="http://console.aliyun.com/ecs/index.html" class="btn btn-large btn-black buy-widget-btn">进入管理控制台  </a><a role="button" href="buy.aliyun.com" class="btn btn-large btn-orange buy-widget-btn">立即购买</a>',
-                  '<p style="margin-top:8px;"> <a href="#">申请免费数据迁移和环境配置</a></p>'].join("");
-                $(".buy-container .buy-area").html(ecsHTML);
-              }else{
-                //未登录
-                 $(".buy-container .buy-area").html(loginBoxHtml);
+            jQuery.getJSON('/promotion/newproductajax',{type:'ecs',timestamp:new Date().getTime()},function(result) {
+              if(!result) {
+                return;
               }
+              var buyArea = $(".buy-container .buy-area");
+              var loginBoxHtml = [];
+              if(result && result.code === -2) {
+                // 未登录
+                loginBoxHtml.push( [
+                    '<p>最划算、最稳定、最安全</p>',
+                    '<p>经济型云服务器低至<span class="font-orange">￥69/月</span></p>'].join('') );
+                
+              }
+              if(result.code === 200) {
+                if(result.data.count > 0) {
+                  loginBoxHtml.push('<a role="button" target="_blank" href="http://ocs.aliyun.com" class="btn btn-large btn-black buy-widget-btn" data-ga="">进入管理控制台</a>');
+                  return;
+                }
+              }
+              loginBoxHtml.push('<a role="button" href="http://buy.aliyun.com" class="btn btn-large btn-orange buy-widget-btn" data-ga="ECS.BTN.立即购买1">立即购买</a>');
+              buyArea.html(loginBoxHtml.join(''));
+
+            });
+
             //显示
             AYSW.product.viewBuyArea();
             
