@@ -4,7 +4,7 @@
 @import "reset";
 @import "media-queries";
 
-@import "sprite-icons";
+// @import "sprite-icons";
 @import "button";
 @import "header"; // 头部
 @import "left-sidebar";
@@ -380,7 +380,7 @@ a:focus, a:focus img, input:focus{
         .customer-item{
             position: relative;
             zoom:1;
-            font:12px/120% tahoma,arial,"Hiragino Sans GB","Microsoft Yahei",宋体;
+            font:12px/120% "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", tahoma,arial,"Hiragino Sans GB", "\5B8B\4F53";
             .li-title{
                 padding:0 0 3px 130px;
                 font-size: 16px;

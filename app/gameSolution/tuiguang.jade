@@ -1,0 +1,39 @@
+extends layout
+block vars
+  productName = "product-ocs"
+block titleName
+  title 阿里云-开放缓存服务OCS
+block css
+block header
+  include ../inc/header-index
+  style
+    .product-ocs .features{
+      background-image:url(http://img03.taobaocdn.com/tps/i3/T1yztLFhdiXXXgv8Mo-317-582.png) !important;
+    }
+block container
+  .product-overview.fix-clear
+    .overview-container
+      h1
+        | 推广创收
+  .product-tab
+    .product-topnav
+      ul.nav.nav-tabs#product_tab
+        li.active(role="tab")
+          a(href="#detail") 推广渠道
+        li(role="tab")
+          a(href="#case") 数据分析服务
+  .tab-content.page-buy
+    .tab-panel.first
+      .anchor
+        a(id="detail",name="detail") &nbsp
+      h2.h2-1 推广渠道
+
+      
+    .tab-panel
+      .anchor
+        a(id="case",name="case") &nbsp
+      h2 数据分析服务  
+
+      
+      
+

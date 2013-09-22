@@ -1,0 +1,39 @@
+@charset "utf-8";
+@import "compass";
+@import "../../styles/mixin";
+.solution-video {
+	background:#f6f6f6;
+	border:#ececec 1px solid;
+	height:163px;
+	line-height: 163px;
+	margin-top:19px;
+	position: relative;
+	@include border-radius(4px);
+	@include clearfix();
+	.video-text{
+		position: absolute;
+		z-index: 1;
+		font-size:16px;
+		color:#000;
+		line-height: 24px;
+		top:40px;
+		left:35px;
+	}
+	.play-btn{
+		margin-top:19px;
+	}
+	.video-img{
+		text-align: left;
+		img{
+			vertical-align: middle;
+		}
+	}
+	
+}
+
+
+.aly-container {
+	.product-topnav,.aly-content,.nav-tabs{
+		width:100%;
+	}
+}

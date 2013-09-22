@@ -44,7 +44,7 @@ header{
         }
     }
     nav li{
-        font:16px/18px "\5FAE\8F6F\96C5\9ED1", Helvetica, Arial, Verdana, "\5B8B\4F53"; 
+        font:16px/18px "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", tahoma,arial,"Hiragino Sans GB", "\5B8B\4F53";
         float:left;
         margin:23px 0 0px 35px;
         padding-bottom:23px;
@@ -150,6 +150,14 @@ header{
       }
       dd{
         width:230px;
+      }
+    }
+    #J_sub_menu2{
+      dt{
+        display: none;
+      }
+      dd{
+        width:100%;
       }
     }
     #J_sub_menu3 b{

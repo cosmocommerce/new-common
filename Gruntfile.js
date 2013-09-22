@@ -81,8 +81,8 @@ module.exports = function(grunt) {
         compass: {
             debug: {
                 options: {
-                    cssDir: '.tmp/styles',
-                    sassDir: 'app/styles',
+                    cssDir: '.tmp',
+                    sassDir: 'app',
                     imagesDir: 'app/images',
                     javascriptsDir: 'app/scripts',
                     config: '.compass.rb'
@@ -90,8 +90,8 @@ module.exports = function(grunt) {
             },
             dist: {
                 options: {
-                    sassDir: 'app/styles',
-                    cssDir: 'dist/styles',
+                    sassDir: 'app',
+                    cssDir: 'dist',
                     imagesDir: 'app/images',
                     environment: 'production',
                     //output_style:'expanded',
