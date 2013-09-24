@@ -7,7 +7,9 @@ img{
     max-width: 100%;
 }
 
-// 页面底部客户案例（他们也在阿里云）
+/*
+页面底部客户案例（他们也在阿里云）
+ */
 .customers{
     text-align: center;
     margin-bottom: 35px;
@@ -26,7 +28,9 @@ img{
 }
 
 
-// 首页
+/*
+首页
+*/
 .index{
     .main{
         max-height:660px;
@@ -48,23 +52,24 @@ img{
           }
         }
         .banner{
-            max-width:1200px;
-            margin:0 auto;
-            top:0;
-            left:0;
-            a{
+            position: relative;
+            .banner-item{
                 position: absolute;
-                height:100%;
-                display: none;
-                text-align: center;
+                z-index: 1;
                 &.active{
                     display:block;
                     position: relative;
                     z-index: 3;
                 }
-            }
-            img{
-                max-height:100%;
+                a{
+                    display: block;
+                    text-align: center;
+                    position: relative;
+                    margin:0 auto;
+                    img{
+                       max-height:100%;
+                   }
+                }
             }
         }
     }
@@ -93,10 +98,10 @@ img{
             }
         }
     }
-    
+
 }
 
-// 部署方式页面
+/* 部署方式页面 */
 
 .aly-container {
   .product-topnav,.aly-content,.nav-tabs{
@@ -106,35 +111,35 @@ img{
 
 // 解决方案gif动画
 .solution-video {
-	background:#f6f6f6;
-	border:#ececec 1px solid;
-	height:163px;
-	line-height: 163px;
-	margin-top:19px;
-	position: relative;
-	@include border-radius(4px);
-	@include clearfix();
-	.video-text{
-		position: absolute;
-		z-index: 1;
-		font-size:16px;
-		color:#000;
-		line-height: 24px;
-		top:40px;
-		left:35px;
-	}
-	.play-btn{
-		margin-top:19px;
-	}
-	.video-img{
-		text-align: left;
-		img{
-			vertical-align: middle;
-		}
-	}
+    background:#f6f6f6;
+    border:#ececec 1px solid;
+    height:163px;
+    line-height: 163px;
+    margin-top:19px;
+    position: relative;
+    @include border-radius(4px);
+    @include clearfix();
+    .video-text{
+       position: absolute;
+       z-index: 1;
+       font-size:16px;
+       color:#000;
+       line-height: 24px;
+       top:40px;
+       left:35px;
+    }
+    .play-btn{
+       margin-top:19px;
+    }
+    .video-img{
+       text-align: left;
+       img{
+         vertical-align: middle;
+       }
+    }
 }
 
-// 如何部署上云
+/* 如何部署上云 */
 .flow-chart{
   text-align:center;
   .buy-widget-btn{

@@ -94,7 +94,7 @@ module.exports = function(grunt) {
                     cssDir: 'dist',
                     imagesDir: 'app/images',
                     environment: 'production',
-                    //output_style:'expanded',
+                    outputStyle:'expanded',
                     config: '.compass.rb'
                 }
             }
@@ -170,7 +170,7 @@ module.exports = function(grunt) {
     });
 
 	grunt.loadNpmTasks('grunt-devtools');
-	
+
     grunt.registerTask('server', function(target) {
         if (target === 'dist') {
             return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
