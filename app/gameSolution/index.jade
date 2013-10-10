@@ -20,48 +20,99 @@ html(class='no-js', lang='zh-cn')
 	body.index
 		include ../inc/topbar
 		include ../inc/header-index
-		.main
-			.banner#J_banner(style="background-color:#4388a5")
-				.banner-item.active(data-color="#4388a5")
-					a(href="")
-						img(src="http://gtms03.alicdn.com/tps/i3/T1ac56Fj4XXXczf_oX-1200-659.jpg")
-				.banner-item(data-color="333333")
-					a(href="")
-						img(src="http://placehold.it/1200x660/333333")
-				.banner-item(data-color="ff6600")
-					a(href="")
-						img(src="http://placehold.it/1200x660/ff6600")
-				.banner-item(data-color="00ff00")
-					a(href="")
-						img(src="http://placehold.it/1200x660/00ff00")
-		ul.features#J_features
-			li
-				.features-item
+		.banner-area
+			.slider#slider
+				.slider-item.active(style='background: #1a0e30 url(http://gtms03.alicdn.com/tps/i3/T1ac56Fj4XXXczf_oX-1200-659.jpg) no-repeat center center; z-index: 3;')
+					a(title='昆塔盒子总动员', target='_blank', style='', href='http://promotion.aliyun.com/kunta')
+				.slider-item(style='background: #333333 url(http://placehold.it/1200x660/333333) no-repeat center center;')
+					a(title='推荐有礼，赚取集分宝', target='_blank', style='', href='http://promotion.aliyun.com/act/recommend-buy')
+				.slider-item(style='background: #ff6600 url(http://placehold.it/1200x660/ff6600) no-repeat center center;')
+					a(title='续费有惊喜', target='_blank', style='', href='http://www.aliyun.com/act/old-customer-favourable/index.html')
+				.slider-item(style='background: #00ff00 url(http://placehold.it/1200x660/00ff00) no-repeat center center;')
+					a(title='金牌服务', target='_blank', style='', href='http://promotion.aliyun.com/act/newjpfw.html')
+		ul.slider-index#slider_index
+			li.slider-index-item
+				div
 					h2 游戏开发者认证
 					span 获得 3000 元开发扶持基金
-			li
-				.features-item
+			li.slider-index-item
+				div
 					h2 游戏开发者认证
 					span 获得 3000 元开发扶持基金
-			li
-				.features-item
+			li.slider-index-item
+				div
 					h2 游戏开发者认证
 					span 获得 3000 元开发扶持基金
-			li
-				.features-item
+			li.slider-index-item
+				div
 					h2 游戏开发者认证
 					span 获得 3000 元开发扶持基金
 		include inc/customers
 		include ../inc/footer.html
 		script
-			$('#J_features li').hover(function(){
-				var index = $(this).index();
-				var banner = $('#J_banner');
-				var a = banner.find('a').eq(index);
-				banner.find('.active').fadeOut().removeClass('active');
+			//首页banner焦点广告切换功能
+			var slider = $('#slider');
+			var sliderIndex = $('#slider_index');
+			var slideParent = slider.parent();
+			var sliderItem = slider.find('.slider-item');
+			var indexItem = sliderIndex.find('.slider-index-item');
+			function showSlider(sliderOne) {
+				var activeItem = sliderItem.filter('.active');
+				var next;
+				if(sliderOne) {
+					next = sliderOne
+				}else {
+					next = (activeItem.length && activeItem.next('.slider-item').length > 0) ? activeItem.next() : sliderItem.eq(0);
+				}
+				next.css('z-index',2);
+				// 取得索引，让下面的索引数字亮起来
+				var index = sliderItem.index(next);
+				indexItem.eq(index).addClass('active').siblings().removeClass('active');
 
-				a.addClass('active').fadeIn().;
+				activeItem.fadeOut(300,function() {
+					activeItem.css('z-index',1).show().removeClass('active');
+					next.css('z-index',3).addClass('active');
+				});
+			}
+
+			// 默认显示第一个
+			//showSlider(sliderItem.eq(0));
+			// 第一个显示之后把其它的都显示，要不然会有闪动感觉
+			sliderItem.show();
+			//定时器
+			var interval;
+			function start() {
+				interval = setInterval(function() {
+					showSlider();
+				},5000);
+			}
+
+			start();
+
+			//点击bannner数字导航切换到相应广告
+			var hoverTimer;
+			indexItem.hover(function(e) {
+				if( $(this).hasClass('active') ) {
+					return;
+				}
+				e.preventDefault();
+				var index = indexItem.index( $(this) );
+				hoverTimer = setTimeout(function() {
+					clearInterval(interval);
+					clearTimeout(hoverTimer);
+					showSlider(sliderItem.eq(index));
+					//点击之后先清除定时器，显示完后再开启定时器，要不然占快会乱掉
+					start();
+				},200);
+			},function() {
+				clearTimeout(hoverTimer);
 			});
 
+			//鼠标指上去暂停轮播
+			slider.hover(function() {
+				clearInterval(interval);
+			},function(){
+				start();
+			});
 
 

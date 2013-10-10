@@ -101,6 +101,167 @@ img{
 
 }
 
+
+.banner-area{
+    height:660px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    z-index:1;
+    .user-info{
+        position: absolute;
+        z-index: 5;
+        width:100%;
+    }
+    .user-info-area{
+        position:relative;
+        margin:0 auto;
+        .login-area{
+            display:none;
+            position:absolute;
+            width:236px;
+            height:236px;
+            top:22px;
+            right:0;
+            z-index:5;
+            background-color: rgba(255,255,255,0.8);
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#99ffffff', endColorstr='#99ffffff'); /* IE */
+            .login-btns{
+                margin:10px;
+                @include clearfix;
+                .btn{
+                    width:75px;
+                }
+            }
+            .login-mail{
+                margin:5px 10px;
+                text-align: center;
+                .btn{
+                    @include background-image(linear-gradient(#fff6dc, #f7e7bc));
+                    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff6dc',endColorstr='#f7e7bc');
+                    width:175px;
+                    color:#ff6600;
+                    span{
+                        vertical-align:middle;
+                    }
+                    &:hover{
+                        background-color:#fdf3d5;
+                        background-image:none;
+                    }
+                }
+            }
+            .help-tab{
+                margin:10px;
+                margin-top:0;
+                .help-tab-nav{
+                    display: table;
+                    width:100%;
+                    *zoom:1;
+                    border-bottom:1px solid #c9c9c9;
+                    li{
+                        float:left;
+                        height:24px;
+                        line-height:24px;
+                        color:#000;
+                        margin-bottom: -1px;
+                        text-align: center;
+                        background-color: #fff;
+                        width:105px;
+                        a{
+                            line-height: 22px;
+                            height:22px;
+                            border:1px solid #c9c9c9;
+                            float:left;
+                            width:103px;
+                            cursor:pointer;
+                            color:#666;
+                            &:hover{
+                                text-decoration: none;
+                            }
+                        }
+                        &.right{
+                          float:right;
+                        }
+                        a:hover{
+                            background-color:#efefef;
+                            color:#000;
+                        }
+                        &.active {
+                            a{
+                                border-top:solid #ff9900 2px;
+                                background-color:#fff;
+                                border-bottom: none;
+                                color:#000;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+                .help-tab-body{
+                    background-color:#fff;
+                    border: 1px solid #c9c9c9;
+                    border-top: none;
+                    padding:0 10px;
+                    height:100px;
+                }
+            }
+            p{
+                span{
+                    @include inline-block;
+                    height:52px;
+                    line-height: 52px;
+                    text-align:center;
+                    width:50%;
+                }
+            }
+        }
+    }
+    .slider{
+        .slider-item{
+            position:absolute;
+            width:100%;
+            height:100%;
+            display:none;
+            &.active{
+                z-index:3;
+            }
+            a{
+                display: block;
+                position:relative;
+                height:100%;
+                margin:0 auto;
+                background:no-repeat center center;
+            }
+        }
+    }
+}
+.slider-index{
+    .slider-index-item{
+        width:25%;
+        height:113px;
+        float:left;
+        text-align: center;
+        background-color: #f0eeee;
+        //@include box-shadow(0 0 4px 0 rgba(0,0,0,.4));
+        border-bottom: 1px solid #c5c5c5;
+        @include background-image(linear-gradient(to top, #dedede, #f4f4f4));
+        cursor:pointer;
+        &:hover,&.active{
+            background-color: #d4d4d4;
+            @include background-image(linear-gradient(to top, #cbcbcb, #d7d7d7));
+        }
+        div{
+            border-right:1px solid #d3d3d3;
+            height:100%;
+            h2{
+                padding-top:32px;
+                font-size:18px;
+            }
+        }
+    }
+}
+
+
 /* 部署方式页面 */
 
 .aly-container {
