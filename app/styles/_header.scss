@@ -1,4 +1,4 @@
-﻿// 导航条
+// 导航条
 
 header{
     height:64px;
@@ -7,7 +7,6 @@ header{
     z-index: 3;
     @include box-shadow(0 0 3px rgba(0, 0, 0, 0.2));
     .header-wrap{
-      border-bottom: 1px solid #e4e4e4;
       position:relative;
       z-index: 301;
       width:100%;
@@ -27,16 +26,16 @@ header{
     }
     //主导航
     nav {
-        float:right;// 
+        float:right;//
         // @TODO: Add docs to mixin-name!
         //
         @mixin mixin-name($params) {
-          
-        }// 
+
+        }//
         // @TODO: Add docs to mixin-name!
         //
         @mixin mixin-name($params) {
-          
+
         }
         clear:right;
         ul{
@@ -71,7 +70,7 @@ header{
             // 装饰竖线
             i{
                 @include i(12px);
-            }        
+            }
         }
         &.active > a{
           color:#ff6600 !important;
@@ -257,11 +256,11 @@ header{
                 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff8a00, endColorstr=#ee7b00);
             }*/
     }
-    
+
 }
 //控制导航的当前高亮显示
 .index header nav .header-nav-index a,
-.product header nav .header-nav-product a, 
+.product header nav .header-nav-product a,
 .solution header nav .header-nav-solution a,
 .market header nav .header-nav-market a,
 .solution header nav .header-nav-solution a,
@@ -272,12 +271,12 @@ header{
 .bbs header nav .header-nav-bbs a{
     color:#ff6600;
 }
-.product header nav .header-nav-product .sub-menu a, 
+.product header nav .header-nav-product .sub-menu a,
 .solution header nav .header-nav-solution .sub-menu a,
 .market header nav .header-nav-market .sub-menu a{
   color:#000;
 }
-.product header nav .header-nav-product .sub-menu a:hover, 
+.product header nav .header-nav-product .sub-menu a:hover,
 .solution header nav .header-nav-solution .sub-menu a:hover,
 .market header nav .header-nav-market .sub-menu a:hover{
   color:#ff6600;
