@@ -46,6 +46,7 @@ a:focus, a:focus img, input:focus{
     }
     h1{
         font-size:24px;
+        line-height:28px;
         color:#000;
         font-weight:bold;
         .icons{
@@ -144,7 +145,7 @@ a:focus, a:focus img, input:focus{
                 color:#000;
             }
             .h2-1{
-               //margin-top:20px;               
+               //margin-top:20px;
             }
             h3{
                 margin-top:10px;
@@ -238,7 +239,7 @@ a:focus, a:focus img, input:focus{
                     a{
                         float:right;
                         font-weight: normal;
-                        
+
                     }
                 }
             }
@@ -267,10 +268,10 @@ a:focus, a:focus img, input:focus{
 }
 //提示框样式
 .poptip-container{
-    border:1px solid #DCDCDC;  
-    border-radius: 5px;              
+    border:1px solid #DCDCDC;
+    border-radius: 5px;
     position: relative;
-    padding:10px 15px; 
+    padding:10px 15px;
     background-color: #FAFAFA;
     color: #9A9A9A;
     zoom:1;
@@ -286,15 +287,15 @@ a:focus, a:focus img, input:focus{
             top: -1px;
             top:0px\9;
             position: absolute;
-            color:#DCDCDC; 
+            color:#DCDCDC;
 
         }
-        span{            
+        span{
             top: 0px;
             top:1px\9;
             position: absolute;
             color:#FAFAFA;
-        }       
+        }
     }
 
 }
@@ -323,7 +324,7 @@ a:focus, a:focus img, input:focus{
     th{
         font-size:12px;
         font-weight:bold;
-        color:#676767;     
+        color:#676767;
     }
     th, td {
         border: 1px solid #F2F2F2;
@@ -376,7 +377,7 @@ a:focus, a:focus img, input:focus{
         position:relative;
         height:225px;
         overflow:hidden;
-        
+
         .customer-item{
             position: relative;
             zoom:1;
@@ -418,7 +419,7 @@ a:focus, a:focus img, input:focus{
             }
 
         }
-       
+
 
     }
     .more-customer{
@@ -525,7 +526,7 @@ a:focus, a:focus img, input:focus{
 //右上角购买区按钮
 .buy-container{
     min-height:90px;
-    _height: 90px; 
+    _height: 90px;
     .buy-area {
         background-color:#fff;
         .font-orange{
@@ -539,11 +540,11 @@ a:focus, a:focus img, input:focus{
             padding:0;
             text-align: center;
             margin-top:5px;
-        } 
+        }
         p{
             font-size:12px;
-        }  
-    }    
+        }
+    }
 }
 
 //ECS产品详情里的小图标样式
@@ -558,7 +559,7 @@ a:focus, a:focus img, input:focus{
         display:inline-block;
         *display:inline;
         *zoom:1;
-          background:url(http://oss.aliyuncs.com/aliyun_portal_storage/1369633926_3_664.png) no-repeat 0 -734px;  
+          background:url(http://oss.aliyuncs.com/aliyun_portal_storage/1369633926_3_664.png) no-repeat 0 -734px;
           width:19px;
           height: 18px;
           vertical-align: middle;
@@ -602,9 +603,9 @@ a:focus, a:focus img, input:focus{
 .product-item{
     padding-top:10px;
 }
-.product-item a{ 
+.product-item a{
     @include inline-block;
-    padding:2px 0px; 
+    padding:2px 0px;
     //margin:0 10px;
     width:32%;
 }

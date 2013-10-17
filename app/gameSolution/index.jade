@@ -71,127 +71,134 @@ html(class='no-js', lang='zh-cn')
 		include inc/customers
 		include ../inc/footer.html
 		script
-			function getCookie(){
-				var info = new Object();
-				var values = document.cookie.split(';');
-				var pair;
-				var key;
-				for(var i=0,len=values.length;i<len;i++){
-						values[i] = values[i].replace(/\s/,'');
-						var pair = values[i].split('=');
-						info[pair[0]] = pair[1];
-				}
-				return info;
-			}
-			var user_url = 'http://promotion.aliyun.test/solutions/statusforauth?type=game&cback=jsonp';
-			var login_area = $('#login_area');
-			var header = login_area.find('.top');
-			var body = login_area.find('.middle');
-			var footer = login_area.find('.bottom');
-			jQuery.ajax({
-				url:user_url,
-				dataType:'jsonp',
-				jsonp:"cback",
-				success:function(data) {
-					if(data.code !== 1) {
-						var cookie = getCookie();
-						var uid = cookie['login_aliyunid'];
-						header.html('欢迎您，<strong>'+ uid + '</strong>');
+			(function(){
+					$(window).scroll(function(){
+
+					});
+					function getCookie(){
+					var info = new Object();
+					var values = document.cookie.split(';');
+					var pair;
+					var key;
+					for(var i=0,len=values.length;i<len;i++){
+							values[i] = values[i].replace(/\s/,'');
+							var pair = values[i].split('=');
+							info[pair[0]] = pair[1];
 					}
-					switch(data.code) {
-						case 2: // 没有实名认证
-							break;
-						case 3: // 表单申请审核不通过
-							body.html('<span class="error">抱歉，您未通过游戏开发者认证</span><br/>通过后可获得 <strong> 3000元 </strong> 开发扶持基金');
-							footer.html('<a href="http://act.aliyun.test/tmsact/solution/game/submit-result.html" target="_blank" class="btn btn-large btn-orange">查看原因</a>');
-							break;
-						case 4: // 表单申请审核中
-							body.html('您已成功提交游戏开发者认证<br/>通过后可获得 <strong> 3000元 </strong>开发扶持基金<br/>入驻阿里 <strong>上亿玩家</strong> 资源推广平台');
-							footer.html('<a href="http://act.aliyun.test/tmsact/solution/game/submit-result.html" target="_blank" class="btn btn-large btn-orange">查看认证状态</a>');
-							break;
-						case 5: // 未提交表单申请
-							break;
-						case 6: // 参数错误
-							break;
-						case 200: // 表单提交成功
-							if(data.coupons === 2) {
-								body.html('您已通过阿里云游戏开发者认证<br/>通过后可获得 <strong>3000元 </strong>开发扶持基金<br/>入驻阿里 <strong>上亿玩家</strong>  资源推广平台');
-								footer.html('<a href="http://promotion.aliyun.test/solutions/viewresult" target="_blank" class="btn btn-large btn-orange">查看详情</a>');
-							}else {
-								body.html('您已通过阿里云游戏开发者认证<br/>游戏部署上云<br/>入驻阿里云 <strong>上亿玩家</strong> 资源推广平台！');
+					return info;
+				}
+				var user_url = 'http://promotion.aliyun.test/solutions/statusforauth?type=game&cback=jsonp&cache='+new Date().getTime();
+				var login_area = $('#login_area');
+				var header = login_area.find('.top');
+				var body = login_area.find('.middle');
+				var footer = login_area.find('.bottom');
+				jQuery.ajax({
+					url:user_url,
+					dataType:'jsonp',
+					jsonp:"cback",
+					success:function(data) {
+						data.code = 200;
+						data.coupons = 1;
+						if(data.code !== 1) {
+							var cookie = getCookie();
+							var uid = cookie['login_aliyunid'];
+							header.html('欢迎您，<strong>'+ uid.replace(/"/g,'') + '</strong>');
+						}
+						switch(data.code) {
+							case 2: // 没有实名认证
+								break;
+							case 3: // 表单申请审核不通过
+								body.html('<span class="error">抱歉，您未通过游戏开发者认证</span><br/>通过后可获得 <strong> 3000元 </strong> 开发扶持基金');
+								footer.html('<a href="http://act.aliyun.test/tmsact/solution/game/submit-result.html" target="_blank" class="btn btn-large btn-orange">查看原因</a>');
+								break;
+							case 4: // 表单申请审核中
+								body.html('您已成功提交游戏开发者认证<br/>通过后可获得 <strong> 3000元 </strong>开发扶持基金<br/>入驻阿里 <strong>上亿玩家</strong> 资源推广平台');
+								footer.html('<a href="http://act.aliyun.test/tmsact/solution/game/submit-result.html" target="_blank" class="btn btn-large btn-orange">查看认证状态</a>');
+								break;
+							case 5: // 未提交表单申请
+								break;
+							case 6: // 参数错误
+								break;
+							case 200: // 表单提交成功
+								if(data.coupons === 2) {
+									body.html('您已通过阿里云游戏开发者认证<br/>通过后可获得 <strong>3000元 </strong>开发扶持基金<br/>入驻阿里 <strong>上亿玩家</strong>  资源推广平台');
+									footer.html('<a href="http://promotion.aliyun.test/solutions/viewresult" target="_blank" class="btn btn-large btn-orange">查看详情</a>');
+								}else {
+									body.html('您已通过阿里云游戏开发者认证<br/>游戏部署上云<br/>入驻阿里云 <strong>上亿玩家</strong> 资源推广平台！');
+									footer.html('<a href="" style="float:left;" class="btn btn-small btn-orange">我要部署</a><a href="" style="float:right;" class="btn btn-small btn-orange">我要入驻</a></div>');
+								}
+								break;
+							case 201:
+								body.html('游戏部署上云<br/>入驻阿里云运营推广平台<br/>获取 <strong>上亿玩家</strong> 资源推广平台！');
 								footer.html('<a href="" style="float:left;" class="btn btn-small btn-orange">我要部署</a><a href="" style="float:right;" class="btn btn-small btn-orange">我要入驻</a></div>');
-							}
-							break;
-						case 201:
-							body.html('游戏部署上云<br/>入驻阿里云运营推广平台<br/>获取 <strong>上亿玩家</strong> 资源推广平台！');
-							footer.html('<a href="" style="float:left;" class="btn btn-small btn-orange">我要部署</a><a href="" style="float:right;" class="btn btn-small btn-orange">我要入驻</a></div>');
+						}
+						$('#login_area').fadeIn();
 					}
-					$('#login_area').fadeIn();
-				}
-			});
-			//首页banner焦点广告切换功能
-			var slider = $('#slider');
-			var sliderIndex = $('#slider_index');
-			var slideParent = slider.parent();
-			var sliderItem = slider.find('.slider-item');
-			var indexItem = sliderIndex.find('.slider-index-item');
-			function showSlider(sliderOne) {
-				var activeItem = sliderItem.filter('.active');
-				var next;
-				if(sliderOne) {
-					next = sliderOne
-				}else {
-					next = (activeItem.length && activeItem.next('.slider-item').length > 0) ? activeItem.next() : sliderItem.eq(0);
-				}
-				next.css('z-index',2);
-				// 取得索引，让下面的索引数字亮起来
-				var index = sliderItem.index(next);
-				indexItem.eq(index).addClass('active').siblings().removeClass('active');
-
-				activeItem.fadeOut(300,function() {
-					activeItem.css('z-index',1).show().removeClass('active');
-					next.css('z-index',3).addClass('active');
 				});
-			}
+				//首页banner焦点广告切换功能
+				var slider = $('#slider');
+				var sliderIndex = $('#slider_index');
+				var slideParent = slider.parent();
+				var sliderItem = slider.find('.slider-item');
+				var indexItem = sliderIndex.find('.slider-index-item');
+				function showSlider(sliderOne) {
+					var activeItem = sliderItem.filter('.active');
+					var next;
+					if(sliderOne) {
+						next = sliderOne
+					}else {
+						next = (activeItem.length && activeItem.next('.slider-item').length > 0) ? activeItem.next() : sliderItem.eq(0);
+					}
+					next.css('z-index',2);
+					// 取得索引，让下面的索引数字亮起来
+					var index = sliderItem.index(next);
+					indexItem.eq(index).addClass('active').siblings().removeClass('active');
 
-			// 默认显示第一个
-			//showSlider(sliderItem.eq(0));
-			// 第一个显示之后把其它的都显示，要不然会有闪动感觉
-			sliderItem.show();
-			//定时器
-			var interval;
-			function start() {
-				interval = setInterval(function() {
-					showSlider();
-				},5000);
-			}
-
-			start();
-
-			//点击bannner数字导航切换到相应广告
-			var hoverTimer;
-			indexItem.hover(function(e) {
-				if( $(this).hasClass('active') ) {
-					return;
+					activeItem.fadeOut(300,function() {
+						activeItem.css('z-index',1).show().removeClass('active');
+						next.css('z-index',3).addClass('active');
+					});
 				}
-				e.preventDefault();
-				var index = indexItem.index( $(this) );
-				hoverTimer = setTimeout(function() {
-					clearInterval(interval);
-					clearTimeout(hoverTimer);
-					showSlider(sliderItem.eq(index));
-					//点击之后先清除定时器，显示完后再开启定时器，要不然占快会乱掉
-					start();
-				},200);
-			},function() {
-				clearTimeout(hoverTimer);
-			});
 
-			//鼠标指上去暂停轮播
-			slider.hover(function() {
-				clearInterval(interval);
-			},function(){
+				// 默认显示第一个
+				//showSlider(sliderItem.eq(0));
+				// 第一个显示之后把其它的都显示，要不然会有闪动感觉
+				sliderItem.show();
+				//定时器
+				var interval;
+				function start() {
+					interval = setInterval(function() {
+						showSlider();
+					},5000);
+				}
+
 				start();
-			});
 
+				//点击bannner数字导航切换到相应广告
+				var hoverTimer;
+				indexItem.hover(function(e) {
+					if( $(this).hasClass('active') ) {
+						return;
+					}
+					e.preventDefault();
+					var index = indexItem.index( $(this) );
+					hoverTimer = setTimeout(function() {
+						clearInterval(interval);
+						clearTimeout(hoverTimer);
+						showSlider(sliderItem.eq(index));
+						//点击之后先清除定时器，显示完后再开启定时器，要不然占快会乱掉
+						start();
+					},200);
+				},function() {
+					clearTimeout(hoverTimer);
+				});
+
+				//鼠标指上去暂停轮播
+				slider.hover(function() {
+					clearInterval(interval);
+				},function(){
+					start();
+				});
+
+			})();
 

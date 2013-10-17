@@ -180,7 +180,7 @@ d.getElementsByTagName("head")[0].appendChild(t);
 <?php include('/home/admin/go/rgn/aliyun/footer.php');?>
 <a id="feedback" href="http://bbs.aliyun.com/read.php?tid=141361&displayMode=1&page=1&toread=1" target="_blank">给新版提意见<i></i></a>
 <script>
-      (function(){       
+      (function(){
           AYSW.product.slideCustomerViews =[];
             <cms:custom group="客户案例" row="10" title="客户案例" defaultRow="1" fields="text1:介绍:string,text2:介绍下第一行:string,text7:介绍下第二行:string,strong:是否显示介绍下第二行:boolean,text3:使用心得:string,text4:链接:string,text5:图片:string,text6:标题:string" name="564ed268-72fa-4bda-99b6-1cbc2661d4eb">#foreach($t in $customList)AYSW.product.slideCustomerViews.push([
             '<ul class="customer-item">',
@@ -195,7 +195,7 @@ d.getElementsByTagName("head")[0].appendChild(t);
                             '<p>$t.text3</p>',
                               '</li>',
                                 '</ul>'
-                                ].join(''));#end </cms:custom> 
+                                ].join(''));#end </cms:custom>
             //登录区块
                       jQuery.getJSON('/promotion/newproductajax',{type:'ace',timestamp:new Date().getTime()},function(result) {
                         if(!result) {
@@ -210,7 +210,7 @@ d.getElementsByTagName("head")[0].appendChild(t);
                           buyArea.html(loginBoxHtml);
                           return;
                         }
-              
+
                         if(result.code === 200) {
                           if(result.data.count > 0) {
                             buyArea.html('<a role="button" target="_blank" href="http://console.aliyun.com/ace" class="btn btn-large btn-black buy-widget-btn" data-ga="">进入管理控制台</a>');
@@ -226,13 +226,13 @@ d.getElementsByTagName("head")[0].appendChild(t);
                       });
                       //显示
                       AYSW.product.viewBuyArea();
-          
+
             if( $('.more-customer .customer-ico').length == 0 ) {
                   $('.more-customer').remove();
                 }
-                     
 
-              
+
+
       })();
     </script>
 </body>

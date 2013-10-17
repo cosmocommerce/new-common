@@ -12,21 +12,19 @@ html(class='no-js', lang='zh-cn')
 
     //if lt IE 9
       script(src="http://static-img3.cdn.aliyuncs.com/js/common/html5.js")
-      
-        
+
+
     script(src="http://static.aliyun.com/js/lib/alipw/classes/alipw-all.js")
     script(src="http://static-img3.cdn.aliyuncs.com/??js/account/Account.class.js,js/www-summerwind/common.js,js/common/CommonUtils.class.js?v=1367065989")
     script(src="http://static-img3.cdn.aliyuncs.com/??js/common/alipw_config.js")
     script(src="../scripts/product.js")
-    script(src="js/game_solution.js")
-
     //if lt IE 8
       script(src="iconfont/lte-ie7.js")
 
     block script
-    productName = ""
+    pageClass = ""
     block vars
-  body(class="product #{productName}")
+  body(class="game-solution #{pageClass}")
     include ../inc/topbar
     block header
     .aly-wrap

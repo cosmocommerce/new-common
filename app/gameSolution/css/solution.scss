@@ -27,6 +27,14 @@ img{
 	}
 }
 
+/*
+左侧导航
+*/
+.dev .link-dev,.deploy .link-deploy,.spread .link-spread{
+	color: #000;
+	background-color: #FFF;
+}
+
 
 /*
 首页
@@ -55,7 +63,7 @@ img{
 			right:0;
 			z-index:5;
 			background-color: rgba(255,255,255,0.8);
-            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#99ffffff', endColorstr='#99ffffff'); /* IE */
+						filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#99ffffff', endColorstr='#99ffffff'); /* IE */
 			.top{
 				height:43px;
 				line-height: 43px;
@@ -70,16 +78,16 @@ img{
 			.middle{
 				border-top: 1px solid #c2c9cc;
 				padding-top: 16px;
-		        line-height: 20px;
-		        text-align: center;
-		        height:70px;
-		    }
+						line-height: 20px;
+						text-align: center;
+						height:70px;
+				}
 			.bottom{
 				margin:5px 10px;
 				text-align: center;
 				overflow: hidden;
 				.btn-large{
-				   // @include background-image(linear-gradient(#fff6dc, #f7e7bc));
+					 // @include background-image(linear-gradient(#fff6dc, #f7e7bc));
 					//filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff6dc',endColorstr='#f7e7bc');
 					width:175px !important;
 				}
@@ -91,8 +99,8 @@ img{
 				color:#ee2424;
 			}
 			strong{
-	            color: #F60!important;
-	        }
+							color: #F60!important;
+					}
 		}
 	}
 	.slider{
@@ -144,9 +152,9 @@ img{
 /* 部署方式页面 */
 
 .aly-container {
-  .product-topnav,.aly-content,.nav-tabs{
+	.product-topnav,.aly-content,.nav-tabs{
 	width:100%;
-  }
+	}
 }
 
 // 解决方案gif动画
@@ -160,52 +168,109 @@ img{
 	@include border-radius(4px);
 	@include clearfix();
 	.video-text{
-	   position: absolute;
-	   z-index: 1;
-	   font-size:16px;
-	   color:#000;
-	   line-height: 24px;
-	   top:40px;
-	   left:35px;
+		 position: absolute;
+		 z-index: 1;
+		 font-size:16px;
+		 color:#000;
+		 line-height: 24px;
+		 top:40px;
+		 left:35px;
 	}
 	.play-btn{
-	   margin-top:19px;
+		 margin-top:19px;
 	}
 	.video-img{
-	   text-align: left;
-	   img{
+		 text-align: left;
+		 img{
 		 vertical-align: middle;
-	   }
+		 }
 	}
 }
 
 /* 如何部署上云 */
 .flow-chart{
-  text-align:center;
-  .buy-widget-btn{
-	width: 183px;
-  }
-  .flow-bottom{
-	margin-top:20px;
-  }
-  .expert-services{
-	margin:15px 0;
-  }
+	text-align:center;
+	.title{
+		margin:30px 0;
+		font-size:35px;
+		color:#000;
+	}
+	.buy-widget-btn{
+		width: 183px;
+	}
+	.flow-bottom{
+		margin-top:20px;
+	}
+	.expert-services{
+		margin:15px 0;
+	}
 }
 
+/* 用户部署分享 */
+.deploy-share{
+	@include clearfix;
+}
 .user-deploy-share{
-  @include clearfix;
-  padding:10px 0;
-  border-bottom: 1px dashed #d1d1d1;
-  margin-bottom:15px;
-  dt{
-	margin:15px 0;
-  }
-  dd{
-	width:22%;
 	float:left;
-	img{
-	  float:left;
+	width:65%;
+	.share-category{
+		@include clearfix;
+		margin-top:10px;
+		padding-bottom: 15px;
+		border-bottom: 1px dashed #d1d1d1;
+		dt{
+			font-size:14px;
+			color:#000;
+			margin-bottom: 10px;
+			a{font-size:12px;}
+		}
+		dd{
+			width:25%;
+			float:left;
+			img{
+				float:left;
+				width:48px;
+				height:48px;
+				margin-right:10px;
+			}
+			.game-name{
+				font-size:14px;
+				color:#000;
+
+			}
+		}
 	}
-  }
+	.other{
+		border-bottom:none;
+		a{color:#666;}
+	}
+}
+.classic-case{
+	float:right;
+	width:32%;
+	.title{
+
+	}
+	.classic-case-detail{
+		@include clearfix;
+		margin-top:18px;
+		img{
+			float:left;
+			width:66px;
+			height:66px;
+			margin-right:10px;
+		}
+		.game-name{
+			font-size:14px;
+			color:#000;
+		}
+	}
+	.video-show{
+		margin-top:30px;
+		.video-title{
+			font-size:14px;
+			font-weight: bold;
+			color:#000;
+		}
+	}
 }

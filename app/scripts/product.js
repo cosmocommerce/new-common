@@ -66,7 +66,7 @@
                   targetContainer.css({
                       'left':offsetLeft+'px'
                   });
-                
+
               }
           } else if (targetContainer.css('position') == 'fixed' || targetContainer.css('position') == 'absolute') {
               targetContainer.css({
@@ -88,7 +88,7 @@
               targetParent: ".left-sidebar",
               footer: ".aysw-footer",
               fromTop: 14
-          }, 
+          },
           {
               target: ".product-topnav",
               targetParent: ".product-tab",
@@ -147,21 +147,21 @@
           $('#product_tab li a').each(function(index,elen){
               selectorList.push('#'+this.href.split('#')[1]);
           })
-          
+
       //锚点offsetTop数组
       var offsetTopList=[];
               for(var i=0,ii=selectorList.length;i<ii;i++){
                   offsetTopList.push($(selectorList[i]).offset().top-10);
-              }  
-      //注册滚动条滚动事件  
+              }
+      //注册滚动条滚动事件
       $(window).scroll(function(){
               if(!AYSW.product.isScroll) return;
               var scrolltop=Alipw.getDoc().scrollTop();
               for(var n=0,nn=offsetTopList.length;n<nn;n++){
                  if((scrolltop>=offsetTopList[n]&&scrolltop<offsetTopList[n+1])||scrolltop>=offsetTopList[nn-1]){
                       if(scrolltop>=offsetTopList[nn-1])n=nn-1;
-                      $('#product_tab li a[href="' + selectorList[n] + '"]').parent().addClass('active').siblings().removeClass('active'); 
-                      return; 
+                      $('#product_tab li a[href="' + selectorList[n] + '"]').parent().addClass('active').siblings().removeClass('active');
+                      return;
                  }
               }
           });
