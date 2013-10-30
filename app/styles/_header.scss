@@ -144,11 +144,16 @@ header{
       }
     }
     #J_sub_menu2{
+      width:74px;
+      left:-30px;
       dt{
         display: none;
       }
       dd{
         width:100%;
+      }
+      b{
+        left:48px;
       }
     }
     #J_sub_menu3 b{

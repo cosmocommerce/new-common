@@ -94,7 +94,7 @@ module.exports = function(grunt) {
                     cssDir: 'dist',
                     imagesDir: 'app/images',
                     environment: 'production',
-                    outputStyle:'expanded',
+                    //outputStyle:'expanded',
                     config: '.compass.rb'
                 }
             }

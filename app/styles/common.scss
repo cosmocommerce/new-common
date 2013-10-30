@@ -4,7 +4,7 @@
 @import "reset";
 @import "media-queries";
 
-// @import "sprite-icons";
+@import "sprite-icons";
 @import "button";
 @import "header"; // 头部
 @import "left-sidebar";
@@ -195,12 +195,12 @@ a:focus, a:focus img, input:focus{
     .dot li{
         //list-style-position: inside;
         list-style-image: inline-image("../images/icons/common/dot-orange.png");
-        *list-style-image: image-url("http://img02.taobaocdn.com/tps/i2/T1E_9TXtXcXXcCFuHr-3-7.png"); /* IE7 */
+        *list-style-image: image-url("http://gtms02.alicdn.com/tps/i2/T1E_9TXtXcXXcCFuHr-3-7.png"); /* IE7 */
     }
     .dot dd{
         background:inline-image("../images/icons/common/dot-orange.png") no-repeat left 12px;
         //text-indent: 1em;
-        *background-image: image-url("http://img02.taobaocdn.com/tps/i2/T1E_9TXtXcXXcCFuHr-3-7.png"); /* IE7 */
+        *background-image: image-url("http://gtms02.alicdn.com/tps/i2/T1E_9TXtXcXXcCFuHr-3-7.png"); /* IE7 */
     }
     .features{
         width:640px;
@@ -498,7 +498,7 @@ a:focus, a:focus img, input:focus{
     background-image: url(http://oss.aliyuncs.com/aliyun_portal_storage/1370322296_55_102.png) !important;
 }
 .product-cdn .features{
-    background-image: url(http://img01.taobaocdn.com/tps/i1/T1VulAFkdXXXbC6WAR-442-525.png) !important;
+    background-image: url(http://gtms01.alicdn.com/tps/i1/T1VulAFkdXXXbC6WAR-442-525.png) !important;
 }
 //产品优势下手型图标右边距
 .tab-content .tab-panel h4 .icon-good{

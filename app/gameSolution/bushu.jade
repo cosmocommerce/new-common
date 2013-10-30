@@ -88,6 +88,9 @@ block container
 				.flow-bottom
 					a.btn.btn-large.btn-orange.buy-widget-btn(href='',style="margin-right:10px;") 我要部署
 				.expert-services
+					a(href="#",title="云中_春节",class="bs-profession")
+						img(src="http://imgs-storage.cdn.aliyuncs.com/1357629515_27_333.png",width="18",height="18")
+						| 部署专家
 					| 专家服务时间：9:00---18:00	&nbsp;
 					a(href="") 第三方服务条款
 		.tab-panel.deploy-share
@@ -167,31 +170,26 @@ block container
 					.video-title 大掌门的掌门谈部署
 					<iframe height=190 width="98%" src="http://player.youku.com/embed/XNjIwODc5NTIw" frameborder=0 allowfullscreen></iframe>
 	script
-		(function(){
-			// 滚动时定位tag的选中
-			//锚点ID数组
-			var selectorList=[]
-			$('#product_tab li a').each(function(index,elen){
-					selectorList.push('#'+this.href.split('#')[1]);
-			})
-			//锚点offsetTop数组
-			var offsetTopList=[];
-			for(var i=0,ii=selectorList.length;i<ii;i++){
-					offsetTopList.push($(selectorList[i]).offset().top-10);
-			}
-			$(window).scroll(function(){
-				var scrolltop = $(document).scrollTop();
-						for(var n = 0,nn = offsetTopList.length; n < nn;n++){
-							 if((scrolltop >= offsetTopList[n] && scrolltop < offsetTopList[n+1]) || scrolltop >= offsetTopList[nn-1]) {
-										if(scrolltop >= offsetTopList[nn-1]) {n=nn-1;}
-										$('#product_tab li a[href="' + selectorList[n] + '"]').parent().addClass('active').siblings().removeClass('active');
-										return;
-							 }
-						}
+		$(function(){
+			var videos = $('.solution-video');
+			videos.each(function() {
+				var that = $(this);
+				that.data('originalHTML',$(that).html());
+				that.delegate('.J_btn_play','click',function(e) {
+					var btn = $(this);
+					videos.each(function() {
+						$(this).html( $(this).data('originalHTML') );
+					});
+					e.preventDefault();
+					var text = that.find('.video-text');
+					text.hide();
+					var img = that.find('img');
+					var gifSrc = btn.attr('href') + '?cache='+ Math.random();
+					var stampSrc = btn.attr('data-stamp') + '?cache='+ Math.random();
+					var gifImg = $('<img src="'+ gifSrc +'" style="display:none" />');
+					img.replaceWith(gifImg);
+					gifImg.show();
+					that.append('<img style="position:absolute;right:0;top:0;" src="'+ stampSrc +'" />');
+				});
 			});
 		});
-
-
-
-
-

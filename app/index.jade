@@ -24,10 +24,6 @@ html(lang='zh-cn')
       script(src="iconfont/lte-ie7.js")
     style
       .c-sectitle-2 span,.c-sectitle-1{padding-left:0;}.slider-index:first-child{margin-left:0 !important;}
-      #mail-tip-box{
-
-      }
-
   body.index
     include inc/notice
     include inc/topbar
@@ -250,7 +246,3 @@ html(lang='zh-cn')
     .aly-wrap(style="padding-top:0;")
       include inc/index-body.html
     include inc/footer.html
-    script
-      $.get('/product',function(data){
-        console.log(data);
-        })

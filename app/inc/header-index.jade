@@ -1,7 +1,7 @@
 header
   .header-wrap
     .header-inner
-      a(href="http://www.aliyun.com") 
+      a(href="http://www.aliyun.com")
         h1.logo 阿里云官方网站
       a(href="http://www.aliyun.com",class="sub-logo index-logo",title="打造数据分享第一平台") 打造数据分享第一平台
       nav
@@ -14,7 +14,7 @@ header
               b
               dl
                 dt 弹性计算
-                dd 
+                dd
                   a(href="http://www.aliyun.com/product/ecs/") 云服务器
                   i
                   a(href="http://www.aliyun.com/product/slb/") 负载均衡
@@ -30,7 +30,7 @@ header
                   a(href="http://www.aliyun.com/product/ots/") 开放结构化数据服务
               dl
                 dt 云引擎
-                dd 
+                dd
                   a(href="http://www.aliyun.com/product/ace/") 云引擎
               dl
                 dt 其它服务
@@ -46,39 +46,39 @@ header
                   a(href="http://mail.aliyun.com/introduce/") 云邮箱
                   i
                   a(href="http://otp.aliyun.com/") 风云令
-          li.main-menu.header-nav-solutions
-            a(href="http://www.aliyun.com",aria-haspopup="J_sub_menu2") 解决方案
+          li.main-menu.header-nav-game
+            a(href="http://game.aliyun.com",aria-haspopup="J_sub_menu2") 游戏云
             div#J_sub_menu2.sub-menu
               b
               dl
                 dt
                 dd
-                  a(href="http://www.aliyun.com/product/ecs/") 手游解决方案
+                  a(href="http://game.aliyun.com") 手游
                   i
-                  a(href="http://www.aliyun.com/product/slb/") 页游解决方案
-                  i
-                  a(href="http://www.aliyun.com/product/ecs/") 移动app解决方案
+                  a(href="http://game.aliyun.com/webgame") 页游
+          li.main-menu.header-nav-game
+            a(href="appcloud.aliyun.com") 移动云
           li.main-menu.header-nav-market
             a(href="http://market.aliyun.com/",aria-haspopup="J_sub_menu3") 云应用市场
             div#J_sub_menu3.sub-menu
               b
               dl
                 dt 网站云
-                dd 
+                dd
                   a(href="http://market.aliyun.com/zoomla") 逐浪CMS建站
               dl
                 dt 网店系统
                 dd
                   a(href="http://market.aliyun.com/shopex") ShopEx
                   i
-                  a(href="http://market.aliyun.com/hishop") Hishop   
+                  a(href="http://market.aliyun.com/hishop") Hishop
                   i
-                  a(href="http://market.aliyun.com/v5shop") V5Shop   
+                  a(href="http://market.aliyun.com/v5shop") V5Shop
                   i
                   a(href="http://market.aliyun.com/shopnc") ShopNC
               dl
                 dt ERP管理
-                dd 
+                dd
                   a(href="http://market.aliyun.com/bjhetang") 禾唐版ERP
               dl
                 dt 办公软件
@@ -86,11 +86,11 @@ header
                   a(href="http://market.aliyun.com/qc24om") 24om在线办公软件
               dl
                 dt 数据分析
-                dd 
+                dd
                   a(href="http://market.aliyun.com/markway") 马克威分析系统
               dl
                 dt 渲染服务
-                dd 
+                dd
                   a(href="http://render.aliyun.com/") 渲染云
           li.main-menu.header-nav-developer
             a(href="http://dev.aliyun.com/",aria-haspopup="J_sub_menu4") 开发者
@@ -136,7 +136,7 @@ script
             $("body").get(0).className=$("body").attr("class").replace(/screen[0-9]{3,4}/ig,"screen1200");
           }else{
             $("body").addClass("screen1200");
-          }  
+          }
         }else{
           if(/screen/ig.test($("body").attr("class"))){
             $("body").get(0).className=$("body").attr("class").replace(/screen[0-9]{3,4}/ig,"screen997");
