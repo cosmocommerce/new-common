@@ -11,6 +11,10 @@ header{
     }
     .logo{
         background:url(http://img01.taobaocdn.com/tps/i1/T1mZeVXytaXXbqHRA.-134-40.png) left center no-repeat;
+        background-image: -webkit-image-set(url(http://img01.taobaocdn.com/tps/i1/T1mZeVXytaXXbqHRA.-134-40.png) 1x,url(http://gtms01.alicdn.com/tps/i1/T1sMEwFiFfXXbEccTy-268-80.png) 2x);
+        background-image: -moz-image-set(url(http://img01.taobaocdn.com/tps/i1/T1mZeVXytaXXbqHRA.-134-40.png) 1x,url(http://gtms01.alicdn.com/tps/i1/T1sMEwFiFfXXbEccTy-268-80.png) 2x);
+        background-image: -ms-image-set(url(http://img01.taobaocdn.com/tps/i1/T1mZeVXytaXXbqHRA.-134-40.png) 1x,url(http://gtms01.alicdn.com/tps/i1/T1sMEwFiFfXXbEccTy-268-80.png) 2x);
+        background-image: -o-image-set(url(http://img01.taobaocdn.com/tps/i1/T1mZeVXytaXXbqHRA.-134-40.png) 1x,url(http://gtms01.alicdn.com/tps/i1/T1sMEwFiFfXXbEccTy-268-80.png) 2x);
         width:135px;
         text-indent: -10000px;
         height: 40px;

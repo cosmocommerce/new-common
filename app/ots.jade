@@ -1,201 +1,217 @@
 extends layout
 block vars
-  productName = "product-ots"
+	productName = "product-ots"
 block titleName
-  title OTS - 阿里云-打造数据第一平台
+	title OTS - 阿里云-打造数据第一平台
 block css
 block header
-  include inc/header-index
+	include inc/header-index
+	style
+		.product-ots .features{
+			background-image:url(http://gtms01.alicdn.com/tps/i1/T1N_ZEFXxcXXXt12ZW-337-529.png) !important;
+		}
 block container
-  .product-overview.fix-clear
-    .overview-container
-      h1
-        i.icons.icons-ots-48
-        | 开放结构化数据服务（OTS）
-      p.introduce 开放结构化数据服务（Open Table Service，OTS）是构建在飞天大规模分布式计算系统之上的海量结构化和半结构化数据存储与实时查询的服务。OTS以数据表的形式组织数据通过RESTful API形式的接口提供服务并提供一个Web界面以方便用户管理。
-    .buy-container
-      .buy-area
-        p 最划算、最稳定、最安全
-          p 经济型云服务器低至
-            span ￥89/月
-        a.btn.btn-large.btn-orange(role="button") 立即购买
-  .product-tab
-    .product-topnav
-      ul.nav.nav-tabs#product_tab
-        li.active(role="tab")
-          a(href="#detail") 产品详情
-        li(role="tab")
-          a(href="#resources") 开发者指南
-        li(role="tab")
-          a(href="#case") 客户案例
-        li(role="tab")
-          a(href="#help") 产品帮助
-  .tab-content.page-buy
-    .tab-panel.first
-      .anchor
-        a(id="detail",name="detail") &nbsp
-      h2.h2-1
-        span 产品详情
-      div.detail-info
-        img(src="http://imgs-storage.cdn.aliyuncs.com/1345543113_1.INDEX.DETAIL.INDEX.OTS.DETAIL.BODY_18.gif")
-        h4 服务简介
-        p 开放结构化数据服务（Open Table Service，OTS）是构建在飞天大规模分布式计算系统之上的海量结构化和半结构化数据存储与实时查询的服务。 
-      div.detail-info
-        img(src="http://imgs-storage.cdn.aliyuncs.com/1345543137_1.INDEX.DETAIL.INDEX.OTS.DETAIL.BODY_18.gif")
-        h4 功能特点
-        p OTS以数据表的形式组织数据，保证强一致性，并提供视图和分页的功能来加速查询。用户可以通过RESTful API来使用服务，也可使用WEB 页面对数据进行管理。
-      div.detail-info
-        img(src="http://imgs-storage.cdn.aliyuncs.com/1345543158_1.INDEX.DETAIL.INDEX.OTS.DETAIL.BODY_18.gif")
-        h4 服务特性
-        p  大规模、低延时、强一致、安全、易用、经济。 
-      div.detail-info
-        img(src="http://imgs-storage.cdn.aliyuncs.com/1345543183_1.INDEX.DETAIL.INDEX.OTS.DETAIL.BODY_18.gif")
-        h4 适用场景
-        p OTS适用于对数据规模和实时性要求高的各类应用。 
-    .tab-panel
-      .anchor
-        a(id="resources",name="resources") &nbsp
-      h3
-        span 开发者指南
-      .product-item.product-download
-        a(href='http://oss.aliyuncs.com/bzzx/ots_python_sdk2013-1-15.zip', target='_blank') Python SDK开发包（2013-1-15）
-        a(href='http://help.aliyun.com/manual?spm=0.0.0.0.PPl9mA&helpId=661', target='_blank') .NET SDK开发包(2013-4-10)
-        a(href='http://help.aliyun.com/manual?spm=0.0.0.116.XEb4nM&helpId=664', target='_blank') Java SDK开发包（2013-1-15）
-        a(href='http://help.aliyun.com/manual?helpId=742', target='_blank') 用户验证
-        a(href='http://help.aliyun.com/manual?helpId=741', target='_blank') Request签名
-        a(href='http://help.aliyun.com/manual?helpId=736', target='_blank') Response 签名
-        a(href='http://help.aliyun.com/manual?helpId=727', target='_blank') Request参数传递
-        a(href='http://help.aliyun.com/manual?helpId=726', target='_blank') 类型及表示方法
-        a(href='http://help.aliyun.com/manual?helpId=725', target='_blank') Request的返回方式
-        a(href='http://help.aliyun.com/manual?helpId=724', target='_blank') OTS RESTful API
-        a(href='http://ots.aliyun.com/ots_sdk/OTS_RESTful_API_2012_05_23.pdf', target='_blank') 错误信息
-    .tab-panel
-      .anchor
-        a(id="case",name="case") &nbsp  
-      h2 客户案例
-      .customer-panel
-        .panel-container.panel-container-loading(id="customer_slideview")
-        .more-customer
-          h4 更多客户
-          .more-customer-wrap
-            a(href="#")
-              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57") 
-            a(href="#")
-              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
-            a(href="#")
-              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
-            a(href="#")
-              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
-            a(href="#")
-              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
-        .panel-left
-          a(id="customer_slideview_prevbtn",href="#") 
-        .panel-right
-          a(id="customer_slideview_nextbtn",href="#") 
-    .tab-panel
-      .anchor
-        a(id="help",name="help") &nbsp  
-      h2 产品帮助
-      .help
-        dl.dot
-          dt 操作指南
-          dd
-            a(href="") 远程连接for linux
-          dd
-            a(href="") Linux FTP服务配置
-          dd
-            a(href="") 远程连接for Windows
-          dd
-            a(href="") Windows FTP服务配置
-        dl.dot
-          dt 资料中心
-          dd
-            a(href="") 云服务器用户管理指南
-          dd
-            a(href="") 云服务器技术白皮书
-        dl.dot.more
-          dt.more.fix-clear 
-            span 常见问题
-            a(href="") 更多...
-          dd
-            a(href="") ip类相关问题
-          dd
-            a(href="") 机房相关问题
-          dd
-            a(href="") 配置升级相关问题
-          dd
-            a(href="") 操作系统相关问题 
-  script
-    (function(){          
-          Alipw.importClass('Alipw.SlideView');
-          AYSW.product.slideCustomerViews =[];
-          AYSW.product.slideCustomerViews.push([
-                      '<ul class="customer-item">',
-                              '<li class="li-title">囧记单词</li>',
-                              '<li class="li-content-1">移动APP开发者解决方案</li>',
-                              '<li class="li-content-2"><span>急需解决：</span>用户增长速度快，流量急需扩容，服务成本过高</li>',
-                              '<li class="li-content-2"><span>购买服务：</span>云服务器V型+<a href="#">关系型数据库</a></li>',
-                              '<li class="li-logo"> <img width="90" height="90" src="http://img02.taobaocdn.com/tps/i2/T10Nx4XrBXXXbCFbsb-100-100.jpg"></li>',
-                              '<li class="li-info poptip-container">',
-                                '<div class="poptip-arrow"><em>◆</em><span>◆</span></div>',
-                                '<h4>客户使用心得：</h4>',
-                                '<p>从2012年开始就想把服务器跟第三方更加专业的合作伙伴进行合作。综合对比下来觉得阿里云的云服务在目前的云主机里是做得比较好的，所以很原意和你们进行合作，速度和稳定性方面都很好。</p>',
-                              '</li>',
-                        '</ul>'
-                        ].join(''));
-          AYSW.product.slideCustomerViews.push([
-                      '<ul class="customer-item">',
-                              '<li class="li-title">囧记单词</li>',
-                              '<li class="li-content-1">移动APP开发者解决方案</li>',
-                              '<li class="li-content-2"><span>急需解决：</span>用户增长速度快，流量急需扩容，服务成本过高</li>',
-                              '<li class="li-content-2"><span>购买服务：</span>云服务器V型+<a href="#">关系型数据库</a></li>',
-                              '<li class="li-logo"> <img width="90" height="90" src="http://img02.taobaocdn.com/tps/i2/T10Nx4XrBXXXbCFbsb-100-100.jpg"></li>',
-                              '<li class="li-info poptip-container">',
-                                '<div class="poptip-arrow"><em>◆</em><span>◆</span></div>',
-                                '<h4>客户使用心得：</h4>',
-                                '<p>从2012年开始就想把服务器跟第三方更加专业的合作伙伴进行合作。综合对比下来觉得阿里云的云服务在目前的云主机里是做得比较好的，所以很原意和你们进行合作，速度和稳定性方面都很好。</p>',
-                              '</li>',
-                        '</ul>'
-                        ].join(''));
-            //登录区块
-            var loginBoxHtml = [
-                  '<p>已有云帐号？ <a href="https://account.aliyun.com/login/login.htm?oauth_callback='+encodeURIComponent(window.location.href)+'">马上登录</a></p>',
-                  '<p><a class="btn btn-large btn-orange buy-widget-btn" href="https://account.aliyun.com/register/register.htm?oauth_callback='+encodeURIComponent(window.location.href)+'">马上注册</a></p>'].join("");
-            if (AYSW.product.getCookie()['login_aliyunid']){
-                //已登录
-                $.ajax({
-                    url: 'http://www.aliyun.com/promotion/productajax/ots/?timestamp=' + (new Date()).getTime(),
-                    dataType: "script",
-                    success: function () {
-                        var otsHtml;
-                        
-                        if (window.__ay_product_ajax && window.__ay_product_ajax.code == 200) {
-                            //已开通
-                            
-                            var _data = __ay_product_ajax.data;
-                            otsHtml = [
-                                '<p>欢迎使用-开放结构化数据服务(OTS)</p>',
-                                '<p> 已用总空间： '+_data.storage+'KB</p>',
-                                  '<p>已用总流量： '+_data.flow+'KB </p>',
-                                  '<p>总请求数：'+_data.request+' 次 </p>',
-                                '<p><a href="http://console.aliyun.com/ots/index.html" target="_blank" class="btn btn-large btn-black buy-widget-btn">进入管理控制台</a> <a href="http://i.aliyun.com/charge/" class="btn btn-large btn-orange buy-widget-btn">我要充值</a></p>'].join("");
-                            $(".buy-container .buy-area").html(otsHtml);
-                        } else {
-                            //未开通
-                            otsHtml = [
-                            '<p>需要邀请码才能开通OTS服务</p>',
-                            '<p><a href="http://i.aliyun.com/inviteapply?agent_id=PjFAwl3VLvs%3D" target="_blank">获取邀请码</a></p>'].join("");
-                            $(".buy-container .buy-area").html(otsHtml);
+	.product-overview.fix-clear
+		.overview-container
+			h1
+				i.icons.icons-ots-48
+				| 开放结构化数据服务（OTS）
+			p.introduce 开放结构化数据服务（Open Table Service，OTS）是构建在飞天大规模分布式计算系统之上的海量结构化和半结构化数据存储与实时查询的服务。OTS以数据表的形式组织数据通过RESTful API形式的接口提供服务并提供一个Web界面以方便用户管理。
+		.buy-container
+			.buy-area
+				p 最划算、最稳定、最安全
+					p 经济型云服务器低至
+						span ￥89/月
+				a.btn.btn-large.btn-orange(role="button") 立即购买
+	.product-tab
+		.product-topnav
+			ul.nav.nav-tabs#product_tab
+				li.active(role="tab")
+					a(href="#detail") 产品详情
+				li(role="tab")
+					a(href="#case") 应用场景及案例
+				li(role="tab")
+					a(href="#help") 产品帮助
+	.tab-content.page-buy
+		.tab-panel.first
+			.anchor
+				a(id="detail",name="detail") &nbsp
+			h2.h2-1
+				span 产品详情
+			h3
+				span 如何使用
+			ul.info-list.dot
+				li 注册阿里云账号，并申请OTS激活码。
+				li 申请通过后，收到并激活激活码。
+				li 登录OTS管理控制台，在Web界面完成建表、数据增删改查等功能。
+				li 也可调用API或SDK完成OTS所有操作。
+			h3 产品优势
+			ul.info-list.features
+				li.features-item
+					h4
+						span.icon-good
+						|	稳定
+					ul.features-info
+						li 系统可用性99.9%
+						li 自动故障检测与恢复
+				li.features-item
+					h4
+						span.icon-good
+						|	安全
+					ul.features-info
+						li 用户级别的数据隔离、访问控制和权限管理
+						li 用户只能访问有权限的表
+						li 数据冗余备份
+				li.features-item
+					h4
+						span.icon-good
+						|	大规模、高性能
+					ul.features-info.last-feature
+						li 单表百TB级别数据存储
+						li 毫秒级别单行读写延迟
+						li 十万级别QPS
+			h3
+				span 产品功能
+			ul.info-list.dot
+				li 提供表、视图、表组的创建、删除等基本功能
+				li 支持单条数据的插入、查询、修改、删除
+				li 支持批量数据的插入、查询、修改、删除
+				li 支持事务性操作，保证事务内操作集合的原子性
+		.tab-panel
+			.anchor
+				a(id="case",name="case") &nbsp
+			h2 应用场景及案例
+			ul.info-list.dot
+				li 存储应用产生的海量数据，如电商交易信息、系统详细日志、科研原始记录等，单表数据量能达到百TB级别，支持分区存储
+				li 低延迟的实时数据查询，如实时交易处理、历史数据展示等
+				li 高并发数据访问，如拥有千万级甚至更多用户的网站交互信息、大量数据采集源的物联网应用等
+			.customer-panel
+				.panel-container.panel-container-loading(id="customer_slideview")
+				.more-customer
+					h4 更多客户
+					.more-customer-wrap
+						a(href="#")
+							img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
+						a(href="#")
+							img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
+						a(href="#")
+							img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
+						a(href="#")
+							img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
+						a(href="#")
+							img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
+				.panel-left
+					a(id="customer_slideview_prevbtn",href="#")
+				.panel-right
+					a(id="customer_slideview_nextbtn",href="#")
+		.tab-panel
+			.anchor
+				a(id="help",name="help") &nbsp
+			h2 产品帮助
+			.help
+				dl.dot
+					dt 操作指南
+					dd
+						a(href="") 远程连接for linux
+					dd
+						a(href="") Linux FTP服务配置
+					dd
+						a(href="") 远程连接for Windows
+					dd
+						a(href="") Windows FTP服务配置
+				dl.dot
+					dt 资料中心
+					dd
+						a(href="") 云服务器用户管理指南
+					dd
+						a(href="") 云服务器技术白皮书
+				dl.dot.more
+					dt.more.fix-clear
+						span 常见问题
+						a(href="") 更多...
+					dd
+						a(href="") ip类相关问题
+					dd
+						a(href="") 机房相关问题
+					dd
+						a(href="") 配置升级相关问题
+					dd
+						a(href="") 操作系统相关问题
+	script
+		(function(){
+					Alipw.importClass('Alipw.SlideView');
+					AYSW.product.slideCustomerViews =[];
+					AYSW.product.slideCustomerViews.push([
+											'<ul class="customer-item">',
+															'<li class="li-title">囧记单词</li>',
+															'<li class="li-content-1">移动APP开发者解决方案</li>',
+															'<li class="li-content-2"><span>急需解决：</span>用户增长速度快，流量急需扩容，服务成本过高</li>',
+															'<li class="li-content-2"><span>购买服务：</span>云服务器V型+<a href="#">关系型数据库</a></li>',
+															'<li class="li-logo"> <img width="90" height="90" src="http://img02.taobaocdn.com/tps/i2/T10Nx4XrBXXXbCFbsb-100-100.jpg"></li>',
+															'<li class="li-info poptip-container">',
+																'<div class="poptip-arrow"><em>◆</em><span>◆</span></div>',
+																'<h4>客户使用心得：</h4>',
+																'<p>从2012年开始就想把服务器跟第三方更加专业的合作伙伴进行合作。综合对比下来觉得阿里云的云服务在目前的云主机里是做得比较好的，所以很原意和你们进行合作，速度和稳定性方面都很好。</p>',
+															'</li>',
+												'</ul>'
+												].join(''));
+					AYSW.product.slideCustomerViews.push([
+											'<ul class="customer-item">',
+															'<li class="li-title">囧记单词</li>',
+															'<li class="li-content-1">移动APP开发者解决方案</li>',
+															'<li class="li-content-2"><span>急需解决：</span>用户增长速度快，流量急需扩容，服务成本过高</li>',
+															'<li class="li-content-2"><span>购买服务：</span>云服务器V型+<a href="#">关系型数据库</a></li>',
+															'<li class="li-logo"> <img width="90" height="90" src="http://img02.taobaocdn.com/tps/i2/T10Nx4XrBXXXbCFbsb-100-100.jpg"></li>',
+															'<li class="li-info poptip-container">',
+																'<div class="poptip-arrow"><em>◆</em><span>◆</span></div>',
+																'<h4>客户使用心得：</h4>',
+																'<p>从2012年开始就想把服务器跟第三方更加专业的合作伙伴进行合作。综合对比下来觉得阿里云的云服务在目前的云主机里是做得比较好的，所以很原意和你们进行合作，速度和稳定性方面都很好。</p>',
+															'</li>',
+												'</ul>'
+												].join(''));
 
-                        }
-                    }
-                });
+						jQuery.getJSON('/promotion/newproductajax',{type:'ots',timestamp:new Date().getTime()},function(result) {
+							if(!result) {
+								return;
+							}
+							var defaultTipHTML = '<p><a role="button" href="http://i.aliyun.com/inviteapply?agent_id=PjFAwl3VLvs%3D" class="btn btn-large buy-widget-btn btn-disable">获取邀请码</a></p>';
 
-              }else{
-                //未登录
-                 $(".buy-container .buy-area").html(loginBoxHtml);
-              }
-            //显示
-            AYSW.product.viewBuyArea();
-            
-      })();
+							var buyArea = $(".buy-container .buy-area");
+							if(result && result.code === -2) {
+								// 未登录
+								var loginBoxHtml = [
+									'<p><a role="button" href="http://i.aliyun.com/inviteapply?agent_id=PjFAwl3VLvs%3D" class="btn btn-large buy-widget-btn btn-disable">获取邀请码</a></p>'
+									].join("");
+								buyArea.html(loginBoxHtml);
+								return;
+							}
+
+							if(result.code === 200) {
+
+								if(result.data.count > 0) {
+									buyArea.html('<a role="button" target="_blank" href="http://ocs.aliyun.com" class="btn btn-large btn-black buy-widget-btn" data-ga="">进入管理控制台</a>');
+									return;
+								}
+
+								var invitationCode = result.data.invitationCode;
+
+								if(!invitationCode) {
+									buyArea.html('<p style="color:red;">本期邀请码免费申请已经结束，敬请期待下期免费开放</p><p><a role="button" href="javascript:;" class="btn btn-large buy-widget-btn btn-disable">获取邀请码</a></p>');
+									return;
+								}else {
+									var html = ['<p>您已拥有邀请码</p>'];
+									if(!result.data.ecsCount)	{
+										html.push('<p>需要<a href="/product/ecs"> 购买ECS </a>才能开通OCS</p>');
+									}else {
+										html.push('<p><a href="http://i.aliyun.com/invite/active?agent_id=76" class="btn btn-large btn-orange buy-widget-btn">开通OCS</a></p>');
+									}
+									buyArea.html( html.join('') );
+								}
+							}
+
+						});
+						//显示
+						AYSW.product.viewBuyArea();
+
+
+			})();

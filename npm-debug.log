@@ -1,0 +1,234 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'generator-bootstrap3-less' ]
+2 info using npm@1.3.11
+3 info using node@v0.10.21
+4 verbose cache add [ 'generator-bootstrap3-less', null ]
+5 verbose cache add name=undefined spec="generator-bootstrap3-less" args=["generator-bootstrap3-less",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'generator-bootstrap3-less',
+6 verbose parsed url   path: 'generator-bootstrap3-less',
+6 verbose parsed url   href: 'generator-bootstrap3-less' }
+7 silly lockFile 6d5cd0fa-generator-bootstrap3-less generator-bootstrap3-less
+8 verbose lock generator-bootstrap3-less /Users/chenchaoqun/.npm/6d5cd0fa-generator-bootstrap3-less.lock
+9 silly lockFile 6d5cd0fa-generator-bootstrap3-less generator-bootstrap3-less
+10 silly lockFile 6d5cd0fa-generator-bootstrap3-less generator-bootstrap3-less
+11 verbose addNamed [ 'generator-bootstrap3-less', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 162f420d-generator-bootstrap3-less generator-bootstrap3-less@
+14 verbose lock generator-bootstrap3-less@ /Users/chenchaoqun/.npm/162f420d-generator-bootstrap3-less.lock
+15 silly addNameRange { name: 'generator-bootstrap3-less', range: '*', hasData: false }
+16 verbose url raw generator-bootstrap3-less
+17 verbose url resolving [ 'https://registry.npmjs.org/', './generator-bootstrap3-less' ]
+18 verbose url resolved https://registry.npmjs.org/generator-bootstrap3-less
+19 info trying registry request attempt 1 at 11:54:21
+20 http GET https://registry.npmjs.org/generator-bootstrap3-less
+21 http 200 https://registry.npmjs.org/generator-bootstrap3-less
+22 silly registry.get cb [ 200,
+22 silly registry.get   { vary: 'Accept',
+22 silly registry.get     server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+22 silly registry.get     etag: '"B3TWXZURDIV4RE1O7SYTREE87"',
+22 silly registry.get     date: 'Thu, 31 Oct 2013 03:54:22 GMT',
+22 silly registry.get     'content-type': 'application/json',
+22 silly registry.get     'content-length': '7670' } ]
+23 silly addNameRange number 2 { name: 'generator-bootstrap3-less', range: '*', hasData: true }
+24 silly addNameRange versions [ 'generator-bootstrap3-less', [ '3.0.0', '3.0.1' ] ]
+25 verbose addNamed [ 'generator-bootstrap3-less', '3.0.1' ]
+26 verbose addNamed [ '3.0.1', '3.0.1' ]
+27 silly lockFile 42916bae-generator-bootstrap3-less-3-0-1 generator-bootstrap3-less@3.0.1
+28 verbose lock generator-bootstrap3-less@3.0.1 /Users/chenchaoqun/.npm/42916bae-generator-bootstrap3-less-3-0-1.lock
+29 silly lockFile f2e34cd2-erator-bootstrap3-less-3-0-1-tgz https://registry.npmjs.org/generator-bootstrap3-less/-/generator-bootstrap3-less-3.0.1.tgz
+30 verbose lock https://registry.npmjs.org/generator-bootstrap3-less/-/generator-bootstrap3-less-3.0.1.tgz /Users/chenchaoqun/.npm/f2e34cd2-erator-bootstrap3-less-3-0-1-tgz.lock
+31 verbose addRemoteTarball [ 'https://registry.npmjs.org/generator-bootstrap3-less/-/generator-bootstrap3-less-3.0.1.tgz',
+31 verbose addRemoteTarball   '865d1cb60133e08f4840fa7bf323ce37fe5e08d4' ]
+32 info retry fetch attempt 1 at 11:54:23
+33 verbose fetch to= /var/folders/f3/1cpx44yx7mgby9ttv11t_c8c0000gn/T/npm-997-fLJvZVsx/1383191663138-0.4304073650855571/tmp.tgz
+34 http GET https://registry.npmjs.org/generator-bootstrap3-less/-/generator-bootstrap3-less-3.0.1.tgz
+35 http 200 https://registry.npmjs.org/generator-bootstrap3-less/-/generator-bootstrap3-less-3.0.1.tgz
+36 verbose tar unpack /var/folders/f3/1cpx44yx7mgby9ttv11t_c8c0000gn/T/npm-997-fLJvZVsx/1383191663138-0.4304073650855571/tmp.tgz
+37 silly lockFile 9bab54ac-63138-0-4304073650855571-package tar:///var/folders/f3/1cpx44yx7mgby9ttv11t_c8c0000gn/T/npm-997-fLJvZVsx/1383191663138-0.4304073650855571/package
+38 verbose lock tar:///var/folders/f3/1cpx44yx7mgby9ttv11t_c8c0000gn/T/npm-997-fLJvZVsx/1383191663138-0.4304073650855571/package /Users/chenchaoqun/.npm/9bab54ac-63138-0-4304073650855571-package.lock
+39 silly lockFile 8c2aed3a-63138-0-4304073650855571-tmp-tgz tar:///var/folders/f3/1cpx44yx7mgby9ttv11t_c8c0000gn/T/npm-997-fLJvZVsx/1383191663138-0.4304073650855571/tmp.tgz
+40 verbose lock tar:///var/folders/f3/1cpx44yx7mgby9ttv11t_c8c0000gn/T/npm-997-fLJvZVsx/1383191663138-0.4304073650855571/tmp.tgz /Users/chenchaoqun/.npm/8c2aed3a-63138-0-4304073650855571-tmp-tgz.lock
+41 silly gunzTarPerm modes [ '755', '644' ]
+42 silly gunzTarPerm extractEntry package.json
+43 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+44 silly gunzTarPerm extractEntry README.md
+45 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+46 silly gunzTarPerm extractEntry LICENSE
+47 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+48 silly gunzTarPerm extractEntry .travis.yml
+49 silly gunzTarPerm modified mode [ '.travis.yml', 438, 420 ]
+50 silly gunzTarPerm extractEntry app/index.js
+51 silly gunzTarPerm modified mode [ 'app/index.js', 438, 420 ]
+52 silly gunzTarPerm extractEntry app/templates/Gruntfile.js
+53 silly gunzTarPerm modified mode [ 'app/templates/Gruntfile.js', 438, 420 ]
+54 silly gunzTarPerm extractEntry app/templates/htaccess
+55 silly gunzTarPerm modified mode [ 'app/templates/htaccess', 438, 420 ]
+56 silly gunzTarPerm extractEntry app/templates/editorconfig
+57 silly gunzTarPerm modified mode [ 'app/templates/editorconfig', 438, 420 ]
+58 silly gunzTarPerm extractEntry app/templates/favicon.ico
+59 silly gunzTarPerm modified mode [ 'app/templates/favicon.ico', 438, 420 ]
+60 silly gunzTarPerm extractEntry app/templates/gitattributes
+61 silly gunzTarPerm modified mode [ 'app/templates/gitattributes', 438, 420 ]
+62 silly gunzTarPerm extractEntry app/templates/gitignore
+63 silly gunzTarPerm modified mode [ 'app/templates/gitignore', 438, 420 ]
+64 silly gunzTarPerm extractEntry app/templates/404.html
+65 silly gunzTarPerm modified mode [ 'app/templates/404.html', 438, 420 ]
+66 silly gunzTarPerm extractEntry app/templates/bowerrc
+67 silly gunzTarPerm modified mode [ 'app/templates/bowerrc', 438, 420 ]
+68 silly gunzTarPerm extractEntry app/templates/index.html
+69 silly gunzTarPerm modified mode [ 'app/templates/index.html', 438, 420 ]
+70 silly gunzTarPerm extractEntry app/templates/jshintrc
+71 silly gunzTarPerm modified mode [ 'app/templates/jshintrc', 438, 420 ]
+72 silly gunzTarPerm extractEntry app/templates/robots.txt
+73 silly gunzTarPerm modified mode [ 'app/templates/robots.txt', 438, 420 ]
+74 silly gunzTarPerm extractEntry app/templates/travis.yml
+75 silly gunzTarPerm modified mode [ 'app/templates/travis.yml', 438, 420 ]
+76 silly gunzTarPerm extractEntry app/templates/_bower.json
+77 silly gunzTarPerm modified mode [ 'app/templates/_bower.json', 438, 420 ]
+78 silly gunzTarPerm extractEntry app/templates/_package.json
+79 silly gunzTarPerm modified mode [ 'app/templates/_package.json', 438, 420 ]
+80 silly gunzTarPerm extractEntry app/USAGE
+81 silly gunzTarPerm modified mode [ 'app/USAGE', 438, 420 ]
+82 silly lockFile 9bab54ac-63138-0-4304073650855571-package tar:///var/folders/f3/1cpx44yx7mgby9ttv11t_c8c0000gn/T/npm-997-fLJvZVsx/1383191663138-0.4304073650855571/package
+83 silly lockFile 9bab54ac-63138-0-4304073650855571-package tar:///var/folders/f3/1cpx44yx7mgby9ttv11t_c8c0000gn/T/npm-997-fLJvZVsx/1383191663138-0.4304073650855571/package
+84 silly lockFile 8c2aed3a-63138-0-4304073650855571-tmp-tgz tar:///var/folders/f3/1cpx44yx7mgby9ttv11t_c8c0000gn/T/npm-997-fLJvZVsx/1383191663138-0.4304073650855571/tmp.tgz
+85 silly lockFile 8c2aed3a-63138-0-4304073650855571-tmp-tgz tar:///var/folders/f3/1cpx44yx7mgby9ttv11t_c8c0000gn/T/npm-997-fLJvZVsx/1383191663138-0.4304073650855571/tmp.tgz
+86 verbose tar pack [ '/Users/chenchaoqun/.npm/generator-bootstrap3-less/3.0.1/package.tgz',
+86 verbose tar pack   '/var/folders/f3/1cpx44yx7mgby9ttv11t_c8c0000gn/T/npm-997-fLJvZVsx/1383191663138-0.4304073650855571/package' ]
+87 verbose tarball /Users/chenchaoqun/.npm/generator-bootstrap3-less/3.0.1/package.tgz
+88 verbose folder /var/folders/f3/1cpx44yx7mgby9ttv11t_c8c0000gn/T/npm-997-fLJvZVsx/1383191663138-0.4304073650855571/package
+89 silly lockFile 9bab54ac-63138-0-4304073650855571-package tar:///var/folders/f3/1cpx44yx7mgby9ttv11t_c8c0000gn/T/npm-997-fLJvZVsx/1383191663138-0.4304073650855571/package
+90 verbose lock tar:///var/folders/f3/1cpx44yx7mgby9ttv11t_c8c0000gn/T/npm-997-fLJvZVsx/1383191663138-0.4304073650855571/package /Users/chenchaoqun/.npm/9bab54ac-63138-0-4304073650855571-package.lock
+91 silly lockFile 432f0a78-ootstrap3-less-3-0-1-package-tgz tar:///Users/chenchaoqun/.npm/generator-bootstrap3-less/3.0.1/package.tgz
+92 verbose lock tar:///Users/chenchaoqun/.npm/generator-bootstrap3-less/3.0.1/package.tgz /Users/chenchaoqun/.npm/432f0a78-ootstrap3-less-3-0-1-package-tgz.lock
+93 silly lockFile 9bab54ac-63138-0-4304073650855571-package tar:///var/folders/f3/1cpx44yx7mgby9ttv11t_c8c0000gn/T/npm-997-fLJvZVsx/1383191663138-0.4304073650855571/package
+94 silly lockFile 9bab54ac-63138-0-4304073650855571-package tar:///var/folders/f3/1cpx44yx7mgby9ttv11t_c8c0000gn/T/npm-997-fLJvZVsx/1383191663138-0.4304073650855571/package
+95 silly lockFile 432f0a78-ootstrap3-less-3-0-1-package-tgz tar:///Users/chenchaoqun/.npm/generator-bootstrap3-less/3.0.1/package.tgz
+96 silly lockFile 432f0a78-ootstrap3-less-3-0-1-package-tgz tar:///Users/chenchaoqun/.npm/generator-bootstrap3-less/3.0.1/package.tgz
+97 silly lockFile dce76cbe-or-bootstrap3-less-3-0-1-package /Users/chenchaoqun/.npm/generator-bootstrap3-less/3.0.1/package
+98 verbose lock /Users/chenchaoqun/.npm/generator-bootstrap3-less/3.0.1/package /Users/chenchaoqun/.npm/dce76cbe-or-bootstrap3-less-3-0-1-package.lock
+99 silly lockFile dce76cbe-or-bootstrap3-less-3-0-1-package /Users/chenchaoqun/.npm/generator-bootstrap3-less/3.0.1/package
+100 silly lockFile dce76cbe-or-bootstrap3-less-3-0-1-package /Users/chenchaoqun/.npm/generator-bootstrap3-less/3.0.1/package
+101 verbose tar unpack /Users/chenchaoqun/.npm/generator-bootstrap3-less/3.0.1/package.tgz
+102 silly lockFile 5955e73b-or-bootstrap3-less-3-0-1-package tar:///Users/chenchaoqun/.npm/generator-bootstrap3-less/3.0.1/package
+103 verbose lock tar:///Users/chenchaoqun/.npm/generator-bootstrap3-less/3.0.1/package /Users/chenchaoqun/.npm/5955e73b-or-bootstrap3-less-3-0-1-package.lock
+104 silly lockFile 432f0a78-ootstrap3-less-3-0-1-package-tgz tar:///Users/chenchaoqun/.npm/generator-bootstrap3-less/3.0.1/package.tgz
+105 verbose lock tar:///Users/chenchaoqun/.npm/generator-bootstrap3-less/3.0.1/package.tgz /Users/chenchaoqun/.npm/432f0a78-ootstrap3-less-3-0-1-package-tgz.lock
+106 silly gunzTarPerm modes [ '755', '644' ]
+107 silly gunzTarPerm extractEntry package.json
+108 silly gunzTarPerm extractEntry README.md
+109 silly gunzTarPerm extractEntry LICENSE
+110 silly gunzTarPerm extractEntry .travis.yml
+111 silly gunzTarPerm extractEntry app/index.js
+112 silly gunzTarPerm extractEntry app/USAGE
+113 silly gunzTarPerm extractEntry app/templates/Gruntfile.js
+114 silly gunzTarPerm extractEntry app/templates/gitattributes
+115 silly gunzTarPerm extractEntry app/templates/_bower.json
+116 silly gunzTarPerm extractEntry app/templates/_package.json
+117 silly gunzTarPerm extractEntry app/templates/bowerrc
+118 silly gunzTarPerm extractEntry app/templates/editorconfig
+119 silly gunzTarPerm extractEntry app/templates/favicon.ico
+120 silly gunzTarPerm extractEntry app/templates/404.html
+121 silly gunzTarPerm extractEntry app/templates/gitignore
+122 silly gunzTarPerm extractEntry app/templates/htaccess
+123 silly gunzTarPerm extractEntry app/templates/index.html
+124 silly gunzTarPerm extractEntry app/templates/jshintrc
+125 silly gunzTarPerm extractEntry app/templates/robots.txt
+126 silly gunzTarPerm extractEntry app/templates/travis.yml
+127 silly lockFile 5955e73b-or-bootstrap3-less-3-0-1-package tar:///Users/chenchaoqun/.npm/generator-bootstrap3-less/3.0.1/package
+128 silly lockFile 5955e73b-or-bootstrap3-less-3-0-1-package tar:///Users/chenchaoqun/.npm/generator-bootstrap3-less/3.0.1/package
+129 silly lockFile 432f0a78-ootstrap3-less-3-0-1-package-tgz tar:///Users/chenchaoqun/.npm/generator-bootstrap3-less/3.0.1/package.tgz
+130 silly lockFile 432f0a78-ootstrap3-less-3-0-1-package-tgz tar:///Users/chenchaoqun/.npm/generator-bootstrap3-less/3.0.1/package.tgz
+131 verbose chmod /Users/chenchaoqun/.npm/generator-bootstrap3-less/3.0.1/package.tgz 644
+132 verbose chown /Users/chenchaoqun/.npm/generator-bootstrap3-less/3.0.1/package.tgz [ 501, 20 ]
+133 silly lockFile f2e34cd2-erator-bootstrap3-less-3-0-1-tgz https://registry.npmjs.org/generator-bootstrap3-less/-/generator-bootstrap3-less-3.0.1.tgz
+134 silly lockFile f2e34cd2-erator-bootstrap3-less-3-0-1-tgz https://registry.npmjs.org/generator-bootstrap3-less/-/generator-bootstrap3-less-3.0.1.tgz
+135 silly lockFile 42916bae-generator-bootstrap3-less-3-0-1 generator-bootstrap3-less@3.0.1
+136 silly lockFile 42916bae-generator-bootstrap3-less-3-0-1 generator-bootstrap3-less@3.0.1
+137 silly lockFile 162f420d-generator-bootstrap3-less generator-bootstrap3-less@
+138 silly lockFile 162f420d-generator-bootstrap3-less generator-bootstrap3-less@
+139 silly resolved [ { name: 'generator-bootstrap3-less',
+139 silly resolved     version: '3.0.1',
+139 silly resolved     description: 'Yeoman generator fo twitter bootstrap3 less',
+139 silly resolved     keywords:
+139 silly resolved      [ 'yeoman-generator',
+139 silly resolved        'less',
+139 silly resolved        'yeoman',
+139 silly resolved        'generator',
+139 silly resolved        'bootstrap',
+139 silly resolved        'bootstrap 3',
+139 silly resolved        'twitter',
+139 silly resolved        'font-awesome' ],
+139 silly resolved     homepage: 'https://github.com/knownasilya/generator-bootstrap-less',
+139 silly resolved     bugs: { url: 'https://github.com/knownasilya/generator-bootstrap-less/issues' },
+139 silly resolved     author:
+139 silly resolved      { name: 'Thomas Lebeau',
+139 silly resolved        email: 'thomas@elebeau.io',
+139 silly resolved        url: 'http://lebeau.io' },
+139 silly resolved     main: 'app/index.js',
+139 silly resolved     repository:
+139 silly resolved      { type: 'git',
+139 silly resolved        url: 'https://github.com/knownasilya/generator-bootstrap-less.git' },
+139 silly resolved     scripts: { test: 'mocha' },
+139 silly resolved     dependencies: { 'yeoman-generator': '~0.10.2' },
+139 silly resolved     peerDependencies: { 'generator-mocha': '~0.1.1' },
+139 silly resolved     devDependencies: { mocha: '~1.12.0' },
+139 silly resolved     engines: { node: '>=0.8.0' },
+139 silly resolved     licenses: [ [Object] ],
+139 silly resolved     readme: '# Generator Bootstrap Less [![Build Status](https://travis-ci.org/Thomas-Lebeau/generator-bootstrap-less.png?branch=master)](https://travis-ci.org/Thomas-Lebeau/generator-bootstrap-less)\r\nA Generator for Yeoman to work with the Less version of Twitter Bootstrap\r\n\r\n\r\n## About\r\nThis generator has been redev from scratch to work with Yeoman 1.0\r\nThe improvments are:\r\n- Much easier installation process. No needs to install dependencies manually anymore\r\n- Better respect of Yeoman\'s workflow\r\n- Possibility to include [Font Awesome](https://github.com/FortAwesome/Font-Awesome)\r\n\r\n\r\n## Getting started\r\n- Make sure you have [yo](https://github.com/yeoman/yo) installed:\r\n    `npm install -g yo`\r\n- Install the generator: `npm install generator-bootstrap-less`\r\n- Run: `yo bootstrap-less` to scaffold your project\r\n- Run `grunt` for building and `grunt server` for preview\r\n\r\n## Options\r\n\r\n* `--skip-install`\r\n\r\n  Skips the automatic execution of `bower` and `npm` after\r\n  scaffolding has finished.\r\n\r\n* `--test-framework=[framework]`\r\n\r\n  Defaults to `mocha`. Can be switched for\r\n  another supported testing framework like `jasmine`.\r\n\r\n\r\n## License\r\n[MIT License](http://en.wikipedia.org/wiki/MIT_License)\r\n\r\n\r\n## Author\r\n*Thomas Lebeau*\r\n\r\n* [http://lebeau.io](http://lebeau.io)\r\n* [@tomalebeau](http://twitter.com/tomalebeau)\r\n',
+139 silly resolved     readmeFilename: 'README.md',
+139 silly resolved     _id: 'generator-bootstrap3-less@3.0.1',
+139 silly resolved     dist: { shasum: '7eb308fd08482ca2022abc8b950c042bcb9fe3b3' },
+139 silly resolved     _from: 'generator-bootstrap3-less@',
+139 silly resolved     _resolved: 'https://registry.npmjs.org/generator-bootstrap3-less/-/generator-bootstrap3-less-3.0.1.tgz' } ]
+140 info install generator-bootstrap3-less@3.0.1 into /usr/local/lib
+141 info installOne generator-bootstrap3-less@3.0.1
+142 info /usr/local/lib/node_modules/generator-bootstrap3-less unbuild
+143 verbose tar unpack /Users/chenchaoqun/.npm/generator-bootstrap3-less/3.0.1/package.tgz
+144 silly lockFile 2945259c-odules-generator-bootstrap3-less tar:///usr/local/lib/node_modules/generator-bootstrap3-less
+145 verbose lock tar:///usr/local/lib/node_modules/generator-bootstrap3-less /Users/chenchaoqun/.npm/2945259c-odules-generator-bootstrap3-less.lock
+146 silly lockFile 432f0a78-ootstrap3-less-3-0-1-package-tgz tar:///Users/chenchaoqun/.npm/generator-bootstrap3-less/3.0.1/package.tgz
+147 verbose lock tar:///Users/chenchaoqun/.npm/generator-bootstrap3-less/3.0.1/package.tgz /Users/chenchaoqun/.npm/432f0a78-ootstrap3-less-3-0-1-package-tgz.lock
+148 silly gunzTarPerm modes [ '755', '644' ]
+149 error Error: EACCES, mkdir '/usr/local/lib/node_modules/generator-bootstrap3-less'
+149 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/generator-bootstrap3-less']
+149 error   errno: 3,
+149 error   code: 'EACCES',
+149 error   path: '/usr/local/lib/node_modules/generator-bootstrap3-less',
+149 error   fstream_type: 'Directory',
+149 error   fstream_path: '/usr/local/lib/node_modules/generator-bootstrap3-less',
+149 error   fstream_class: 'DirWriter',
+149 error   fstream_stack:
+149 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+149 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53',
+149 error      'Object.oncomplete (fs.js:107:15)' ] }
+150 error Please try running this command again as root/Administrator.
+151 error System Darwin 13.0.0
+152 error command "node" "/usr/local/bin/npm" "install" "-g" "generator-bootstrap3-less"
+153 error cwd /Users/chenchaoqun/Github/new-common
+154 error node -v v0.10.21
+155 error npm -v 1.3.11
+156 error path /usr/local/lib/node_modules/generator-bootstrap3-less
+157 error fstream_path /usr/local/lib/node_modules/generator-bootstrap3-less
+158 error fstream_type Directory
+159 error fstream_class DirWriter
+160 error code EACCES
+161 error errno 3
+162 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/generator-bootstrap3-less'
+163 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+163 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53
+163 error fstream_stack Object.oncomplete (fs.js:107:15)
+164 verbose exit [ 3, true ]

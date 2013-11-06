@@ -6,6 +6,11 @@ block titleName
 block css
 block header
 	include inc/header-index
+	style
+		.product-slb .features{
+			background-image:url(http://gtms01.alicdn.com/tps/i1/T1z.smFc4bXXaehmAZ-338-538.png) !important;
+		}
+
 block container
 	.product-overview.fix-clear
 		.overview-container
@@ -45,7 +50,7 @@ block container
 				li.features-item
 					h4
 						span.icon-good
-						|  高可用
+						|	高可用
 					ul.features-info
 						li 采用全冗余设计，无单点，可用性高达99.95%
 						li 根据应用负载进行弹性扩容，在流量波动情况下
@@ -54,7 +59,7 @@ block container
 				li.features-item
 					h4
 						span.icon-good
-						|  低成本
+						|	低成本
 					ul.features-info
 						li 与传统硬件负载均衡系统高投入相比成本能下降60%，
 						li 当前免费使用
@@ -63,7 +68,7 @@ block container
 				li.features-item
 					h4
 						span.icon-good
-						|  安全
+						|	安全
 					ul.features-info.last-feature
 						li 结合云盾提供防DDoS攻击能力，包括：CC、
 							br
@@ -163,40 +168,30 @@ block container
 															'</li>',
 												'</ul>'
 												].join(''));
-						//登录区块
-						var loginBoxHtml = [
-									'<p>已有云帐号？ <a href="https://account.aliyun.com/login/login.htm?oauth_callback='+encodeURIComponent(window.location.href)+'">马上登录</a></p>',
-									'<p><a class="btn btn-large btn-orange buy-widget-btn" href="https://account.aliyun.com/register/register.htm?oauth_callback='+encodeURIComponent(window.location.href)+'">马上注册</a></p>'].join("");
-						if (AYSW.product.getCookie()['login_aliyunid']){
-								//已登录
-								$.ajax({
-										url: 'http://www.aliyun.com/promotion/productajax/slb/?timestamp=' + (new Date()).getTime(),
-										dataType: "script",
-										success: function () {
-												var slbHtml;
 
-												if (window.__ay_product_ajax && window.__ay_product_ajax.code == 200) {
-
-														slbHtml = [
-																'<p class="mt20">你已开通slb服务</p>',
-																'<p><a role="button" href="http://console.aliyun.com/rds/index.html" class="btn btn-large btn-black buy-widget-btn" target="_blank">进入管理控制台</a></p>'].join("");
-
-														$(".buy-container .buy-area").html(slbHtml);
-												} else {
-														slbHtml = [
-																'<p class="mt20">SLB产品现可免费使用</p>',
-																'<p class="mt20">你需要拥有2台以上的云服务器后才能申请开通</p>',
-																'<p><a role="button" href="http://console.aliyun.com/slb/index.html"	target="_blank" class="btn btn-large btn-orange buy-widget-btn">立即开通</a></p>'].join("");
-														$(".buy-container .buy-area").html(slbHtml);
-												}
-										}
-								});
-
-							}else{
-								//未登录
-								$(".buy-container .buy-area").html(loginBoxHtml);
+						jQuery.getJSON('/promotion/newproductajax',{type:'slb',timestamp:new Date().getTime()},function(result) {
+							if(!result) {
+								return;
 							}
+							var buyArea = $(".buy-container .buy-area");
+							var defaultTipHTML = '<a role="button" href="http://slb.console.aliyun.com/" class="btn btn-large btn-orange buy-widget-btn" data-ga="SLB.BTN.免费开通">免费开通</a>';
+							if(result && result.code === -2) {
+								// 未登录
+								buyArea.html(defaultTipHTML);
+								return;
+							}
+
+							if(result.code === 200) {
+
+								if(result.data.count > 0) {
+									buyArea.html('<p>你已开通SLB服务</p><a role="button" target="_blank" href="http://slb.console.aliyun.com" class="btn btn-large btn-black buy-widget-btn" data-ga="">进入管理控制台</a>');
+								}else if(!result.data.ecsCount){
+									buyArea.html('<p>SLB现可免费使用，需要和云服务器结合使用。在免费体验期内，每个用户只能开启1个SLB实例</p><a role="button" href="http://slb.console.aliyun.com/" class="btn btn-large btn-disable buy-widget-btn" data-ga="SLB.BTN.免费开通">免费开通</a><br/><p>需要<a href="http://buy.aliyun.com/">购买云服务器</a>才可以开通SLB</p>');
+								}else{
+									buyArea.html(defaultTipHTML);
+								}
+							}
+						});
 						//显示
 						AYSW.product.viewBuyArea();
-
 			})();

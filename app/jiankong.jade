@@ -1,152 +1,173 @@
 extends layout
 block vars
-  productName = "product-jiankong screen1200"
+	productName = "product-jiankong screen1200"
 block titleName
-  title 云监控 - 阿里云-打造数据第一平台
+	title 云监控 - 阿里云-打造数据第一平台
 block css
 block header
-  include inc/header-index
+	include inc/header-index
 block container
-  .product-overview.fix-clear
-    .overview-container
-      h1
-        i.icons.icons-yunjiankong-48
-        | 云监控
-      p.introduce 云监控实时监控您的网站或服务器，可及时发现故障并通过多种报警方式及时通知到您，为您的服务正常运行保驾护航。 云监控除了为阿里云云服务器客户提供安全有效的监控服务外，还能为其他自有服务器客户提供功能强大、简单易用的监控服务。用户无需自建监控系统，只需要通过简单的配置即可拥有全面、安全、可靠的监控服务。
-    .buy-container
-      .buy-area
-        p 最划算、最稳定、最安全
-          p 经济型云服务器低至
-            span ￥89/月
-        a.btn.btn-large.btn-orange(role="button") 立即购买
-  .product-tab
-    .product-topnav
-      ul.nav.nav-tabs#product_tab
-        li.active(role="tab")
-          a(href="#detail") 产品详情
-        li(role="tab")
-          a(href="#category") 监控分类
-        li(role="tab")
-          a(href="#resources") 开发者资源
-        li(role="tab")
-          a(href="#case") 客户案例
-        li(role="tab")
-          a(href="#help") 产品使用帮助
-  .tab-content.page-buy
-    .tab-panel
-      .anchor
-        a(id="detail",name="detail") &nbsp
-      h2.h2-1 产品详情
-      include inc/jiankong-1.html
-    .tab-panel
-      .anchor
-        a(id="category",name="category") &nbsp
-      h2 监控分类 
-      include inc/jiankong-2.html
-    .tab-panel
-      .anchor
-        a(id="resources",name="resources") &nbsp
-      h2 开发者资源
-      include inc/jiankong-3.html    
-    .tab-panel
-      .anchor
-        a(id="case",name="case") &nbsp
-      h2 客户案例  
-      .customer-panel
-        .panel-container.panel-container-loading(id="customer_slideview")
-        .more-customer
-          h4 更多客户
-          .more-customer-wrap
-            a(href="#")
-              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57") 
-            a(href="#")
-              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
-            a(href="#")
-              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
-            a(href="#")
-              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
-            a(href="#")
-              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
-        .panel-left
-          a(id="customer_slideview_prevbtn",href="#") 
-        .panel-right
-          a(id="customer_slideview_nextbtn",href="#") 
-    .tab-panel
-      .anchor
-        a(id="help",name="help") &nbsp
-      h2 产品帮助
-      .help
-        dl.dot
-          dt 操作指南
-          dd
-            a(href="") 远程连接for linux
-          dd
-            a(href="") Linux FTP服务配置
-          dd
-            a(href="") 远程连接for Windows
-          dd
-            a(href="") Windows FTP服务配置
-        dl.dot
-          dt 资料中心
-          dd
-            a(href="") 云服务器用户管理指南
-          dd
-            a(href="") 云服务器技术白皮书
-        dl.dot.more
-          dt.more.fix-clear 
-            span 常见问题
-            a(href="") 更多...
-          dd
-            a(href="") ip类相关问题
-          dd
-            a(href="") 机房相关问题
-          dd
-            a(href="") 配置升级相关问题
-          dd
-            a(href="") 操作系统相关问题 
+	.product-overview.fix-clear
+		.overview-container
+			h1
+				i.icons.icons-yunjiankong-48
+				| 云监控
+			p.introduce 云监控实时监控您的网站或服务器，可及时发现故障并通过多种报警方式及时通知到您，为您的服务正常运行保驾护航。 云监控除了为阿里云云服务器客户提供安全有效的监控服务外，还能为其他自有服务器客户提供功能强大、简单易用的监控服务。用户无需自建监控系统，只需要通过简单的配置即可拥有全面、安全、可靠的监控服务。
+		.buy-container
+			.buy-area
+	.product-tab
+		.product-topnav
+			ul.nav.nav-tabs#product_tab
+				li.active(role="tab")
+					a(href="#detail") 产品详情
+				li(role="tab")
+					a(href="#case") 应用场景及案例
+				li(role="tab")
+					a(href="#help") 产品使用帮助
+	.tab-content.page-buy
+		.tab-panel
+			.anchor
+				a(id="detail",name="detail") &nbsp
+			h2.h2-1 产品详情
+			include inc/jiankong-1.html
+		.tab-panel
+			.anchor
+				a(id="category",name="category") &nbsp
+			h3
+				span 产品功能
+			include inc/jiankong-2.html
+			h3
+				span 开发者资源
+			include inc/jiankong-3.html
+		.tab-panel
+			.anchor
+				a(id="case",name="case") &nbsp
+			h2 客户案例
+			.customer-panel
+				.panel-container.panel-container-loading(id="customer_slideview")
+				.more-customer
+					h4 更多客户
+					.more-customer-wrap
+						a(href="#")
+							img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
+						a(href="#")
+							img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
+						a(href="#")
+							img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
+						a(href="#")
+							img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
+						a(href="#")
+							img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
+				.panel-left
+					a(id="customer_slideview_prevbtn",href="#")
+				.panel-right
+					a(id="customer_slideview_nextbtn",href="#")
+		.tab-panel
+			.anchor
+				a(id="help",name="help") &nbsp
+			h2 产品帮助
+			.help
+				dl.dot
+					dt 操作指南
+					dd
+						a(href="") 远程连接for linux
+					dd
+						a(href="") Linux FTP服务配置
+					dd
+						a(href="") 远程连接for Windows
+					dd
+						a(href="") Windows FTP服务配置
+				dl.dot
+					dt 资料中心
+					dd
+						a(href="") 云服务器用户管理指南
+					dd
+						a(href="") 云服务器技术白皮书
+				dl.dot.more
+					dt.more.fix-clear
+						span 常见问题
+						a(href="") 更多...
+					dd
+						a(href="") ip类相关问题
+					dd
+						a(href="") 机房相关问题
+					dd
+						a(href="") 配置升级相关问题
+					dd
+						a(href="") 操作系统相关问题
 block buy_tooltips
-  p 最划算、最稳定、最安全
-  p 经济型云服务器低至
-    span ￥89/月
+	p 最划算、最稳定、最安全
+	p 经济型云服务器低至
+		span ￥89/月
 block footer
-  script
-        (function(){
-              
-              Alipw.importClass('Alipw.SlideView');
+	script
+				(function(){
 
-              AYSW.product.slideCustomerViews =[];
-              AYSW.product.slideCustomerViews.push([
-                          '<ul class="customer-item">',
-                                  '<li class="li-title">囧记单词</li>',
-                                  '<li class="li-content-1">移动APP开发者解决方案</li>',
-                                  '<li class="li-content-2"><span>急需解决：</span>用户增长速度快，流量急需扩容，服务成本过高</li>',
-                                  '<li class="li-content-2"><span>购买服务：</span>云服务器V型+<a href="#">关系型数据库</a></li>',
-                                  '<li class="li-logo"> <img width="90" height="90" src="http://img02.taobaocdn.com/tps/i2/T10Nx4XrBXXXbCFbsb-100-100.jpg"></li>',
-                                  '<li class="li-info poptip-container">',
-                                    '<div class="poptip-arrow"><em>◆</em><span>◆</span></div>',
-                                    '<h4>客户使用心得：</h4>',
-                                    '<p>从2012年开始就想把服务器跟第三方更加专业的合作伙伴进行合作。综合对比下来觉得阿里云的云服务在目前的云主机里是做得比较好的，所以很原意和你们进行合作，速度和稳定性方面都很好。</p>',
-                                  '</li>',
-                            '</ul>'
-                            ].join(''));
-              AYSW.product.slideCustomerViews.push([
-                          '<ul class="customer-item">',
-                                  '<li class="li-title">囧记单词</li>',
-                                  '<li class="li-content-1">移动APP开发者解决方案</li>',
-                                  '<li class="li-content-2"><span>急需解决：</span>用户增长速度快，流量急需扩容，服务成本过高</li>',
-                                  '<li class="li-content-2"><span>购买服务：</span>云服务器V型+<a href="#">关系型数据库</a></li>',
-                                  '<li class="li-logo"> <img width="90" height="90" src="http://img02.taobaocdn.com/tps/i2/T10Nx4XrBXXXbCFbsb-100-100.jpg"></li>',
-                                  '<li class="li-info poptip-container">',
-                                    '<div class="poptip-arrow"><em>◆</em><span>◆</span></div>',
-                                    '<h4>客户使用心得：</h4>',
-                                    '<p>从2012年开始就想把服务器跟第三方更加专业的合作伙伴进行合作。综合对比下来觉得阿里云的云服务在目前的云主机里是做得比较好的，所以很原意和你们进行合作，速度和稳定性方面都很好。</p>',
-                                  '</li>',
-                            '</ul>'
-                            ].join(''));
-          })();
+							Alipw.importClass('Alipw.SlideView');
 
+							AYSW.product.slideCustomerViews =[];
+							AYSW.product.slideCustomerViews.push([
+													'<ul class="customer-item">',
+																	'<li class="li-title">囧记单词</li>',
+																	'<li class="li-content-1">移动APP开发者解决方案</li>',
+																	'<li class="li-content-2"><span>急需解决：</span>用户增长速度快，流量急需扩容，服务成本过高</li>',
+																	'<li class="li-content-2"><span>购买服务：</span>云服务器V型+<a href="#">关系型数据库</a></li>',
+																	'<li class="li-logo"> <img width="90" height="90" src="http://img02.taobaocdn.com/tps/i2/T10Nx4XrBXXXbCFbsb-100-100.jpg"></li>',
+																	'<li class="li-info poptip-container">',
+																		'<div class="poptip-arrow"><em>◆</em><span>◆</span></div>',
+																		'<h4>客户使用心得：</h4>',
+																		'<p>从2012年开始就想把服务器跟第三方更加专业的合作伙伴进行合作。综合对比下来觉得阿里云的云服务在目前的云主机里是做得比较好的，所以很原意和你们进行合作，速度和稳定性方面都很好。</p>',
+																	'</li>',
+														'</ul>'
+														].join(''));
+							AYSW.product.slideCustomerViews.push([
+													'<ul class="customer-item">',
+																	'<li class="li-title">囧记单词</li>',
+																	'<li class="li-content-1">移动APP开发者解决方案</li>',
+																	'<li class="li-content-2"><span>急需解决：</span>用户增长速度快，流量急需扩容，服务成本过高</li>',
+																	'<li class="li-content-2"><span>购买服务：</span>云服务器V型+<a href="#">关系型数据库</a></li>',
+																	'<li class="li-logo"> <img width="90" height="90" src="http://img02.taobaocdn.com/tps/i2/T10Nx4XrBXXXbCFbsb-100-100.jpg"></li>',
+																	'<li class="li-info poptip-container">',
+																		'<div class="poptip-arrow"><em>◆</em><span>◆</span></div>',
+																		'<h4>客户使用心得：</h4>',
+																		'<p>从2012年开始就想把服务器跟第三方更加专业的合作伙伴进行合作。综合对比下来觉得阿里云的云服务在目前的云主机里是做得比较好的，所以很原意和你们进行合作，速度和稳定性方面都很好。</p>',
+																	'</li>',
+														'</ul>'
+														].join(''));
 
-  script(src="http://buy.aliyun.com?app=vm_js")
-  script(src="http://static.aliyun.com/js/www-summerwind/buy_modules.js?v=1367065989")
-  script(src="http://static.aliyun.com/js/www-summerwind/product_vmcalculator.js?v=1367065989")
-  script(src="http://w.cnzz.com/c.php?id=30062873")
+							jQuery.getJSON('/promotion/newproductajax/getUserService',{timestamp:new Date().getTime()},function(result) {
+							if(!result) {
+								return;
+							}
+							var buyArea = $(".buy-container .buy-area");
+							var defaultTipHTML = '<p>云监控现可免费使用</p><a role="button" href="http://slb.console.aliyun.com/" class="btn btn-large btn-orange buy-widget-btn" data-ga="JIANKONG.BTN.免费开通">免费开通</a>';
+							if(result && result.code === -2) {
+								// 未登录
+								buyArea.html(defaultTipHTML);
+								return;
+							}
+
+							if(result.service) {
+								var hasJiankong = false,hasService = false;
+								$.each( result.service ,function(i,val) {
+									if(val === 'jiankong') {
+										hasJiankong = true;
+									}else{
+										hasService = true;
+									}
+								});
+
+								if( hasService && hasJiankong ) {
+									buyArea.html('<a role="button" href="http://console.aliyun.com/jiankong/" class="btn btn-large btn-black buy-widget-btn" data-ga="JIANKONG.BTN.管理控制台">管理控制台</a>');
+								}else if( hasService && !hasJiankong ) {
+									buyArea.html('<a role="button" href="http://console.aliyun.com/jiankong/" class="btn btn-large btn-black buy-widget-btn" data-ga="JIANKONG.BTN.免费开通">免费开通</a>');
+								}else if( !hasService && !hasJiankong ) {
+										buyArea.html('<p>购买其它阿里云服务后，云监控即可免费开通</p><a role="button" href="http://console.aliyun.com/jiankong/" class="btn btn-large btn-disable" data-ga="JIANKONG.BTN.免费开通">免费开通</a>');
+								}
+
+							}
+						});
+						//显示
+						AYSW.product.viewBuyArea();
+					})();
+
