@@ -58,7 +58,7 @@
                         </div>
                         <div class="form-item">
                             <label class="form-item-lable"> 网站日PV：</label>
-                            <input id="site_pv" class="input-1"><span class="form-item-tip"><b class="font-red">万</b>，可写1-2500的任意值</span>
+                            <input id="site_pv" class="input-1" type="number"><span class="form-item-tip"><b class="font-red">万</b>，可写1-2500的任意值</span>
                         </div>
                         <div class="form-item form-item-buttton">
                             <input type="button" value="开始测算" id="startCount_btn_1" class="btn btn-large btn-orange">
@@ -81,11 +81,11 @@
                         </div>
                         <div class="form-item">
                             <label class="form-item-lable"> QPS(每秒数据库SQL执行次数)：</label>
-                            <input id="method2_qps" type="number" class="input-1"><span class="form-item-tip"><b class="font-red">次</b>，可写1-10000的任意值</span>
+                            <input id="method2_qps" class="input-1" type="number"><span class="form-item-tip"><b class="font-red">次</b>，可写1-10000的任意值</span>
                         </div>
                         <div class="form-item">
                             <label class="form-item-lable"> 物理磁盘个数：</label>
-                            <input id="method2_disk" type="number" class="input-1">
+                            <input id="method2_disk" class="input-1" type="number"><span class="form-item-tip"><b class="font-red">个</b>，可写1-32的任意值</span>
                         </div>
                         <div class="form-item">
                             <label class="form-item-lable"> 物理磁盘类型：</label>
@@ -149,7 +149,7 @@
 			return true;
     }
     var token;
-    jQuery.get('http://www.aliyun.test/promotion/rdsbijia/getToken',function(data) {
+    jQuery.get('/promotion/rdsbijia/getToken',function(data) {
         if(data.code === 200) {
             token = data.data;
         }
@@ -157,10 +157,15 @@
 
     $('#startCount_btn_1').click(function(e) {
         var btn = $(this);
-        btn.attr('disabled','disabled').val('测算中...').removeClass('btn-orange').addClass('btn-disable');
         var webiteType = $('#site_type').val();
         var pv = $('#site_pv').val();
         var sqlType = $('#database_type').val();
+        if( isNaN(parseFloat(pv)) || parseFloat(pv) < 1 || parseFloat(pv) > 2500 ) {
+        	alert('请填写1-2500的数字');
+        	$('#site_pv').focus().select();
+        	return;
+        }
+        btn.attr('disabled','disabled').val('测算中...').removeClass('btn-orange').addClass('btn-disable');
         jQuery.ajax({
           url:'/promotion/rdsbijia',
           dataType:'json',
@@ -191,6 +196,17 @@
         var qps = $('#method2_qps').val();
         var hardDiskCount = $('#method2_disk').val();
         var hardDiskType = $('#method2_disk_type').val();
+        if( isNaN(parseInt(qps)) || parseInt(qps) < 1 || parseInt(qps) > 1000) {
+        	alert('请填写1-10000的数字');
+        	$('#method2_qps').focus().select();
+        	return;
+        }
+        if( isNaN(parseInt(hardDiskCount)) || parseInt(hardDiskCount) < 1 || parseInt(hardDiskCount) > 32) {
+        	alert('请填写1-32的整数');
+        	$('#method2_disk').focus();
+        	return;
+        }
+        btn.attr('disabled','disabled').val('测算中...').removeClass('btn-orange').addClass('btn-disable');
         jQuery.ajax({
           url:'/promotion/rdsbijia',
           dataType:'json',

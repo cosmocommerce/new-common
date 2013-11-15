@@ -24,9 +24,9 @@ block container
         p 最划算、最稳定、最安全
         p 经济型云服务器低至
           span.font-orange ￥69/月
-        a.btn.btn-large.btn-black.buy-widget-btn(role="button",href="http://console.aliyun.com/ecs/index.html") 进入管理控制台  
+        a.btn.btn-large.btn-black.buy-widget-btn(role="button",href="http://console.aliyun.com/ecs/index.html") 进入管理控制台
         a.btn.btn-large.btn-orange.buy-widget-btn(role="button",href="buy.aliyun.com") 立即购买
-        p(style="margin-top:8px;") 
+        p(style="margin-top:8px;")
           a(href="#") 申请免费数据迁移和环境配置
   .product-tab
     .product-topnav
@@ -44,40 +44,40 @@ block container
       .anchor
         a(id="detail",name="detail") &nbsp
       h2.h2-1 产品详情
-      h3 
+      h3
         span 如何使用
       ul.info-list.dot
         li 获取激活码，在审核通过后，可用激活码免费开通一个512M的实例（有效期致2013年12月31日）
         li 登录OCS控制台，获取OCS客户端和访问信息，并可对实例进行配置管理
         li 将OCS客户端植入应用程序，应用程序通过客户端对OCS进行生产操作
-      h3 
+      h3
         span 产品优势
       ul.info-list.features
         li.features-item
-          h4 
-            span.icon-good 
+          h4
+            span.icon-good
             | 快速
           ul.features-info
             li SSD+内存配置，响应速度远远高于磁盘性能
             li 分布式集群，突破单机服务和网络能力
             li 提供内网访问，降低网络开销
         li.features-item
-          h4 
-            span.icon-good 
+          h4
+            span.icon-good
             | 可靠
           ul.features-info
             li 分布式生产集群及负载均衡设计，硬件损坏10秒内快速恢复
             li 数据高可靠，通过SSD实现数据持久化保存
             li 安全可靠， 内网访问,支持访问权限控制
         li.features-item
-          h4 
-            span.icon-good 
+          h4
+            span.icon-good
             | 便捷
           ul.features-info
             li 快速开通，只需申请实例即可使用
             li 弹性升级，修改规格不影响服务
-      h3 
-        span 产品功能 
+      h3
+        span 产品功能
       ul.info-list.dot
         li Web应用可以通过OCS实现热点数据的高速缓存，例如完成数据库写操作时同步写入OCS，而在读取时先从OCS中读取，从而大幅提高访问速度
         li OCS主要支持存储、读取、删除及其他类操作，以下OCS主要元操作，不同第三方客户端封装后会有增减或修改，请参考相应的客户端说明
@@ -97,12 +97,12 @@ block container
         li 单个数据较小，建议在KB级别
       .customer-panel
         .panel-container.panel-container-loading(id="customer_slideview")
-         
+
         .more-customer
           h4 更多客户
           .more-customer-wrap
             a(href="#")
-              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57") 
+              img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
             a(href="#")
               img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
             a(href="#")
@@ -112,9 +112,9 @@ block container
             a(href="#")
               img(src="http://imgs-storage.cdn.aliyuncs.com/1340638705_1.INDEX.DETAIL.INDEX.VM.CASE.MORE.LIST_18.jpg",width="118", height="57")
         .panel-left
-          a(id="customer_slideview_prevbtn",href="#") 
+          a(id="customer_slideview_prevbtn",href="#")
         .panel-right
-          a(id="customer_slideview_nextbtn",href="#") 
+          a(id="customer_slideview_nextbtn",href="#")
 
     .tab-panel
       .anchor
@@ -166,7 +166,7 @@ block container
           dd
             a(href="") 云服务器技术白皮书
         dl.dot.more
-          dt.more.fix-clear 
+          dt.more.fix-clear
             span 常见问题
             a(href="") 更多...
           dd
@@ -176,9 +176,9 @@ block container
           dd
             a(href="") 配置升级相关问题
           dd
-            a(href="") 操作系统相关问题 
+            a(href="") 操作系统相关问题
   script
-    (function(){          
+    (function(){
           Alipw.importClass('Alipw.SlideView');
           AYSW.product.slideCustomerViews =[];
           AYSW.product.slideCustomerViews.push([
@@ -225,7 +225,7 @@ block container
               }
 
               if(result.code === 200) {
-                
+
                 if(result.data.count > 0) {
                   buyArea.html('<a role="button" target="_blank" href="http://ocs.aliyun.com" class="btn btn-large btn-black buy-widget-btn" data-ga="">进入管理控制台</a>');
                   return;
@@ -246,9 +246,8 @@ block container
                   buyArea.html( html.join('') );
                 }
               }
-              
+
             });
             //显示
             AYSW.product.viewBuyArea();
       })();
-  script(src="http://w.cnzz.com/c.php?id=30062873")

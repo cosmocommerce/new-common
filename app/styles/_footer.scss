@@ -37,3 +37,6 @@
 .aysw-footer-goldmetal-others .aysw-left{ float:left; padding:10px 0 15px 0; line-height:200%;}
 
 .aysw-footer-goldmetal{width:33.32%;}
+// 底部加上最小宽度，集团友情链接的地方也需要改，因为用户中心的是940宽，margin调小点
+.aysw-footer-copyright i {margin: 0 8px;}
+.aysw-footer{min-width:997px;}

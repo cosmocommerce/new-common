@@ -200,12 +200,12 @@ header{
       height:40px;
       margin-top:16px;
     }
-    .sub-logo-bbs{
-      background-image: url(http://img02.taobaocdn.com/tps/i2/T1Bc9YXAlgXXcpKPji-54-40.png);
-    }
-    .sub-logo-dev{
-      background-image: url(http://img04.taobaocdn.com/tps/i4/T1ijOYXqtgXXcdXJ.7-115-40.png);
-    }
+    // .sub-logo-bbs{
+    //   background-image: url(http://img02.taobaocdn.com/tps/i2/T1Bc9YXAlgXXcpKPji-54-40.png);
+    // }
+    // .sub-logo-dev{
+    //   background-image: url(http://img04.taobaocdn.com/tps/i4/T1ijOYXqtgXXcdXJ.7-115-40.png);
+    // }
     ul.nav-child{
         li{
             //font-size: 14px;
@@ -253,6 +253,12 @@ header{
             }*/
     }
 
+}
+header.plain{
+	background-color:inherit;
+	margin-top:25px;
+	height:66px;
+	@include box-shadow(0 0 0 rgba(0, 0, 0, 0));
 }
 .index header nav .header-nav-index a,
 .product header nav .header-nav-product a,

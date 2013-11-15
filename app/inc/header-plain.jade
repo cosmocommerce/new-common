@@ -1,0 +1,37 @@
+header.plain
+  .header-wrap
+    .header-inner
+      a(href="http://www.aliyun.com")
+        h1.logo 阿里云官方网站
+      a#J_sub-logo(href="http://www.aliyun.com",class="sub-logo index-logo",title="打造数据分享第一平台") 打造数据分享第一平台
+
+<!--[if IE 6]>
+script
+  $(function() {
+    $('.main-menu').hover(function() {
+      $(this).find('.sub-menu').show();
+    },function() {
+      $(this).find('.sub-menu').hide();
+    })
+  });
+<![endif]-->
+<!--[if lte IE 8]>
+script
+  (function () {
+        var updscreen = function () {
+            if ($(window).width() >= 1280) {
+                $("body").removeClass('screen997').addClass("screen1200");
+            } else {
+                $("body").removeClass('screen1200').addClass("screen997");
+            }
+        };
+        updscreen();
+        var resizeTimer;
+        $(window).resize(function () {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function () {
+                updscreen();
+            }, 300);
+        });
+    })();
+<![endif]-->

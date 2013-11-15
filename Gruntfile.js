@@ -26,7 +26,7 @@ module.exports = function(grunt) {
             },
             html: {
                 files: ['app/**/*.html'],
-                tasks: ['jade:debug']
+                tasks: ['copy:debug']
             }
         },
         connect: {
@@ -84,8 +84,9 @@ module.exports = function(grunt) {
                     cssDir: '.tmp',
                     sassDir: 'app',
                     imagesDir: 'app/images',
-                    javascriptsDir: 'app/scripts',
-                    config: '.compass.rb'
+                    relativeAssets : true,
+					httpGeneratedImagesPath : '/images',
+					generatedImagesDir : '.tmp/images'
                 }
             },
             dist: {
@@ -95,7 +96,6 @@ module.exports = function(grunt) {
                     imagesDir: 'app/images',
                     environment: 'production',
                     //outputStyle:'expanded',
-                    config: '.compass.rb'
                 }
             }
         },

@@ -149,7 +149,7 @@ block footer
 
 							if(result.service) {
 								var hasJiankong = false,hasService = false;
-								$.each( result.service ,function(i,val) {
+								jQuery.each( result.service ,function(i,val) {
 									if(val === 'jiankong') {
 										hasJiankong = true;
 									}else{
@@ -157,12 +157,14 @@ block footer
 									}
 								});
 
-								if( hasService && hasJiankong ) {
+								if( hasJiankong ) {
 									buyArea.html('<a role="button" href="http://console.aliyun.com/jiankong/" class="btn btn-large btn-black buy-widget-btn" data-ga="JIANKONG.BTN.管理控制台">管理控制台</a>');
-								}else if( hasService && !hasJiankong ) {
-									buyArea.html('<a role="button" href="http://console.aliyun.com/jiankong/" class="btn btn-large btn-black buy-widget-btn" data-ga="JIANKONG.BTN.免费开通">免费开通</a>');
-								}else if( !hasService && !hasJiankong ) {
-										buyArea.html('<p>购买其它阿里云服务后，云监控即可免费开通</p><a role="button" href="http://console.aliyun.com/jiankong/" class="btn btn-large btn-disable" data-ga="JIANKONG.BTN.免费开通">免费开通</a>');
+								}else if( !hasJiankong && hasService ) {
+									buyArea.html('<a role="button" href="http://console.aliyun.com/jiankong/" class="btn btn-large btn-orange buy-widget-btn" data-ga="JIANKONG.BTN.免费开通">免费开通</a>');
+								}else if( !hasJiankong && !hasService ) {
+										buyArea.html('<p>购买其它阿里云服务后，云监控即可免费开通</p><a role="button" href="javascript:;" class="btn btn-large btn-disable buy-widget-btn" data-ga="JIANKONG.BTN.免费开通">免费开通</a>');
+								}else{
+									buyArea.html(defaultTipHTML);
 								}
 
 							}

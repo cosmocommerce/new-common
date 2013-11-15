@@ -128,24 +128,21 @@ script
 <![endif]-->
 <!--[if lte IE 8]>
 script
-  (function(){
-      var updscreen=function(){
-
-        if($(window).width()>=1280){
-          if(/screen/ig.test($("body").attr("class"))){
-            $("body").get(0).className=$("body").attr("class").replace(/screen[0-9]{3,4}/ig,"screen1200");
-          }else{
-            $("body").addClass("screen1200");
-          }
-        }else{
-          if(/screen/ig.test($("body").attr("class"))){
-            $("body").get(0).className=$("body").attr("class").replace(/screen[0-9]{3,4}/ig,"screen997");
-          }else{
-            $("body").addClass("screen997");
-          }
-        }
-      }
-      updscreen();
-      $(window).resize(updscreen);
-  })();
+  (function () {
+        var updscreen = function () {
+            if ($(window).width() >= 1280) {
+                $("body").removeClass('screen997').addClass("screen1200");
+            } else {
+                $("body").removeClass('screen1200').addClass("screen997");
+            }
+        };
+        updscreen();
+        var resizeTimer;
+        $(window).resize(function () {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function () {
+                updscreen();
+            }, 300);
+        });
+    })();
 <![endif]-->

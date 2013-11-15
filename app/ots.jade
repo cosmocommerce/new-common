@@ -178,33 +178,24 @@ block container
 
 							var buyArea = $(".buy-container .buy-area");
 							if(result && result.code === -2) {
-								// 未登录
-								var loginBoxHtml = [
-									'<p><a role="button" href="http://i.aliyun.com/inviteapply?agent_id=PjFAwl3VLvs%3D" class="btn btn-large buy-widget-btn btn-disable">获取邀请码</a></p>'
-									].join("");
-								buyArea.html(loginBoxHtml);
+								buyArea.html(defaultTipHTML);
 								return;
 							}
 
 							if(result.code === 200) {
 
 								if(result.data.count > 0) {
-									buyArea.html('<a role="button" target="_blank" href="http://ocs.aliyun.com" class="btn btn-large btn-black buy-widget-btn" data-ga="">进入管理控制台</a>');
+									buyArea.html('<a role="button" target="_blank" href="http://ots.aliyun.com" class="btn btn-large btn-black buy-widget-btn" data-ga="">进入管理控制台</a>');
 									return;
 								}
 
 								var invitationCode = result.data.invitationCode;
 
 								if(!invitationCode) {
-									buyArea.html('<p style="color:red;">本期邀请码免费申请已经结束，敬请期待下期免费开放</p><p><a role="button" href="javascript:;" class="btn btn-large buy-widget-btn btn-disable">获取邀请码</a></p>');
+									buyArea.html('<p>需要邀请码才能开通OTS服务</p><p><a role="button" href="http://i.aliyun.com/inviteapply?agent_id=PjFAwl3VLvs%3D" class="btn btn-orange btn-large buy-widget-btn">获取邀请码</a></p>');
 									return;
 								}else {
-									var html = ['<p>您已拥有邀请码</p>'];
-									if(!result.data.ecsCount)	{
-										html.push('<p>需要<a href="/product/ecs"> 购买ECS </a>才能开通OCS</p>');
-									}else {
-										html.push('<p><a href="http://i.aliyun.com/invite/active?agent_id=76" class="btn btn-large btn-orange buy-widget-btn">开通OCS</a></p>');
-									}
+									var html = ['<p>您已拥有邀请码</p><p><a href="http://i.aliyun.com/invite/active?agent_id=38" class="btn btn-large btn-orange buy-widget-btn">开通OTS</a></p>'];
 									buyArea.html( html.join('') );
 								}
 							}
