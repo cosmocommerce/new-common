@@ -17,7 +17,7 @@ module.exports = function(grunt) {
                 tasks: ['copy:debug']
             },
             compass: {
-                files: ['app/**/*.scss'],
+                files: ['app/**/*.{scss,sass}'],
                 tasks: ['compass:debug']
             },
             jade: {
@@ -169,7 +169,6 @@ module.exports = function(grunt) {
         }
     });
 
-	grunt.loadNpmTasks('grunt-devtools');
 
     grunt.registerTask('server', function(target) {
         if (target === 'dist') {

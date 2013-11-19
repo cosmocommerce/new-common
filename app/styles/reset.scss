@@ -25,7 +25,7 @@ audio,canvas,video {
 
 /* 要注意表单元素并不继承父级 font 的问题 */
 body,button,input,select,textarea {
-    @include rem('font-size',12px);
+    font-size:12px;
     font-family:"\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", tahoma,arial,"Hiragino Sans GB", "\5B8B\4F53";
 }
 input,select,textarea {
